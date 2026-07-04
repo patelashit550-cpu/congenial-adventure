@@ -1,0 +1,46 @@
+# Skill: Content Provenance and Sol.site Binding
+
+Use when wiring milling, noding, or transaction-pool agents to Transition Insight.
+
+## Endpoints
+
+- `/.well-known/provenance.json` — canonical URL, SNS, Sol.site alias, pool metadata
+- `/attestation.json` — SHA-256 manifest of published ontology files (global tier)
+- `/auth.md` — human-readable provenance notes for agents
+
+## Identity chain
+
+1. **Canonical:** `https://transition-insight.com`
+2. **SNS:** `transition-insight.sol` (wallet-owned on Solana)
+3. **Sol.site:** `https://transition-insight.sol.sites` (SNS → DNS gateway)
+4. **DID:** `did:pkh:solana:<wallet>` from provenance / page meta (`author-did`)
+
+Agents should treat the signed `manifestDigest` in attestation as the corpus
+root hash for any slice-of-pool work. Per-file `sha256` entries identify individual essays.
+
+## Sol.site DNS (owner action)
+
+In SNS → Configure Sol.site → add CNAME for Cloudflare Pages:
+
+- **Type:** CNAME
+- **Value:** `transition-insight.com` (or Cloudflare Pages hostname)
+
+Until DNS is live, `provenance.json` reports `solSite.status: pending-dns`.
+
+## Sign attestation (maintainer)
+
+```
+npm run content:attest
+SOLANA_SIGNING_KEY=<base58-secret> npm run content:sign
+npm run content:verify
+```
+
+Never commit `SOLANA_SIGNING_KEY`. Use the wallet that owns `transition-insight.sol`.
+
+## Future milling / noding
+
+When building transaction-pool or content-milling features:
+
+- Verify attestation signature before indexing a corpus snapshot
+- Bind on-chain program IDs to `manifestDigest` for decisive provenance
+- Prefer `the-transaction.md` (Peridot / governance) as design context for rails

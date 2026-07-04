@@ -1,0 +1,92 @@
+{
+  "version": "1",
+  "generated": "2026-07-04T16:02:24.144Z",
+  "tier": "global",
+  "manifestDigest": "sha256:4334dfb29d1f0ff5d7ecf88ba9573f8da8725e83f639455d36328b14e633b5b0",
+  "identity": {
+    "canonical": "https://transition-insight.com",
+    "sns": "transition-insight.sol",
+    "solSite": "https://transition-insight.sol.sites",
+    "ens": "ashitpatel.eth",
+    "solana": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
+    "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
+  },
+  "summary": {
+    "totalOntologyFiles": 66,
+    "attestedFiles": 7,
+    "signedFiles": 0
+  },
+  "attested": [
+    {
+      "path": "ontology/governance/illumination/arete.md",
+      "stage": "published",
+      "title": "Areté",
+      "author": null,
+      "publishedAt": "2026-07-01T00:00:00.000Z",
+      "slug": "arete",
+      "series": "peridot",
+      "sha256": "sha256:a67b62d569ff3788598af5bb01c4cec9ce2305e883e39fdc6a258bf865aa4264"
+    },
+    {
+      "path": "ontology/governance/illumination/peridot.md",
+      "stage": "published",
+      "title": "Peridot",
+      "author": null,
+      "publishedAt": "2026-06-01T00:00:00.000Z",
+      "slug": "peridot",
+      "series": "peridot",
+      "sha256": "sha256:f323365379d75316a260e32c977f765df212fc4d5380d83cf6c737f64d357d59"
+    },
+    {
+      "path": "ontology/me/connexion.md",
+      "stage": "published",
+      "title": "Connexion",
+      "author": null,
+      "publishedAt": "2026-04-30T00:00:00.000Z",
+      "slug": "connexion",
+      "series": null,
+      "sha256": "sha256:3e1b1bd4d900204ccdb0ac75d734c02fcb046e2aca9ea43e7ee58538538ba46b"
+    },
+    {
+      "path": "ontology/me/origins.md",
+      "stage": "published",
+      "title": "Act I: अर्थ — Origins",
+      "author": null,
+      "publishedAt": "2026-04-27T00:00:00.000Z",
+      "slug": "origins",
+      "series": null,
+      "sha256": "sha256:f5abee1fb25e8b8aec299b4fa7fcd2a053cc88c47e762342c9c9a32daeca2c06"
+    },
+    {
+      "path": "ontology/me/trials-of-job.md",
+      "stage": "published",
+      "title": "Trials of Job",
+      "author": null,
+      "publishedAt": "2026-06-29T00:00:00.000Z",
+      "slug": "trials-of-job",
+      "series": null,
+      "sha256": "sha256:eb1ed64cc4238f27af09665927a76488dfd55e7ca3161ec4f8d558ddd4952808"
+    },
+    {
+      "path": "ontology/narrative/biography/ashit-milne.md",
+      "stage": "published",
+      "title": "One Step Beyond",
+      "author": null,
+      "publishedAt": "2026-07-01T00:00:00.000Z",
+      "slug": "ashit-milne",
+      "series": "The Times",
+      "sha256": "sha256:a94442aab0b75e5090f74edf03ad612fe9b7e6a8502061c3b803debe695e5775"
+    },
+    {
+      "path": "ontology/narrative/biography/ashit-patel.md",
+      "stage": "published",
+      "title": "Macauley's Favorite Bastard",
+      "author": null,
+      "publishedAt": "2026-06-27T00:00:00.000Z",
+      "slug": "ashit-patel",
+      "series": "The Times",
+      "sha256": "sha256:1cbffccb1a5897630f3ac475a86f7e94f7ba25af8e13ba5bc92937d52db12c1a"
+    }
+  ],
+  "signature": null
+}

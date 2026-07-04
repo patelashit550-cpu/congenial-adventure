@@ -1,0 +1,45 @@
+{
+  "version": "1",
+  "generated": "2026-07-04T16:02:24.307Z",
+  "canonical": "https://transition-insight.com",
+  "aliases": [
+    {
+      "type": "sns",
+      "name": "transition-insight.sol"
+    },
+    {
+      "type": "sol.site",
+      "url": "https://transition-insight.sol.sites"
+    },
+    {
+      "type": "ens",
+      "name": "ashitpatel.eth"
+    }
+  ],
+  "identity": {
+    "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
+    "solana": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
+    "validator": "Lumos Maxima",
+    "validatorVoteAccount": "5daP6pZoPSak6UEKuRg2HHjvTPpqqwB113oNamGNKuuZ"
+  },
+  "documents": {
+    "attestation": "https://transition-insight.com/attestation.json",
+    "auth": "https://transition-insight.com/auth.md",
+    "security": "https://transition-insight.com/.well-known/security.txt",
+    "apiCatalog": "https://transition-insight.com/.well-known/api-catalog",
+    "agentSkills": "https://transition-insight.com/.well-known/agent-skills/index.json"
+  },
+  "pool": {
+    "description": "Published ontology corpus attestation for milling, noding, and transaction-pool agents.",
+    "tier": "global",
+    "manifest": "https://transition-insight.com/attestation.json",
+    "manifestDigest": "sha256:4334dfb29d1f0ff5d7ecf88ba9573f8da8725e83f639455d36328b14e633b5b0",
+    "signature": null,
+    "entryCount": 7
+  },
+  "solSite": {
+    "domain": "https://transition-insight.sol.sites",
+    "status": "pending-dns",
+    "note": "Configure CNAME on SNS Sol.site to Cloudflare Pages (transition-insight.com). Until DNS is live, treat canonical web URL as source of truth."
+  }
+}
