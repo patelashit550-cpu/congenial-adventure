@@ -1870,36 +1870,37 @@
 }
 
 .bento-header-title-row .bento-box-title {
-  flex: 0 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
 }
 
 .bento-box-title-visual-slot {
-  flex: 1 1 0;
+  flex: 0 0 auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-width: 0;
-  overflow: hidden;
+  min-width: 3.75rem;
+  max-width: 45%;
+  overflow: visible;
 }
 
-/* next/image wraps the <img> in a <span> — constrain intrinsic width on narrow cards */
+/* next/image wraps the <img> in a <span> during dev; static export uses <img> directly */
 .bento-box-title-visual-slot > span {
   display: flex !important;
   align-items: center;
   justify-content: flex-end;
-  max-width: 100% !important;
-  width: auto !important;
-  height: 4.65rem !important;
+  flex: 0 0 auto;
+  max-width: 100%;
+  height: 4.65rem;
 }
 
 .bento-box-title-visual {
   display: block;
-  height: 4.5rem;
-  width: auto !important;
+  height: 4.65rem;
+  width: auto;
+  max-height: 4.65rem;
   max-width: 100%;
-  max-height: 4.5rem;
-  flex-shrink: 1;
+  flex-shrink: 0;
   object-fit: contain;
   object-position: right center;
   background: transparent;
@@ -1910,15 +1911,20 @@
 .p3-bento-shell .bento-box-title-visual {
   max-height: 4.65rem;
   height: 4.65rem;
-  width: auto !important;
+  width: auto;
   max-width: 100%;
 }
 
 @media (max-width: 1023px) {
+  .bento-box-title-visual-slot {
+    min-width: 3rem;
+    max-width: 40%;
+  }
+
   .bento-box-title-visual-slot > span,
   .p3-bento-shell .bento-header-title-row img,
   .p3-bento-shell .bento-box-title-visual {
-    height: 3.5rem !important;
+    height: 3.5rem;
     max-height: 3.5rem;
   }
 }
