@@ -262,7 +262,7 @@ export function listEssays(topicPath: string | string[]): EssayStub[] {
     return a._filename.localeCompare(b._filename);
   });
 
-  return stubs.map(({ _filename: _f, ...rest }) => rest);
+  return stubs.map(({ _filename, ...rest }) => rest);
 }
 
 /**
@@ -304,7 +304,7 @@ export function listEssaysForBuild(
     return a._filename.localeCompare(b._filename);
   });
 
-  return filtered.map(({ _filename: _f, ...rest }) => rest);
+  return filtered.map(({ _filename, ...rest }) => rest);
 }
 
 /** Read one essay inside a topic by its true directory positioning and URL slug name. */
@@ -353,7 +353,7 @@ export function listEssaysInTopicFolder(
     })
     .map((filename) => essayStubFromFilename(filename));
 
-  return sortEssayStubs(stubs).map(({ _filename: _f, ...rest }) => rest);
+  return sortEssayStubs(stubs).map(({ _filename, ...rest }) => rest);
 }
 
 export function listEssaysInTopicFolderForBuild(
@@ -379,7 +379,7 @@ export function listEssaysInTopicFolderForBuild(
     })
     .map((filename) => essayStubFromFilename(filename));
 
-  return sortEssayStubs(stubs).map(({ _filename: _f, ...rest }) => rest);
+  return sortEssayStubs(stubs).map(({ _filename, ...rest }) => rest);
 }
 
 /** Essays anywhere in the corpus matching a `series` frontmatter value. */
@@ -393,7 +393,7 @@ export function listEssaysBySeries(seriesName: string): EssayStub[] {
     })
     .map((filename) => essayStubFromFilename(filename));
 
-  return sortEssayStubs(stubs).map(({ _filename: _f, ...rest }) => rest);
+  return sortEssayStubs(stubs).map(({ _filename, ...rest }) => rest);
 }
 
 export function listEssaysBySeriesForBuild(
@@ -413,7 +413,7 @@ export function listEssaysBySeriesForBuild(
     })
     .map((filename) => essayStubFromFilename(filename));
 
-  return sortEssayStubs(stubs).map(({ _filename: _f, ...rest }) => rest);
+  return sortEssayStubs(stubs).map(({ _filename, ...rest }) => rest);
 }
 
 /** Back-compat shim for legacy API calls. */

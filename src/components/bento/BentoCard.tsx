@@ -161,10 +161,7 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
         <span className="bento-box-kicker__script" lang="sa">
           {nodeKicker}
         </span>
-        <span className="bento-box-kicker__suffix">
-          {" "}
-          // {nodeId}
-        </span>
+        <span className="bento-box-kicker__suffix">{` // ${nodeId}`}</span>
       </p>
 
       <div className="bento-header-title-row">

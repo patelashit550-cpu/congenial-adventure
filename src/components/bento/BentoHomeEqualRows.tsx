@@ -1,7 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { useLayoutEffect, useRef, useState, useEffect, useCallback } from "react";
+import { useLayoutEffect, useRef, useState, useEffect, useCallback, useSyncExternalStore } from "react";
 
 import { BentoCard } from "./BentoCard";
 import { BentoRegistry } from "@/config/site";
@@ -10,6 +10,16 @@ import { cn } from "@/lib/utils";
 
 const MD_MIN = 768;
 const WIDE_MQ = `(min-width: ${MD_MIN}px)`;
+
+function subscribeWideMq(onStoreChange: () => void): () => void {
+  const m = window.matchMedia(WIDE_MQ);
+  m.addEventListener("change", onStoreChange);
+  return () => m.removeEventListener("change", onStoreChange);
+}
+
+function getWideMqSnapshot(): boolean {
+  return window.matchMedia(WIDE_MQ).matches;
+}
 
 type Props = { visible: NavVisibilityPayload };
 
@@ -23,11 +33,11 @@ export function BentoHomeEqualRows({ visible }: Props) {
   const [rowPx, setRowPx] = useState<number | null>(null);
   const [layoutPass, setLayoutPass] = useState(0);
   
-  /** SSR + first client tick match `false` so markup hydrates; `useLayout` syncs to `matchMedia`. */
-  const [isWide, setIsWide] = useState(false);
-  
-  /** Prevents layout flashes and guarantees server/client markup match during initial hydration step. */
-  const [mounted, setMounted] = useState(false);
+  /** SSR + first client tick match `false` so markup hydrates; syncs via `useSyncExternalStore`. */
+  const isWide = useSyncExternalStore(subscribeWideMq, getWideMqSnapshot, () => false);
+
+  /** Client-only gate so equal-row layout does not flash before hydration. */
+  const mounted = useSyncExternalStore(() => () => {}, () => true, () => false);
   
   const visKey = JSON.stringify(visible);
 
@@ -40,32 +50,8 @@ export function BentoHomeEqualRows({ visible }: Props) {
     setRowPx((p) => (p === h ? p : h));
   }, []);
 
-  // Track initial client mount
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   useLayoutEffect(() => {
-    if (typeof window === "undefined") return;
-    const m = window.matchMedia(WIDE_MQ);
-    setIsWide(m.matches);
-    const onM = () => {
-      setIsWide(m.matches);
-      if (!m.matches) {
-        setRowPx(null);
-        return;
-      }
-      setLayoutPass((n) => n + 1);
-    };
-    m.addEventListener("change", onM);
-    return () => m.removeEventListener("change", onM);
-  }, []);
-
-  useLayoutEffect(() => {
-    if (!isWide) {
-      setRowPx(null);
-      return;
-    }
+    if (!isWide) return;
 
     measureTallestFrame();
 
