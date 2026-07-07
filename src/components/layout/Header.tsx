@@ -1,5 +1,6 @@
 'use client';
 
+import { withBasePath } from "@/lib/base-path";
 import Image from 'next/image';
 
 /*
@@ -14,7 +15,7 @@ export function Header() {
         <div className="p3-header-left min-w-0 gap-5 sm:gap-7 md:gap-9 lg:gap-10">
           <div className="p3-header-emblem shrink-0">
             <Image
-              src="/visuals/icon.png"
+              src={withBasePath("/visuals/icon.png")}
               alt="Transition Insight logo"
               width={96}
               height={96}

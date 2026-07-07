@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { BentoRegistry } from '@/config/site';
+import { withBasePath } from '@/lib/base-path';
 import { resolveBentoKeyFromPathname } from '@/lib/nav-visibility-shared';
 import { useNavVisibility } from '@/components/layout/NavVisibilityContext';
 import { cn } from '@/lib/utils';
@@ -84,7 +85,7 @@ const NarrativeHeader = () => {
         <Link href="/" className="p3-narrative-brand" aria-label="Transition Insight — home">
           <span className="p3-narrative-brand__mark">
             <Image
-              src="/visuals/icon.png"
+              src={withBasePath("/visuals/icon.png")}
               alt=""
               aria-hidden="true"
               width={56}

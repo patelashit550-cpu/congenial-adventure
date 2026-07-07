@@ -8,6 +8,7 @@ import { AdTrackingCleanup } from "@/components/layout/AdTrackingCleanup";
 import { getNavVisibilityPayload } from "@/lib/nav-visibility";
 import { getSovereignIdentity } from "@/lib/sovereign"; // Corrected from @/config/site
 import { SiteIdentity } from "@/config/site";
+import { withBasePath } from "@/lib/base-path";
 
 function metadataBaseUrl(): URL {
   const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim() || SiteIdentity.url;
@@ -49,9 +50,9 @@ export function generateMetadata(): Metadata {
     title: "Transition Insight",
     description: "Planet-III: Human-Centric Governance",
     icons: {
-      icon: [{ url: "/visuals/icon.png", type: "image/png" }],
-      shortcut: "/visuals/icon.png",
-      apple: "/visuals/icon.png",
+      icon: [{ url: withBasePath("/visuals/icon.png"), type: "image/png" }],
+      shortcut: withBasePath("/visuals/icon.png"),
+      apple: withBasePath("/visuals/icon.png"),
     },
     other,
   };

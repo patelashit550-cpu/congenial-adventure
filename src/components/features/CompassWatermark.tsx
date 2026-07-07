@@ -1,6 +1,8 @@
 "use client";
 import { useRef, useEffect } from "react";
 
+import { withBasePath } from "@/lib/base-path";
+
 export function CompassWatermark() {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -22,7 +24,7 @@ export function CompassWatermark() {
 
   return (
     <div ref={ref} className="p3-compass-watermark" aria-hidden="true">
-      <img src="/visuals/sundial_letters_outer.svg" alt="" />
+      <img src={withBasePath("/visuals/sundial_letters_outer.svg")} alt="" />
     </div>
   );
 }

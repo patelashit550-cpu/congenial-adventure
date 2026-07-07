@@ -24,8 +24,9 @@ import {
   type ContentHubRoute,
 } from "@/lib/content-routes";
 import { getSovereignIdentity } from "@/lib/sovereign";
-import { TrajectoryTimeline } from "@/components/features/TrajectoryTimeline";
+import { withBasePath } from "@/lib/base-path";
 import { ConnexionContactPanel } from "@/components/features/ConnexionContactPanel";
+import { TrajectoryTimeline } from "@/components/features/TrajectoryTimeline";
 
 const LEAD_IMAGE_FEATURE_CLASS: Record<string, string> = {
   half: "p3-inline-image--feature-half",
@@ -96,6 +97,10 @@ function contentJsonLd(frontmatter: EssayData["frontmatter"], did: string | null
 }
 
 /** inset | figure | plate → centred editorial plate above essay body (after page title) */
+function assetSrc(src: string): string {
+  return src.startsWith("/") ? withBasePath(src) : src;
+}
+
 function isPlateImageRole(imageRole?: string): boolean {
   return imageRole === "inset" || imageRole === "figure" || imageRole === "plate";
 }
@@ -121,7 +126,7 @@ function EditorialPlateFigure({
         .join(" ")}
     >
       <img
-        src={image}
+        src={assetSrc(image)}
         alt={imageAlt}
         loading="eager"
         className={[
@@ -150,7 +155,7 @@ function createMarkdownComponents(leadFeatureClass?: string): Components {
       ]
         .filter(Boolean)
         .join(" ");
-      return <img src={src} alt={alt ?? ""} {...props} className={className} />;
+      return <img src={assetSrc(src)} alt={alt ?? ""} {...props} className={className} />;
     },
   };
 }
@@ -223,7 +228,7 @@ function NarrativeEssayBody({
       {isOverlayFigure && image && (
         <figure className="p3-narrative-figure p3-narrative-figure--overlay">
           <img
-            src={image}
+            src={assetSrc(image)}
             alt={imageAlt}
             loading="eager"
             className="p3-narrative-figure__img p3-narrative-figure__img--overlay"
@@ -520,7 +525,7 @@ function TopicLayout({
           {isTitleBesideImage ? (
             <div className="p3-topic-article__title-row">
               <img
-                src={image}
+                src={assetSrc(image!)}
                 alt=""
                 className={isTitleMark ? "p3-topic-article__title-mark" : "p3-topic-article__title-icon"}
                 aria-hidden="true"

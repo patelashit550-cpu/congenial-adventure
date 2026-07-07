@@ -1,4 +1,5 @@
 // src/config/site.ts
+import { withBasePath } from "@/lib/base-path";
 
 /**
  * SiteIdentity: High-level metadata for the Planet-III project.
@@ -8,7 +9,7 @@ export const SiteIdentity = {
   name: 'Transition Insight',
   description: 'HUMAN-CENTRIC GOVERNANCE FOR A NEW EARTH',
   url: 'https://transition-insight.com',
-  icon: '/visuals/icon.png',
+  icon: withBasePath("/visuals/icon.png"),
 };
 
 /**
@@ -53,7 +54,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     subtitle: "Identity",
     status: "NODE_ACTIVE // 001",
     requiresAuth: false,
-    titleVisualSrc: "/visuals/bento-rose-emerald.png",
+    titleVisualSrc: withBasePath("/visuals/bento-rose-emerald.png"),
     titleVisualAlt: "Rose — Veritas",
     series: [
       { name: "Origins", desc: "अर्थ — On Earth", dataPoint: "0xAF1", href: "/me/origins" },
@@ -69,7 +70,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     subtitle: "Anarchy As Governance",
     status: "NODE_STABLE // 002",
     requiresAuth: false,
-    titleVisualSrc: "/visuals/bento-gem-emerald.png",
+    titleVisualSrc: withBasePath("/visuals/bento-gem-emerald.png"),
     titleVisualAlt: "Gem — Utilitas",
     series: [
       { name: "Carta", desc: "Canon", dataPoint: "0xBF5", href: "/governance/carta" },
@@ -86,7 +87,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     subtitle: "Jackanory: The Tangent",
     status: "SIGNAL_LIVE // 003",
     requiresAuth: false,
-    titleVisualSrc: "/visuals/bento-lion-emerald.png",
+    titleVisualSrc: withBasePath("/visuals/bento-lion-emerald.png"),
     titleVisualAlt: "Lion — The Times",
     series: [
       { name: "The Times", desc: "By Jack London", dataPoint: "0xCF1", href: "/chronicle/jack-london" },
