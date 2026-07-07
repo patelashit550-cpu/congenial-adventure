@@ -1877,18 +1877,31 @@
 .bento-box-title-visual-slot {
   flex: 1 1 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   min-width: 0;
+  overflow: hidden;
+}
+
+/* next/image wraps the <img> in a <span> — constrain intrinsic width on narrow cards */
+.bento-box-title-visual-slot > span {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 100% !important;
+  width: auto !important;
+  height: 4.65rem !important;
 }
 
 .bento-box-title-visual {
   display: block;
   height: 4.5rem;
-  width: auto;
+  width: auto !important;
+  max-width: 100%;
   max-height: 4.5rem;
-  flex-shrink: 0;
+  flex-shrink: 1;
   object-fit: contain;
+  object-position: right center;
   background: transparent;
   image-rendering: auto;
 }
@@ -1897,7 +1910,17 @@
 .p3-bento-shell .bento-box-title-visual {
   max-height: 4.65rem;
   height: 4.65rem;
-  width: auto;
+  width: auto !important;
+  max-width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .bento-box-title-visual-slot > span,
+  .p3-bento-shell .bento-header-title-row img,
+  .p3-bento-shell .bento-box-title-visual {
+    height: 3.5rem !important;
+    max-height: 3.5rem;
+  }
 }
 
 .jurisdiction-card .bento-row:hover .bento-category-title,

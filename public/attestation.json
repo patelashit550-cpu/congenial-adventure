@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-04T16:02:24.144Z",
+  "generated": "2026-07-07T16:29:23.390Z",
   "tier": "global",
-  "manifestDigest": "sha256:4334dfb29d1f0ff5d7ecf88ba9573f8da8725e83f639455d36328b14e633b5b0",
+  "manifestDigest": "sha256:877503a24285f40f0dfed2b2290c83998064a5111e37b1f10008f614b44357de",
   "identity": {
     "canonical": "https://transition-insight.com",
     "sns": "transition-insight.sol",
@@ -12,8 +12,8 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 66,
-    "attestedFiles": 7,
+    "totalOntologyFiles": 68,
+    "attestedFiles": 9,
     "signedFiles": 0
   },
   "attested": [
@@ -86,6 +86,26 @@
       "slug": "ashit-patel",
       "series": "The Times",
       "sha256": "sha256:1cbffccb1a5897630f3ac475a86f7e94f7ba25af8e13ba5bc92937d52db12c1a"
+    },
+    {
+      "path": "ontology/narrative/comment/polite-bureau.md",
+      "stage": "published",
+      "title": "Polite Bureau",
+      "author": null,
+      "publishedAt": "2026-07-06T00:00:00.000Z",
+      "slug": "polite-bureau",
+      "series": "Polite Bureau",
+      "sha256": "sha256:f7740517acec2a83b60083e1efde33e782ac08159b8ad483a1f55f17241bccbd"
+    },
+    {
+      "path": "ontology/narrative/comment/The Tenable.md",
+      "stage": "published",
+      "title": "The Tenable",
+      "author": null,
+      "publishedAt": "2026-07-06T00:00:00.000Z",
+      "slug": "tenable",
+      "series": "Polite Bureau",
+      "sha256": "sha256:beb86e48fd92f09cd98174df7977e911ff288f8fc2d67e50cb2e73a457f6e11f"
     }
   ],
   "signature": null
