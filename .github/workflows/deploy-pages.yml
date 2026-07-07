@@ -34,6 +34,9 @@ jobs:
         run: npm ci --no-audit --no-fund
 
       - name: Build static export (global tier)
+        env:
+          # Project Pages URL: /{repo}/ — omit when serving at custom domain root.
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build:global
 
       - name: Upload Pages artifact
