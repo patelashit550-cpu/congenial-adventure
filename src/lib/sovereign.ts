@@ -13,6 +13,8 @@ export interface SovereignIdentity {
   }
   readonly ipfs: {
     readonly peerId: string | null
+    readonly cid: string | null
+    readonly directory: string | null
   }
   readonly domains: {
     readonly web: string
@@ -45,7 +47,13 @@ export function getSovereignIdentity(): SovereignIdentity {
       validator: process.env.NEXT_PUBLIC_VALIDATOR_NAME || 'Lumos Maxima',
       validatorVoteAccount: process.env.NEXT_PUBLIC_VALIDATOR_VOTE_ACCOUNT || null,
     },
-    ipfs: { peerId: process.env.IPFS_PEER_ID || null },
+    ipfs: {
+      peerId: process.env.IPFS_PEER_ID || null,
+      cid: process.env.NEXT_PUBLIC_IPFS_CID || null,
+      directory: process.env.NEXT_PUBLIC_IPFS_CID
+        ? `${(process.env.NEXT_PUBLIC_IPFS_GATEWAY || 'https://gateway.pinata.cloud').replace(/\/$/, '')}/ipfs/${process.env.NEXT_PUBLIC_IPFS_CID}/`
+        : null,
+    },
     domains: {
       web: process.env.NEXT_PUBLIC_SITE_URL || 'https://transition-insight.com',
       sns,

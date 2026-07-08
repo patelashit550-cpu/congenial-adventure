@@ -34,9 +34,8 @@ jobs:
         run: npm ci --no-audit --no-fund
 
       - name: Build static export (global tier)
-        env:
-          # Project Pages URL: /{repo}/ — omit when serving at custom domain root.
-          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+        # Serving at custom domain root (transition-insight.com) → no basePath.
+        # Absolute /_next/ asset paths are correct for a root-domain deploy.
         run: npm run build:global
 
       - name: Upload Pages artifact

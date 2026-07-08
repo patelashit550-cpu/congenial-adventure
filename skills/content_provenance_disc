@@ -18,14 +18,24 @@ Use when wiring milling, noding, or transaction-pool agents to Transition Insigh
 Agents should treat the signed `manifestDigest` in attestation as the corpus
 root hash for any slice-of-pool work. Per-file `sha256` entries identify individual essays.
 
-## Sol.site DNS (owner action)
+## Sovereign publish (IPFS / IPNS via Pinata)
 
-In SNS → Configure Sol.site → add CNAME for Cloudflare Pages:
+No GitHub, no Cloudflare origin. Build global tier, pin `out/`, publish IPNS:
 
-- **Type:** CNAME
-- **Value:** `transition-insight.com` (or Cloudflare Pages hostname)
+```
+cp .env.sovereign.example .env.local   # add PINATA_JWT, gateway, IPNS name
+npm run deploy:sovereign
+```
 
-Until DNS is live, `provenance.json` reports `solSite.status: pending-dns`.
+After first pin, set `NEXT_PUBLIC_IPFS_CID`, `NEXT_PUBLIC_IPFS_GATEWAY`, and
+`NEXT_PUBLIC_IPNS_NAME` in `.env.local`, rebuild, and redeploy so
+`provenance.json` and attestation reference the live CID.
+
+Wire `transition-insight.com` via Pinata dedicated-gateway custom domain
+(CNAME) or DNSLink (`_dnslink` TXT → `/ipns/<name>`). Sol.site can CNAME to
+the same hostname once it resolves.
+
+Until a CID is baked in, `provenance.json` reports `solSite.status: pending-dns`.
 
 ## Sign attestation (maintainer)
 

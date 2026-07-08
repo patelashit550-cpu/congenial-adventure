@@ -1,8 +1,13 @@
 {
   "version": "1",
-  "generated": "2026-07-07T17:55:43.218Z",
+  "generated": "2026-07-08T01:21:34.667Z",
   "canonical": "https://transition-insight.com",
   "aliases": [
+    {
+      "type": "ipfs",
+      "cid": "bafybeib445bltpeni4dx5khfehefmg5szbl5htmfhp6kusyqxozgeebyb4",
+      "url": "https://gateway.pinata.cloud/ipfs/bafybeib445bltpeni4dx5khfehefmg5szbl5htmfhp6kusyqxozgeebyb4/"
+    },
     {
       "type": "sns",
       "name": "transition-insight.sol"
@@ -16,6 +21,13 @@
       "name": "ashitpatel.eth"
     }
   ],
+  "ipfs": {
+    "cid": "bafybeib445bltpeni4dx5khfehefmg5szbl5htmfhp6kusyqxozgeebyb4",
+    "gateway": "https://gateway.pinata.cloud",
+    "directory": "https://gateway.pinata.cloud/ipfs/bafybeib445bltpeni4dx5khfehefmg5szbl5htmfhp6kusyqxozgeebyb4/",
+    "ipns": null,
+    "ipnsUrl": null
+  },
   "identity": {
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
     "solana": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
@@ -33,13 +45,13 @@
     "description": "Published ontology corpus attestation for milling, noding, and transaction-pool agents.",
     "tier": "global",
     "manifest": "https://transition-insight.com/attestation.json",
-    "manifestDigest": "sha256:877503a24285f40f0dfed2b2290c83998064a5111e37b1f10008f614b44357de",
+    "manifestDigest": "sha256:fe59c1a2348afc5b3892328fc3ff87da946db04b43a45bc113400194a427107a",
     "signature": null,
     "entryCount": 9
   },
   "solSite": {
     "domain": "https://transition-insight.sol.sites",
-    "status": "pending-dns",
-    "note": "Configure CNAME on SNS Sol.site to Cloudflare Pages (transition-insight.com). Until DNS is live, treat canonical web URL as source of truth."
+    "status": "point-at-ipfs-gateway",
+    "note": "In SNS → Sol.site, CNAME to your Pinata dedicated gateway (or DNSLink host). Canonical static export: provenance ipfs.directory."
   }
 }

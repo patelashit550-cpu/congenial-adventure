@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-07T17:55:43.036Z",
+  "generated": "2026-07-08T01:21:34.412Z",
   "tier": "global",
-  "manifestDigest": "sha256:877503a24285f40f0dfed2b2290c83998064a5111e37b1f10008f614b44357de",
+  "manifestDigest": "sha256:fe59c1a2348afc5b3892328fc3ff87da946db04b43a45bc113400194a427107a",
   "identity": {
     "canonical": "https://transition-insight.com",
     "sns": "transition-insight.sol",
@@ -98,14 +98,14 @@
       "sha256": "sha256:f7740517acec2a83b60083e1efde33e782ac08159b8ad483a1f55f17241bccbd"
     },
     {
-      "path": "ontology/narrative/comment/The Tenable.md",
+      "path": "ontology/narrative/comment/Tenable.md",
       "stage": "published",
       "title": "The Tenable",
       "author": null,
       "publishedAt": "2026-07-06T00:00:00.000Z",
       "slug": "tenable",
       "series": "Polite Bureau",
-      "sha256": "sha256:beb86e48fd92f09cd98174df7977e911ff288f8fc2d67e50cb2e73a457f6e11f"
+      "sha256": "sha256:214c5e31add226b0bb46e33879abd035a9dda19098ab07b092c27d2810db2268"
     }
   ],
   "signature": null

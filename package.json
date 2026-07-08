@@ -20,7 +20,11 @@
     "verify:sitemap:live": "node scripts/verify-sitemap.mjs --live=https://transition-insight.com",
     "scan:agent-ready": "node scripts/scan-agent-ready.mjs https://transition-insight.com",
     "process:bento-emblems": "python scripts/process-bento-emblems.py",
-    "content:attest": "node scripts/generate-attestation.mjs && node scripts/generate-provenance.mjs"
+    "content:attest": "node scripts/generate-attestation.mjs && node scripts/generate-provenance.mjs",
+    "pinata:upload": "node scripts/pinata-upload-dir.mjs",
+    "deploy:sovereign": "node scripts/deploy-sovereign.mjs",
+    "deploy:sovereign:upload": "node scripts/deploy-sovereign.mjs --upload-only",
+    "pinata:cleanup": "node scripts/pinata-cleanup-pins.mjs"
   },
   "dependencies": {
     "audit": "^0.0.6",
