@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: false
+tags:
+  - ethics
+  - decentralization
+  - governance
+  - money
+  - technology
+  - civilization
 ---
 **1: Leviathan - The Sovereign Semper Idem** 
 

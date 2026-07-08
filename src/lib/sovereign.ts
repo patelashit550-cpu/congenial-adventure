@@ -55,7 +55,7 @@ export function getSovereignIdentity(): SovereignIdentity {
         : null,
     },
     domains: {
-      web: process.env.NEXT_PUBLIC_SITE_URL || 'https://transition-insight.com',
+      web: process.env.NEXT_PUBLIC_SITE_URL || 'https://ashitmilne.xyz',
       sns,
       solSite: deriveSolSiteUrl(sns),
       ens: process.env.NEXT_PUBLIC_ENS_DOMAIN || null,

@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - money
+  - political-economy
+  - governance
+  - commons
+  - technology
+  - capital
 ---
 Artwork: Substance (i.e. it is work - even though it doesn't look like it) and it's worth something. Goodness - it grows on trees
 

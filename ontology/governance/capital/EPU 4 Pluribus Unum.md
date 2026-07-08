@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - money
+  - ethics
+  - decentralization
+  - theology
+  - economy
+  - technology
 ---
 **The Good Life**
 

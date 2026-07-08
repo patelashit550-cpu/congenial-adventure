@@ -8,6 +8,11 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - money
+  - theology
+  - civilization
+  - decentralization
 ---
 **The** **Nature** **of Money - Milk and Honey**
 

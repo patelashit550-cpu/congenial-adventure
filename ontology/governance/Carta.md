@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: false
+tags:
+  - governance
+  - decentralization
+  - money
+  - technology
+  - theology
+  - capital
 ---
 **Artwork**: *Like A Roiling Stone* - This is an abstract expression of wholeness as *digital* non-dualism - a decimal point is followed by a zero (nothing subtracted) *or* alternatively the seer perceiving the universal as indistinct from self (nothing added). Important here is the distinction between hole and whole - the former is the void null abyss of nihilism (an absence of all things) while the latter is a full accounting of *all* things brought into equilibrium where time is Universal and settled. Therefore it has a return on investment (*Roi*) manifested through the settling of its element (Londinium) through contemplation. Through being, the self is transformed, and so to *perhaps* the whole in good time. One's sovereignty has been assumed (taken - never shaken - and quite often -  stirred).
 

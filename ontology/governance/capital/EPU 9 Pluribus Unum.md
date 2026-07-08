@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - governance
+  - money
+  - capital
+  - political-economy
+  - technology
+  - economy
 ---
 **The Way The World Works Is Broken**
 

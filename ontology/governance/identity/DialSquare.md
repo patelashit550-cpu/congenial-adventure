@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - governance
+  - commons
+  - theology
+  - money
+  - sovereignty
+  - art
 ---
 Gloria, in te domine Gloria, exultate  Gloria, gloria Oh Lord, loosen my lips
 

@@ -16,6 +16,13 @@ lexica:
   - "[[social network]]"
   - "[[governance]]"
   - "[[political economy]]"
+tags:
+  - governance
+  - identity
+  - money
+  - political-economy
+  - economy
+  - technology
 ---
 
 ## The Architecture of Social Network

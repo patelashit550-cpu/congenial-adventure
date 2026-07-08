@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - identity
+  - environment
+  - money
+  - theology
+  - commons
+  - governance
 ---
 **Artwork**: A stylized depiction of the sacred ash (*vibhuti*) daubed on Shiv's forehead. I often compare it to the mathematical symbol for equivalence (≡)
 

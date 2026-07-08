@@ -15,6 +15,13 @@ lexica:
   - "[[moral injury]]"
   - "[[governance]]"
   - "[[ashit patel]]"
+tags:
+  - governance
+  - identity
+  - technology
+  - commons
+  - political-economy
+  - money
 ---
 
 ## The Occupational Hazards of Eden

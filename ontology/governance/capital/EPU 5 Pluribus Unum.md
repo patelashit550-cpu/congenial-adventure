@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - governance
+  - decentralization
+  - political-economy
+  - economy
+  - money
+  - capital
 ---
 **Alchemy of Truth and Beauty: Monetary Monism**
 

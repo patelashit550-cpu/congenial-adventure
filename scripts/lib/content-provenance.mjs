@@ -112,7 +112,7 @@ export function getSovereignEnv() {
     process.env.NEXT_PUBLIC_SOL_SITE_URL?.trim() ||
     (sns ? `https://${sns.replace(/\.sol$/i, "")}.sol.sites` : null);
   const solana = process.env.NEXT_PUBLIC_SOLANA_WALLET_ADDRESS?.trim() || null;
-  const canonical = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://transition-insight.com";
+  const canonical = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://ashitmilne.xyz";
 
   return {
     canonical,

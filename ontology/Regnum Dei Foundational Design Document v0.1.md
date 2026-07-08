@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: false
+tags:
+  - governance
+  - sovereignty
+  - identity
+  - commons
+  - capital
+  - technology
 ---
 ## 1. Conceptual Core — *Regnum Dei* as Framework
 

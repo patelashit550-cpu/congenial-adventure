@@ -10,7 +10,12 @@ size: md
 showInNav: true
 date: '2025-09-16T00:00:00.000Z'
 tags:
-  - Regnum Dei
+  - regnum-dei
+  - governance
+  - commons
+  - decentralization
+  - identity
+  - political-economy
 series: Dial Square
 part: '2'
 ---

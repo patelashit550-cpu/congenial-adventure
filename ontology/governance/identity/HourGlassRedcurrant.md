@@ -10,7 +10,12 @@ size: md
 showInNav: true
 date: '2025-09-14'
 tags:
-  - Regnum Dei
+  - regnum-dei
+  - theology
+  - money
+  - philosophy
+  - sovereignty
+  - cultural-critique
 series: Dial Square
 part: 3
 ---

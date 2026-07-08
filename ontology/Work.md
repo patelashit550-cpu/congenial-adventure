@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: false
+tags:
+  - money
+  - anarchism
+  - governance
+  - sovereignty
+  - political-economy
+  - decentralization
 ---
 Above: Life's a beach on earth and so is Karma. Peaches come from a can - they were put there by a man in a factory downtown. 'sex on a beach' is just a beverage made of alcoholic distilled peaches and OJ (probably just as well given the look of things on earth). Get a room.
 

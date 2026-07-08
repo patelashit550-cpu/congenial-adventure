@@ -21,6 +21,7 @@ tags:
   - political-economy
   - monetary-policy
   - governance
+  - theology
 lexica:
   - "[[governance]]"
   - "[[transaction]]"

@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - money
+  - technology
+  - sovereignty
+  - governance
+  - capital
+  - decentralization
 ---
 **Zero Trust: You Got The Power to Let Power Go?**
 

@@ -8,7 +8,7 @@ import { withBasePath } from "@/lib/base-path";
 export const SiteIdentity = {
   name: 'Transition Insight',
   description: 'HUMAN-CENTRIC GOVERNANCE FOR A NEW EARTH',
-  url: 'https://transition-insight.com',
+  url: 'https://ashitmilne.xyz',
   icon: withBasePath("/visuals/icon.png"),
 };
 

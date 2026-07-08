@@ -25,6 +25,7 @@ import {
 } from "@/lib/content-routes";
 import { getSovereignIdentity } from "@/lib/sovereign";
 import { withBasePath } from "@/lib/base-path";
+import { SiteIdentity } from "@/config/site";
 import { ConnexionContactPanel } from "@/components/features/ConnexionContactPanel";
 import { TrajectoryTimeline } from "@/components/features/TrajectoryTimeline";
 
@@ -62,6 +63,73 @@ function resolveTopicMapping(rawPath: string[]): { path: string[]; active: strin
   return { path: rawPath.slice(0, rawPath.length - 1), active: target };
 }
 
+const AUTHOR_NAME_DEFAULT = "Ashit Milne";
+
+/** Frontmatter `tags` normalized to a trimmed string[] (SEO keywords). */
+function frontmatterTags(fm: Record<string, unknown>): string[] {
+  const raw = fm.tags;
+  const arr = Array.isArray(raw) ? raw : typeof raw === "string" && raw.trim() ? [raw] : [];
+  return arr.filter((v): v is string => typeof v === "string" && v.trim().length > 0).map((v) => v.trim());
+}
+
+function authorName(fm: Record<string, unknown>): string {
+  return typeof fm.jurisdiction === "string" && fm.jurisdiction.trim() ? fm.jurisdiction.trim() : AUTHOR_NAME_DEFAULT;
+}
+
+function publishedIso(fm: Record<string, unknown>): string | undefined {
+  const raw = fm.publishedAt;
+  if (raw == null) return undefined;
+  if (raw instanceof Date) return raw.toISOString();
+  const t = typeof raw === "number" ? raw : typeof raw === "string" ? Date.parse(raw) : NaN;
+  return Number.isNaN(t) ? undefined : new Date(t).toISOString();
+}
+
+function sectionName(fm: Record<string, unknown>): string | undefined {
+  const s = fm.series;
+  if (typeof s === "string" && s.trim()) return s.trim();
+  if (Array.isArray(s)) {
+    const first = s.find((x) => typeof x === "string" && x.trim());
+    if (typeof first === "string") return first.trim();
+  }
+  return undefined;
+}
+
+/** Resolve a public path or bare URL to an absolute canonical URL. */
+function toAbsUrl(pathOrUrl: string | undefined): string | undefined {
+  if (!pathOrUrl) return undefined;
+  try {
+    return new URL(pathOrUrl.startsWith("/") ? withBasePath(pathOrUrl) : pathOrUrl, SiteIdentity.url).toString();
+  } catch {
+    return undefined;
+  }
+}
+
+function canonicalPath(slug: string[]): string {
+  return `/${slug.filter(Boolean).join("/")}/`;
+}
+
+/** Plain-text excerpt for meta description when no explicit subtitle exists. */
+function plainExcerpt(markdown: string, max = 160): string | undefined {
+  const text = markdown
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/\[\[([^\]]*)\]\]/g, "$1")
+    .replace(/[>#*_`~|]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!text) return undefined;
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return `${cut.slice(0, lastSpace > 40 ? lastSpace : max).trim()}…`;
+}
+
+function essayDescription(fm: Record<string, unknown>, content: string): string | undefined {
+  if (typeof fm.subtitle === "string" && fm.subtitle.trim()) return fm.subtitle.trim();
+  return plainExcerpt(content) ?? SiteIdentity.description;
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug: rawSlug } = await params;
   if (!rawSlug) return {};
@@ -74,25 +142,79 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!essay) return {};
 
-  const { frontmatter } = essay;
+  const { frontmatter, content } = essay;
   const { did } = getSovereignIdentity();
   const other: Record<string, string> = {};
   if (did) other["author-did"] = did;
 
+  const title = typeof frontmatter.title === "string" ? frontmatter.title : undefined;
+  const description = essayDescription(frontmatter, content);
+  const tags = frontmatterTags(frontmatter);
+  const path = canonicalPath(slug);
+  const published = publishedIso(frontmatter);
+  const imageAbs = toAbsUrl(typeof frontmatter.image === "string" ? frontmatter.image : undefined);
+  const imageAlt =
+    (typeof frontmatter.imageAlt === "string" && frontmatter.imageAlt.trim()) || title || SiteIdentity.name;
+  const images = imageAbs ? [{ url: imageAbs, alt: imageAlt }] : undefined;
+
   return {
-    title: typeof frontmatter.title === "string" ? frontmatter.title : undefined,
-    description: typeof frontmatter.subtitle === "string" ? frontmatter.subtitle : undefined,
+    title,
+    description,
+    keywords: tags.length ? tags : undefined,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "article",
+      title,
+      description,
+      url: path,
+      siteName: SiteIdentity.name,
+      publishedTime: published,
+      authors: [authorName(frontmatter)],
+      tags: tags.length ? tags : undefined,
+      images,
+    },
+    twitter: {
+      card: images ? "summary_large_image" : "summary",
+      title,
+      description,
+      images: imageAbs ? [imageAbs] : undefined,
+    },
     other,
   };
 }
 
-function contentJsonLd(frontmatter: EssayData["frontmatter"], did: string | null | undefined): string {
+function contentJsonLd(
+  frontmatter: EssayData["frontmatter"],
+  did: string | null | undefined,
+  url?: string
+): string {
+  const tags = frontmatterTags(frontmatter);
   const ld: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: frontmatter.title ?? "",
   };
-  if (did) ld.author = { "@type": "Person", identifier: did };
+  if (typeof frontmatter.subtitle === "string" && frontmatter.subtitle.trim()) {
+    ld.description = frontmatter.subtitle.trim();
+  }
+  if (url) {
+    ld.url = url;
+    ld.mainEntityOfPage = url;
+  }
+  if (tags.length) ld.keywords = tags.join(", ");
+  const section = sectionName(frontmatter);
+  if (section) ld.articleSection = section;
+  const published = publishedIso(frontmatter);
+  if (published) {
+    ld.datePublished = published;
+    ld.dateModified = published;
+  }
+  const author: Record<string, unknown> = { "@type": "Person", name: authorName(frontmatter), url: SiteIdentity.url };
+  if (did) author.identifier = did;
+  ld.author = author;
+  ld.publisher = { "@type": "Organization", name: SiteIdentity.name, url: SiteIdentity.url };
+  const img = toAbsUrl(typeof frontmatter.image === "string" ? frontmatter.image : undefined);
+  if (img) ld.image = img;
   return JSON.stringify(ld);
 }
 
@@ -290,6 +412,8 @@ export default async function OntologyArchive({ params }: PageProps) {
   const slug = rawSlug.filter(Boolean);
   if (slug.length < 2) return notFound();
 
+  const canonicalUrl = toAbsUrl(canonicalPath(slug));
+
   const route = resolveContentRoute(slug);
   if (!route) return notFound();
 
@@ -308,7 +432,7 @@ export default async function OntologyArchive({ params }: PageProps) {
     const essays = listEssaysForBuild(topicPath);
 
     if (isMeRoute) {
-      return <SingleArticle data={single} />;
+      return <SingleArticle data={single} canonicalUrl={canonicalUrl} />;
     }
 
     if (essays.length > 0) {
@@ -322,7 +446,7 @@ export default async function OntologyArchive({ params }: PageProps) {
       );
     }
 
-    return <SingleArticle data={single} />;
+    return <SingleArticle data={single} canonicalUrl={canonicalUrl} />;
   }
 
   if (!isTopicFolder(topicPath)) return notFound();
@@ -391,7 +515,7 @@ function renderContentHub(route: ContentHubRoute) {
   );
 }
 
-function SingleArticle({ data }: { data: EssayData }) {
+function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?: string }) {
   const { frontmatter, content } = data;
   const { did } = getSovereignIdentity();
   const image = typeof frontmatter.image === "string" ? frontmatter.image : undefined;
@@ -419,7 +543,7 @@ function SingleArticle({ data }: { data: EssayData }) {
 
   return (
     <div className={`p3-narrative-canvas${connexionFit ? " p3-narrative-canvas--connexion-fit" : ""}`}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentJsonLd(frontmatter, did) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentJsonLd(frontmatter, did, canonicalUrl) }} />
 
       <article className={`p3-narrative-article${connexionFit ? " p3-narrative-article--connexion-fit" : ""}`}>
         <header className="p3-narrative-article__header">
@@ -462,6 +586,7 @@ function TopicLayout({
   const basePath = `/${topicPath.join("/")}`;
   const { frontmatter, content } = activeEssay;
   const { did } = getSovereignIdentity();
+  const canonicalUrl = toAbsUrl(`${basePath}/${activeSlug}/`);
   const fallbackTitle = essays.find((e) => e.slug === activeSlug)?.title ?? "";
   const title = (frontmatter.title as string) || fallbackTitle;
   const subtitle =
@@ -489,7 +614,7 @@ function TopicLayout({
 
   return (
     <div className="p3-topic-canvas">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentJsonLd(frontmatter, did) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentJsonLd(frontmatter, did, canonicalUrl) }} />
       <nav className="p3-topic-nav" aria-label="Essays in this topic">
         <div className="p3-topic-nav__sticky">
           <p className="p3-topic-nav__kicker">{activeKickerLabel}</p>

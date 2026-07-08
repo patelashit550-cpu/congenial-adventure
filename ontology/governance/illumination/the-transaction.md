@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - money
+  - sovereignty
+  - self-sovereignty
+  - environment
+  - identity
+  - governance
 ---
 Above: Canadian coinage. I highly recommend a visit to the [Royal Canadian Mint](https://www.mint.ca/en?rcmeid=Agency_PBM_SEM_71700000075106880_58700006463377440_p58419888311&&msclkid=141488ee0ebd1ea4955ee0bdedd6e25f&utm_source=bing&utm_medium=cpc&utm_campaign=CAN-Core-Branded&utm_term=royal canadian mint&utm_content=Core Branded - Exact&gclid=141488ee0ebd1ea4955ee0bdedd6e25f&gclsrc=3p.ds&gad_source=7) in Ottawa if you visit the nation's capital - one of the world's most technologically advanced. Over 70 countries outsource their money-tech needs to Canada. In *our* country primary denominations for circulation are still alloy measured with precision. It's the global standard for sound fiat currency for those who know money (hence why the 51st State bollocks earlier this year).
 

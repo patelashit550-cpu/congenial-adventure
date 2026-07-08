@@ -1,28 +1,28 @@
 {
   "linkset": [
     {
-      "anchor": "https://transition-insight.com/",
+      "anchor": "https://ashitmilne.xyz/",
       "service-desc": [
         {
-          "href": "https://transition-insight.com/sitemap.xml",
+          "href": "https://ashitmilne.xyz/sitemap.xml",
           "type": "application/xml"
         },
         {
-          "href": "https://transition-insight.com/openapi.json",
+          "href": "https://ashitmilne.xyz/openapi.json",
           "type": "application/json"
         }
       ],
       "service-doc": [
         {
-          "href": "https://transition-insight.com/.well-known/agent-skills/index.json",
+          "href": "https://ashitmilne.xyz/.well-known/agent-skills/index.json",
           "type": "application/json"
         },
         {
-          "href": "https://transition-insight.com/.well-known/agent-skills/transition-insight/SKILL.md",
+          "href": "https://ashitmilne.xyz/.well-known/agent-skills/transition-insight/SKILL.md",
           "type": "text/markdown"
         },
         {
-          "href": "https://transition-insight.com/auth.md",
+          "href": "https://ashitmilne.xyz/auth.md",
           "type": "text/markdown"
         }
       ]

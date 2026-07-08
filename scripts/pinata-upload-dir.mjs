@@ -40,7 +40,7 @@ try {
   console.log(`Record: ${recordPath.replace(/\\/g, "/")}`);
   const siteHost =
     process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/^https?:\/\//, "").replace(/\/$/, "") ||
-    "transition-insight.com";
+    "ashitmilne.xyz";
 
   console.log("");
   console.log("Bake into .env.local, then rebuild:");

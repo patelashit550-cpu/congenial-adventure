@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - technology
+  - governance
+  - money
+  - capital
+  - sovereignty
+  - cultural-critique
 ---
 **A Theory of History and A Time-Worn Peace**
 

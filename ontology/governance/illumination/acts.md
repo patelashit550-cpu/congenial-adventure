@@ -10,7 +10,12 @@ size: md
 showInNav: false
 date: '2025-09-13'
 tags:
-  - Regnum Dei
+  - regnum-dei
+  - community
+  - governance
+  - civilization
+  - economy
+  - capital
 series: InTev
 part: 1
 ---

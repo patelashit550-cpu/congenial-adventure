@@ -10,7 +10,12 @@ size: md
 showInNav: true
 date: '2025-09-14'
 tags:
-  - Peridot
+  - peridot
+  - governance
+  - decentralization
+  - sovereignty
+  - self-sovereignty
+  - political-economy
 ---
 
 

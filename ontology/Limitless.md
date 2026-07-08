@@ -15,6 +15,7 @@ tags:
   - meaning
   - definition
   - being
+  - money
 series: Daily Planet
 ---
 

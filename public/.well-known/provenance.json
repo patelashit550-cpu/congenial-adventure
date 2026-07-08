@@ -1,7 +1,7 @@
 {
   "version": "1",
-  "generated": "2026-07-08T01:21:34.667Z",
-  "canonical": "https://transition-insight.com",
+  "generated": "2026-07-08T22:37:31.290Z",
+  "canonical": "https://ashitmilne.xyz",
   "aliases": [
     {
       "type": "ipfs",
@@ -35,17 +35,17 @@
     "validatorVoteAccount": "5daP6pZoPSak6UEKuRg2HHjvTPpqqwB113oNamGNKuuZ"
   },
   "documents": {
-    "attestation": "https://transition-insight.com/attestation.json",
-    "auth": "https://transition-insight.com/auth.md",
-    "security": "https://transition-insight.com/.well-known/security.txt",
-    "apiCatalog": "https://transition-insight.com/.well-known/api-catalog",
-    "agentSkills": "https://transition-insight.com/.well-known/agent-skills/index.json"
+    "attestation": "https://ashitmilne.xyz/attestation.json",
+    "auth": "https://ashitmilne.xyz/auth.md",
+    "security": "https://ashitmilne.xyz/.well-known/security.txt",
+    "apiCatalog": "https://ashitmilne.xyz/.well-known/api-catalog",
+    "agentSkills": "https://ashitmilne.xyz/.well-known/agent-skills/index.json"
   },
   "pool": {
     "description": "Published ontology corpus attestation for milling, noding, and transaction-pool agents.",
     "tier": "global",
-    "manifest": "https://transition-insight.com/attestation.json",
-    "manifestDigest": "sha256:fe59c1a2348afc5b3892328fc3ff87da946db04b43a45bc113400194a427107a",
+    "manifest": "https://ashitmilne.xyz/attestation.json",
+    "manifestDigest": "sha256:0ed7f8886f993cf59b3446550a885063daa0b3b14e01fa42024a8e6f262b71de",
     "signature": null,
     "entryCount": 9
   },

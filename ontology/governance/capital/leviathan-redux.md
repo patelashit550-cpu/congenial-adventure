@@ -29,6 +29,7 @@ tags:
   - decentralization-cryptographic-systems
   - cultural-historical-context
   - philosophical-existential-inquiry
+  - ethics
 ---
 
 ![](/home/ashit/Documents/Planet-III/02_Assets/Leviathan.png)

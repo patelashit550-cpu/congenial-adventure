@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: false
+tags:
+  - governance
+  - sovereignty
+  - money
+  - ethics
+  - identity
+  - commons
 ---
 
 ## A

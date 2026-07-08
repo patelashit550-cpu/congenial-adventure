@@ -21,6 +21,12 @@ lexica:
   - "[[ashit patel]]"
   - "[[education]]"  
   - "[[international]]"
+tags:
+  - political-economy
+  - governance
+  - capital
+  - economy
+  - technology
 ---
 
 ## About The Young Idea

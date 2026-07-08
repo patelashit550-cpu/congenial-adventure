@@ -1,10 +1,10 @@
 {
   "version": "1",
-  "generated": "2026-07-08T01:21:34.412Z",
+  "generated": "2026-07-08T22:37:31.111Z",
   "tier": "global",
-  "manifestDigest": "sha256:fe59c1a2348afc5b3892328fc3ff87da946db04b43a45bc113400194a427107a",
+  "manifestDigest": "sha256:0ed7f8886f993cf59b3446550a885063daa0b3b14e01fa42024a8e6f262b71de",
   "identity": {
-    "canonical": "https://transition-insight.com",
+    "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
     "solSite": "https://transition-insight.sol.sites",
     "ens": "ashitpatel.eth",
@@ -25,7 +25,7 @@
       "publishedAt": "2026-07-01T00:00:00.000Z",
       "slug": "arete",
       "series": "peridot",
-      "sha256": "sha256:a67b62d569ff3788598af5bb01c4cec9ce2305e883e39fdc6a258bf865aa4264"
+      "sha256": "sha256:95061887cf6f4d555d796d3d6bcbc30a2be5d18daeef89f2512bcc87d9b64415"
     },
     {
       "path": "ontology/governance/illumination/peridot.md",
@@ -35,7 +35,7 @@
       "publishedAt": "2026-06-01T00:00:00.000Z",
       "slug": "peridot",
       "series": "peridot",
-      "sha256": "sha256:f323365379d75316a260e32c977f765df212fc4d5380d83cf6c737f64d357d59"
+      "sha256": "sha256:70e4767887728482297ab27c7cf5a217e2009742e082c13844cfd3ce302efecc"
     },
     {
       "path": "ontology/me/connexion.md",
@@ -55,7 +55,7 @@
       "publishedAt": "2026-04-27T00:00:00.000Z",
       "slug": "origins",
       "series": null,
-      "sha256": "sha256:f5abee1fb25e8b8aec299b4fa7fcd2a053cc88c47e762342c9c9a32daeca2c06"
+      "sha256": "sha256:513a7800e5e2deee4ae5fff78ac29382771e069ba2639d01fff508ed87632c15"
     },
     {
       "path": "ontology/me/trials-of-job.md",
@@ -65,7 +65,7 @@
       "publishedAt": "2026-06-29T00:00:00.000Z",
       "slug": "trials-of-job",
       "series": null,
-      "sha256": "sha256:eb1ed64cc4238f27af09665927a76488dfd55e7ca3161ec4f8d558ddd4952808"
+      "sha256": "sha256:7e42d468a21ae2f94b0dba9a05c83b79a55f175c47f31cec023180a25265d88a"
     },
     {
       "path": "ontology/narrative/biography/ashit-milne.md",
@@ -85,7 +85,7 @@
       "publishedAt": "2026-06-27T00:00:00.000Z",
       "slug": "ashit-patel",
       "series": "The Times",
-      "sha256": "sha256:1cbffccb1a5897630f3ac475a86f7e94f7ba25af8e13ba5bc92937d52db12c1a"
+      "sha256": "sha256:6e424cd43a5c51698c16396e648d0cd5fe74919bbcb45974563d493245a5e7f6"
     },
     {
       "path": "ontology/narrative/comment/polite-bureau.md",
@@ -95,7 +95,7 @@
       "publishedAt": "2026-07-06T00:00:00.000Z",
       "slug": "polite-bureau",
       "series": "Polite Bureau",
-      "sha256": "sha256:f7740517acec2a83b60083e1efde33e782ac08159b8ad483a1f55f17241bccbd"
+      "sha256": "sha256:bb30bfe33a60b5f62ecfc71d70cdf2002c1b135ea7309fdf627b513095e8a799"
     },
     {
       "path": "ontology/narrative/comment/Tenable.md",
@@ -105,7 +105,7 @@
       "publishedAt": "2026-07-06T00:00:00.000Z",
       "slug": "tenable",
       "series": "Polite Bureau",
-      "sha256": "sha256:214c5e31add226b0bb46e33879abd035a9dda19098ab07b092c27d2810db2268"
+      "sha256": "sha256:4a9cf408791144eb7b88818c83e0b81b41668f095c3e6bd7c0eb05fe4cc970e4"
     }
   ],
   "signature": null

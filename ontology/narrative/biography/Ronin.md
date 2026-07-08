@@ -26,6 +26,10 @@ lexica:
   - '[[money]]'
   - '[[ronin]]'
   - '[[yoga]]'
+tags:
+  - political-economy
+  - self-sovereignty
+  - art
 ---
 
 ![Ronin essay lead image](/visuals/ronin.webp)

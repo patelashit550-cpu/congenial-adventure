@@ -10,7 +10,12 @@ size: md
 showInNav: true
 date: '2025-10-24T00:00:00.000Z'
 tags:
-  - Japan
+  - japan
+  - money
+  - governance
+  - sovereignty
+  - theology
+  - sacred-feminine
 series: daily planet
 ---
 

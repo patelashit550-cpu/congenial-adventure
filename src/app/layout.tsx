@@ -15,7 +15,7 @@ function metadataBaseUrl(): URL {
   try {
     return new URL(raw.endsWith("/") ? raw : `${raw}/`);
   } catch {
-    return new URL("https://transition-insight.com/");
+    return new URL("https://ashitmilne.xyz/");
   }
 }
 

@@ -8,6 +8,8 @@ type: essay
 theme: emerald
 size: md
 showInNav: false
+tags:
+  - technology
 ---
 ### The Principle of Decamerons 旬
 

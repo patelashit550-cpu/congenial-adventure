@@ -10,6 +10,8 @@ showInNav: true
 publishedAt: 2026-07-06
 theme: emerald
 jurisdiction: "Ashit Milne"
+tags:
+  - political-economy
 ---
 
 Polite Bureau is commentary — op-eds and occasional notes from Ashit Milne on political economy, culture, and the gap between narrative and reality.

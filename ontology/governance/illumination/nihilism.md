@@ -8,6 +8,11 @@ type: essay
 theme: emerald
 size: md
 showInNav: false
+tags:
+  - cultural-critique
+  - sovereignty
+  - governance
+  - theology
 ---
 Above: Hiroshima - if it's not love, then it's the bomb that will bring us together. Now that's fusion (even though it's fission).
 

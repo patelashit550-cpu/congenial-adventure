@@ -18,6 +18,13 @@ lexica:
 order: 1
 series: The Times
 image_feature: pct-80
+tags:
+  - cultural-critique
+  - civilization
+  - governance
+  - money
+  - identity
+  - political-economy
 ---
 
 

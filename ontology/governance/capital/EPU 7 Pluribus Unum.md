@@ -8,6 +8,13 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+tags:
+  - technology
+  - decentralization
+  - money
+  - identity
+  - theology
+  - political-economy
 ---
 **Hard Fork**
 

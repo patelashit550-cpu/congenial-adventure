@@ -15,6 +15,7 @@ tags:
   - sovereignty
   - planet
   - culture
+  - governance
 series: Peridot
 ---
 

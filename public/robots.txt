@@ -1,5 +1,5 @@
 User-Agent: *
 Allow: /
 
-Host: https://transition-insight.com
-Sitemap: https://transition-insight.com/sitemap.xml
+Host: https://ashitmilne.xyz
+Sitemap: https://ashitmilne.xyz/sitemap.xml

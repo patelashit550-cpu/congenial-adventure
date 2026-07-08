@@ -18,6 +18,13 @@ lexica:
   - "[[anarchy]]"
   - "[[ragnarok]]"
   - "[[Dial Square]]"
+tags:
+  - ethics
+  - governance
+  - identity
+  - money
+  - capital
+  - theology
 ---
 
 ## Ragnarök

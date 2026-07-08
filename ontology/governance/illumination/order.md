@@ -15,6 +15,7 @@ tags:
   - anarchy
   - common-good
   - sustainability
+  - anarchism
 series: Peridot
 ---
 

@@ -4,6 +4,9 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const origin = (
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://ashitmilne.xyz"
+).replace(/\/$/, "");
 const skillRel = ".well-known/agent-skills/transition-insight/SKILL.md";
 const skillPath = join(root, "public", skillRel);
 const indexPath = join(root, "public", ".well-known/agent-skills/index.json");
@@ -19,7 +22,7 @@ const index = {
       type: "skill-md",
       description:
         "Navigate and read Transition Insight essays, chronicles, and governance nodes.",
-      url: `https://transition-insight.com/${skillRel}`,
+      url: `${origin}/${skillRel}`,
       digest,
     },
   ],
