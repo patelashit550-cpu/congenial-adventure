@@ -2,7 +2,7 @@
 stage: published
 node_id: 2960
 jurisdiction: Ashit Milne
-title: "The Tenable"
+title: The Tenable
 subtitle:
 label: Business My Own
 slug: tenable
@@ -14,7 +14,7 @@ showInNav: true
 series: Polite Bureau
 publishedAt: 2026-07-06
 image: /assets/montazuma.jpg
-imageAlt: "Montezuma Castle — multi-storey cliff dwelling in a limestone alcove"
+imageAlt: Montezuma Castle — tenement cliff dwelling in a limestone alcove
 imageRole: inset
 tags:
   - cultural-critique
@@ -53,17 +53,17 @@ And yet those born to advantage still preach the old creed. Those of us whose st
 
 For me there is no clear definition of when humanity began but there is a general notion that civilization began some 10,000 years ago. That does *not* at all preclude the idea that our faculties are so immature. However we do have a heuristic called the power law or 80/20.
 
-Collectively we executed over the course of the last 2,000 years the most extraordinary and yet arbitrary decision to begin time at zero. We made our time metric instead of imperial and so too our money.
+Collectively we executed over the course of the last 2,000 years the most extraordinary and yet arbitrary decision to begin time at zero. We made our time metric instead of imperial and so too our money. And since time is money, the promise of good faith was that one day our money *too* may become tenable and through it so too our interactions with one another in the smallest of increments.
 
 Before Christ we measured time in epochs or eras as the dynasties of truly powerful and seemingly permanent authority. The potentates who commanded truly arbitrary power over ordinary people. I cannot *imagine* the suffering of the millions who were subject to the arbitrariness of authority delegated by such Kings.
 
-Those Pharaohs are long gone. Moses parted the seas so that we may cross. The wisdom and courage of Solomon and David were granted to us and then came the messiah who preached love in this institution and the brotherhood of man (or whatever that means). Our leaders today are such that we may brush past them and their outstretched hand on the street without hesitation or reservation - as though we were lost in some train of thought far more important than they could ever be. This is how I am.
+Those Pharaohs are long gone. Moses parted the seas so that we may cross. The wisdom and courage of Solomon and David were granted to us and then came the *Messiah* who preached all you need is love. Corporate and government Caesars today are such that we may brush past them and their outstretched hand on the street without fear of retribution.
 
-Today many of us are granted modern conveniences that the Kings of Old could only *imagine*. Not a single one if given the chance would turn away the opportunity of returning as an ordinary run of the mill person living in the comfort of modern suburbia. Such are the wonders of the ordinary world.
+The vast majority of us are granted modern conveniences that the kings of old could only *imagine*. Not a single one if given the chance would turn away the opportunity of returning as an ordinary run of the mill person living in the comfort of modern suburbia. Such are the wonders of the ordinary world.
 
 ## Jesus of Suburbia
 
-So, I beseech you. Those of you who are not so fortunately graced with favour and who feel instead fear and fury: Turn inward. Demand austerity from yourself. Speak clearly and align your own reality to this extraordinary arc of justice that we are all a part of. Do this first before dictating to others: Be Jesus of Suburbia.
+So, I beseech you who feel out of favour and who seethe with fearful fury: Turn inward. Demand austerity from yourself. Speak clearly and align your own reality to this extraordinary arc of justice that we are all a part of. Do this first before dictating to others: Be Jesus of Suburbia in your home however modest a tenement relic it may be. For what would you offer to be lodger, and into whose ledger, for just one night in Montezuma's Castle (above)?
 
 If you must travel, pay your fare and carry tenable money—or instead tread softly on bare feet. Wherever you are, keep your eyes firmly on your objective and look both ways before you cross the road—there's traffic, and man, is it something. Quit school or quit work. Be restful and be your own authority on what is *ultra* and what is *violet*.
 
