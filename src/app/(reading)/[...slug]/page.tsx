@@ -266,6 +266,11 @@ function EditorialPlateFigure({
 function createMarkdownComponents(leadFeatureClass?: string): Components {
   let leadImageAssigned = false;
   return {
+    table: ({ children, ...props }) => (
+      <div className="p3-table-scroll">
+        <table {...props}>{children}</table>
+      </div>
+    ),
     img: ({ src, alt, ...props }) => {
       if (typeof src !== "string" || src.trim() === "") return null;
       const isLeadImage = !leadImageAssigned;

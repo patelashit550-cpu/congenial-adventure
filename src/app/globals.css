@@ -480,11 +480,12 @@
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   min-height: 6.5rem;
   height: auto;
   padding: 0.65rem 1.25rem;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   background: #000;
   border-bottom: 1px solid rgba(52, 211, 153, 0.5);
   transition:
@@ -496,8 +497,10 @@
 .p3-reading-main {
   box-sizing: border-box;
   width: 100%;
+  max-width: 100%;
   flex: 1 1 auto;
-  padding-top: 7.75rem;
+  overflow-x: clip;
+  padding-top: max(8.25rem, calc(env(safe-area-inset-top, 0px) + 7.25rem));
   min-height: calc(100svh - 7.75rem);
 }
 
@@ -836,11 +839,22 @@
 }
 
 .p3-narrative-canvas {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   min-height: calc(100vh - 6.5rem);
   background: #1a1a1c;
   color: #e4e4e7;
   padding-top: 3rem;
   padding-bottom: 6rem;
+}
+
+@media (max-width: 767px) {
+  .p3-narrative-canvas {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -850,10 +864,18 @@
 }
 
 .p3-narrative-article {
+  box-sizing: border-box;
   width: 100%;
   max-width: 56rem;
+  min-width: 0;
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1.25rem;
+}
+
+@media (max-width: 767px) {
+  .p3-narrative-article {
+    padding-inline: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -896,18 +918,21 @@
 
 .p3-narrative-article__title {
   margin: 0;
-  font-size: 1.875rem;
+  font-size: clamp(1.35rem, 5.5vw, 1.875rem);
   font-weight: 600;
-  letter-spacing: 0.18em;
-  line-height: 1.05;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
   text-transform: uppercase;
   color: #f4f4f5;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 @media (min-width: 768px) {
   .p3-narrative-article__title {
     font-size: 2.5rem;
     letter-spacing: 0.2em;
+    line-height: 1.05;
   }
 }
 
@@ -921,18 +946,21 @@
 
 .p3-narrative-layout {
   display: block;
-}
-
-.p3-narrative-body--with-plate::after {
-  content: "";
-  display: block;
-  clear: both;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* Overlay lead — stamped over the essay column */
 .p3-narrative-layout--overlay-figure {
   position: relative;
   display: block;
+  overflow-x: clip;
+}
+
+.p3-narrative-body--with-plate::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .p3-narrative-figure--overlay {
@@ -961,7 +989,12 @@
 @media (max-width: 767px) {
   .p3-narrative-figure--overlay {
     top: -1rem;
-    right: -0.75rem;
+    right: 0;
+  }
+
+  .p3-narrative-figure__img--overlay {
+    width: min(42vw, 12rem);
+    max-width: 12rem;
   }
 }
 
@@ -1176,13 +1209,39 @@
   background: #0a0a0b;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 4px;
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .p3-narrative-body pre code {
   padding: 0;
   background: transparent;
   border: 0;
+}
+
+.p3-table-scroll {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.p3-narrative-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.p3-narrative-body th,
+.p3-narrative-body td {
+  padding: 0.5rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+  vertical-align: top;
 }
 
 .p3-narrative-footer {
@@ -2125,11 +2184,47 @@
 @media (max-width: 1024px) {
   .p3-topic-canvas {
     grid-template-columns: minmax(0, 1fr);
-    gap: 2rem;
-    padding: 2rem 1.25rem 4rem;
+    gap: 1.25rem;
+    padding: 1rem 1rem 3rem;
+    overflow-x: clip;
   }
   .p3-topic-separator {
     display: none;
+  }
+
+  /* Compact horizontal essay nav — article body starts higher on phone */
+  .p3-topic-nav__list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.65rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.35rem;
+  }
+
+  .p3-topic-nav__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .p3-topic-nav__link {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 13px;
+    padding: 0.35rem 0.55rem;
+    border-left: 0;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .p3-topic-nav__link.is-active {
+    padding-left: 0.55rem;
+    border-left: 0;
+    background: rgba(52, 211, 153, 0.12);
+  }
+
+  .p3-topic-nav__kicker {
+    margin-bottom: 0.65rem;
   }
 }
 
