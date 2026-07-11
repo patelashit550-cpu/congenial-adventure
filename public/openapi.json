@@ -154,6 +154,17 @@
         }
       }
     },
+    "/me/praxis": {
+      "get": {
+        "operationId": "get_me_praxis",
+        "summary": "Read public page at /me/praxis",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/me/trials-of-job": {
       "get": {
         "operationId": "get_me_trials_of_job",

@@ -59,7 +59,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     series: [
       { name: "Origins", desc: "अर्थ — On Earth", dataPoint: "0xAF1", href: "/me/origins" },
       { name: "Trials of Job", desc: "気 — The Key Flows", dataPoint: "0xAF2", href: "/me/trials-of-job" },
-      { name: "Praxis", desc: "πρᾶξις — Across the Social Network", dataPoint: "0xAF3", href: "/me/praxis" },
+      { name: "Praxis", desc: "πρᾶξις — Across Architecture", dataPoint: "0xAF3", href: "/me/praxis" },
       { name: "Connexion", desc: "Phone Jack", dataPoint: "0xAF4", href: "/me/connexion" },
     ],
   },

@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-08T22:37:31.111Z",
+  "generated": "2026-07-11T12:55:36.528Z",
   "tier": "global",
-  "manifestDigest": "sha256:0ed7f8886f993cf59b3446550a885063daa0b3b14e01fa42024a8e6f262b71de",
+  "manifestDigest": "sha256:9ea6510a9410342bbc1ae13f921adb248052efdae29426b0e1f55137aaeb255a",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -55,17 +55,27 @@
       "publishedAt": "2026-04-27T00:00:00.000Z",
       "slug": "origins",
       "series": null,
-      "sha256": "sha256:513a7800e5e2deee4ae5fff78ac29382771e069ba2639d01fff508ed87632c15"
+      "sha256": "sha256:12c044ac75ad849e04839d0dad602c3a66fa8e472a10d7151f764829a2f2f021"
+    },
+    {
+      "path": "ontology/me/praxis.md",
+      "stage": "published",
+      "title": "Act III: πρᾶξις — Praxis",
+      "author": null,
+      "publishedAt": "2026-07-11T00:00:00.000Z",
+      "slug": "praxis",
+      "series": null,
+      "sha256": "sha256:5c4a8157fa40929b96a3362dead32bb078860e002e1beaa684b05f8b7c8f2d53"
     },
     {
       "path": "ontology/me/trials-of-job.md",
       "stage": "published",
-      "title": "Trials of Job",
+      "title": "Act II: 気 - Trials of Job",
       "author": null,
       "publishedAt": "2026-06-29T00:00:00.000Z",
       "slug": "trials-of-job",
       "series": null,
-      "sha256": "sha256:7e42d468a21ae2f94b0dba9a05c83b79a55f175c47f31cec023180a25265d88a"
+      "sha256": "sha256:363f98ba139a506e64694b007822a3c045504279d7b2026f8e1ac817a202d3a6"
     },
     {
       "path": "ontology/narrative/biography/ashit-milne.md",
@@ -88,16 +98,6 @@
       "sha256": "sha256:6e424cd43a5c51698c16396e648d0cd5fe74919bbcb45974563d493245a5e7f6"
     },
     {
-      "path": "ontology/narrative/comment/polite-bureau.md",
-      "stage": "published",
-      "title": "Polite Bureau",
-      "author": null,
-      "publishedAt": "2026-07-06T00:00:00.000Z",
-      "slug": "polite-bureau",
-      "series": "Polite Bureau",
-      "sha256": "sha256:bb30bfe33a60b5f62ecfc71d70cdf2002c1b135ea7309fdf627b513095e8a799"
-    },
-    {
       "path": "ontology/narrative/comment/Tenable.md",
       "stage": "published",
       "title": "The Tenable",
@@ -105,7 +105,7 @@
       "publishedAt": "2026-07-06T00:00:00.000Z",
       "slug": "tenable",
       "series": "Polite Bureau",
-      "sha256": "sha256:4a9cf408791144eb7b88818c83e0b81b41668f095c3e6bd7c0eb05fe4cc970e4"
+      "sha256": "sha256:6cfb5a449e34d915551ba67a3bbc6797eee9f35de614a3ec0d0c2960f41bcfa6"
     }
   ],
   "signature": null

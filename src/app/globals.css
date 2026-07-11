@@ -160,24 +160,44 @@
 
 @media (min-width: 640px) {
   .p3-landing-hero {
-    --p3-landing-top: min(6.25rem, calc(1.25rem + 10vh));
-    --p3-landing-top: min(6.25rem, calc(1.25rem + 10svh));
-    padding-bottom: 1.1rem;
+    --p3-landing-top: min(5.75rem, calc(1.1rem + 9vh));
+    --p3-landing-top: min(5.75rem, calc(1.1rem + 9svh));
+    padding-bottom: 0.85rem;
   }
 }
 
 @media (min-width: 768px) {
   .p3-landing-hero {
-    --p3-landing-top: min(6.75rem, calc(1.25rem + 11vh));
-    --p3-landing-top: min(6.75rem, calc(1.25rem + 11svh));
-    padding-bottom: 1.1rem;
+    --p3-landing-top: min(5.5rem, calc(1rem + 8vh));
+    --p3-landing-top: min(5.5rem, calc(1rem + 8svh));
+    padding-bottom: 0.75rem;
   }
 }
 
 @media (min-width: 1024px) {
   .p3-landing-hero {
-    --p3-landing-top: min(7.25rem, calc(1.1rem + 12vh));
-    --p3-landing-top: min(7.25rem, calc(1.1rem + 12svh));
+    --p3-landing-top: min(4.75rem, calc(0.85rem + 6.5vh));
+    --p3-landing-top: min(4.75rem, calc(0.85rem + 6.5svh));
+    padding-bottom: 0.65rem;
+  }
+}
+
+/* Home main: top-align bento under header (no vertical centering — keeps card feet in view). */
+.p3-landing-main {
+  min-height: 0;
+}
+
+.p3-landing-home {
+  padding-top: clamp(0.35rem, 0.2rem + 0.45vw, 0.65rem);
+}
+
+@media (min-width: 768px) {
+  .p3-landing-home {
+    padding-top: clamp(0.25rem, 0.15rem + 0.35vw, 0.5rem);
+  }
+
+  .p3-bento-shell {
+    margin-top: clamp(0.25rem, 0.15rem + 0.35vw, 0.45rem);
   }
 }
 
@@ -2137,10 +2157,25 @@
   }
 }
 
-.bento-container--home-equal .bento-nav-scroller::-webkit-scrollbar {
-  display: none;
-  width: 0;
-  height: 0;
+@media (min-width: 768px) {
+  .p3-landing-main {
+    --p3-bento-row-max: calc(100svh - env(safe-area-inset-top, 0px) - 10.5rem);
+  }
+
+  .bento-container--home-equal .bento-home-card-frame {
+    max-height: var(--p3-bento-row-max);
+  }
+
+  .bento-container--home-equal .bento-nav-scroller {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .bento-container--home-equal .bento-nav-scroller::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
 
 @media (min-width: 1024px) {

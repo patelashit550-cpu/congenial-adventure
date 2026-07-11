@@ -10,6 +10,17 @@ import { cn } from "@/lib/utils";
 
 const MD_MIN = 768;
 const WIDE_MQ = `(min-width: ${MD_MIN}px)`;
+/** Matches `pb-8` on `.p3-landing-home`. */
+const LANDING_BOTTOM_PAD_PX = 32;
+const MIN_ROW_PX = 180;
+
+function getAvailableRowHeight(): number {
+  if (typeof window === "undefined") return Number.POSITIVE_INFINITY;
+  const header = document.querySelector(".p3-landing-hero");
+  const viewportH = window.visualViewport?.height ?? window.innerHeight;
+  const top = header?.getBoundingClientRect().bottom ?? 0;
+  return Math.max(0, Math.floor(viewportH - top - LANDING_BOTTOM_PAD_PX));
+}
 
 function subscribeWideMq(onStoreChange: () => void): () => void {
   const m = window.matchMedia(WIDE_MQ);
@@ -24,9 +35,8 @@ function getWideMqSnapshot(): boolean {
 type Props = { visible: NavVisibilityPayload };
 
 /**
- * `md+`: all three card frames share one height: the **tallest** natural column
- * (content-driven only — no extra viewport min, so the row doesn’t sit mostly empty
- * under shorter lists). Inner overflow still uses `.bento-nav-scroller`.
+ * `md+`: equal-height row capped to the viewport band below the header.
+ * Shorter columns stretch; taller columns scroll inside `.bento-nav-scroller`.
  */
 export function BentoHomeEqualRows({ visible }: Props) {
   const frameRefs = useRef<(HTMLDivElement | null)[]>([null, null, null]);
@@ -46,7 +56,10 @@ export function BentoHomeEqualRows({ visible }: Props) {
     if (els.length !== 3 || els.some((e) => e == null)) return;
     const hs = els.map((el) => Math.ceil(el!.getBoundingClientRect().height));
     if (hs.some((h) => h < 1)) return;
-    const h = Math.max(hs[0]!, hs[1]!, hs[2]!);
+    const natural = Math.max(hs[0]!, hs[1]!, hs[2]!);
+    const available = getAvailableRowHeight();
+    if (available < 1) return;
+    const h = Math.max(MIN_ROW_PX, Math.min(natural, available));
     setRowPx((p) => (p === h ? p : h));
   }, []);
 
@@ -93,14 +106,26 @@ export function BentoHomeEqualRows({ visible }: Props) {
   }, [isWide, visKey, measureTallestFrame]);
 
   useEffect(() => {
-    if (!isWide) return;
+    if (!isWide) {
+      setRowPx(null);
+      return;
+    }
     const onResize = () => {
       setRowPx(null);
       setLayoutPass((n) => n + 1);
     };
     window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+    window.visualViewport?.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+      window.visualViewport?.removeEventListener("resize", onResize);
+    };
   }, [isWide]);
+
+  useEffect(() => {
+    if (!isWide) return;
+    setRowPx(null);
+  }, [isWide, visKey]);
 
   useEffect(() => {
     if (typeof document === "undefined" || !isWide) return;
