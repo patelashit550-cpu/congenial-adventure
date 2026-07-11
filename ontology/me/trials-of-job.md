@@ -1,5 +1,5 @@
 ---
-title: "Trials of Job"
+title: "Act II: 気 - Trials of Job"
 stage: published
 type: essay
 slug: trials-of-job
@@ -10,7 +10,7 @@ imageRole: inset
 showInNav: true
 publishedAt: 2026-06-29
 theme: emerald
-jurisdiction: "Ashit Milne"
+jurisdiction: Ashit Milne
 lexica:
   - "[[moral injury]]"
   - "[[governance]]"
