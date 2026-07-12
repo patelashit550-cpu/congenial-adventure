@@ -31,12 +31,11 @@ Project Management in the software development lifecycle has been my vocation fo
 > Sells cigars to the boss from the factory  
 > He is jealous of the man in the corner shop  
 > He is sick of struggling so hard  
-> Says it might be nice to own a factory
->
+> Says it might be nice to own a factory  
 > Go to church do the people from the area  
 > All shapes and classes sit and pray together  
 > For here they are all one  
-> For God created all men equal
+> For God created all men equal  
 >
 > ~ The Jam (Man in the Corner Shop)
 
