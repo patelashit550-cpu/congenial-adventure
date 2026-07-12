@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-11T13:21:30.250Z",
+  "generated": "2026-07-12T11:57:25.279Z",
   "tier": "global",
-  "manifestDigest": "sha256:9ea6510a9410342bbc1ae13f921adb248052efdae29426b0e1f55137aaeb255a",
+  "manifestDigest": "sha256:e4363fcbc649d7e9d92a2bdccc317eccac07b95470a7169c7861c84b342091de",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,8 +12,8 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 68,
-    "attestedFiles": 9,
+    "totalOntologyFiles": 67,
+    "attestedFiles": 8,
     "signedFiles": 0
   },
   "attested": [
@@ -25,17 +25,7 @@
       "publishedAt": "2026-07-01T00:00:00.000Z",
       "slug": "arete",
       "series": "peridot",
-      "sha256": "sha256:95061887cf6f4d555d796d3d6bcbc30a2be5d18daeef89f2512bcc87d9b64415"
-    },
-    {
-      "path": "ontology/governance/illumination/peridot.md",
-      "stage": "published",
-      "title": "Peridot",
-      "author": null,
-      "publishedAt": "2026-06-01T00:00:00.000Z",
-      "slug": "peridot",
-      "series": "peridot",
-      "sha256": "sha256:70e4767887728482297ab27c7cf5a217e2009742e082c13844cfd3ce302efecc"
+      "sha256": "sha256:dc8d0aa1083c26febc4f0e83d7f5c959547561d50ba155a9c47b2f119bc8731a"
     },
     {
       "path": "ontology/me/connexion.md",
@@ -65,7 +55,7 @@
       "publishedAt": "2026-07-11T00:00:00.000Z",
       "slug": "praxis",
       "series": null,
-      "sha256": "sha256:5c4a8157fa40929b96a3362dead32bb078860e002e1beaa684b05f8b7c8f2d53"
+      "sha256": "sha256:50060a3a0441a7ee4602c8f7ee7cff91f73282798ab2dc43fbf99514c6ac2752"
     },
     {
       "path": "ontology/me/trials-of-job.md",
@@ -75,7 +65,7 @@
       "publishedAt": "2026-06-29T00:00:00.000Z",
       "slug": "trials-of-job",
       "series": null,
-      "sha256": "sha256:363f98ba139a506e64694b007822a3c045504279d7b2026f8e1ac817a202d3a6"
+      "sha256": "sha256:c75fb79dc9151cc087df9439ccb54ae8dff93ead6cf5ec86754b9bc133a8fb7b"
     },
     {
       "path": "ontology/narrative/biography/ashit-milne.md",

@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "generated": "2026-07-11T13:21:30.471Z",
+  "generated": "2026-07-12T11:57:25.806Z",
   "canonical": "https://ashitmilne.xyz",
   "aliases": [
     {
@@ -45,9 +45,9 @@
     "description": "Published ontology corpus attestation for milling, noding, and transaction-pool agents.",
     "tier": "global",
     "manifest": "https://ashitmilne.xyz/attestation.json",
-    "manifestDigest": "sha256:9ea6510a9410342bbc1ae13f921adb248052efdae29426b0e1f55137aaeb255a",
+    "manifestDigest": "sha256:e4363fcbc649d7e9d92a2bdccc317eccac07b95470a7169c7861c84b342091de",
     "signature": null,
-    "entryCount": 9
+    "entryCount": 8
   },
   "solSite": {
     "domain": "https://transition-insight.sol.sites",

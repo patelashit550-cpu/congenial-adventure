@@ -28,6 +28,18 @@ tags:
 
 Project Management in the software development lifecycle has been my vocation for over a quarter of a century. I won't provide a job description, which may instead be discovered in any number of places. Briefly, it is the process by which applications are created, bundled, tested, and released to the world. In theory, an application is a mechanism or utility—technology designed to grant an end-user some incremental ease, measured in that scarcest of currencies: time and effort saved. My own role has been to *govern* project teams and orchestrate their tasks as the work is performed to elaborate software applications and manifest an end state. All the while transparently reporting progress to various stakeholders—the sponsors or champions who own the product and fund the initiative.
 
+> Sells cigars to the boss from the factory  
+> He is jealous of the man in the corner shop  
+> He is sick of struggling so hard  
+> Says it might be nice to own a factory
+>
+> Go to church do the people from the area  
+> All shapes and classes sit and pray together  
+> For here they are all one  
+> For God created all men equal
+>
+> ~ The Jam (Man in the Corner Shop)
+
 At the time of writing I am 56 and have lived most of my life in a region of exceptional prosperity; a modern Eden which must seem like paradise to many. Canada is endowed with both vast wilderness and culturally sophisticated cities—both are types of resources with profound potential such that the country draws a ready flow of migrants, now largely from the Indian subcontinent. One could make an argument that this constitutes a brain-drain of ready-made generally trustworthy and sufficiently educated talent for its laborious menial requirements from a country which might make better use of their talents; it is also where my own heritage and patrimony arose: those of my grandfathers, both of whom were born in India's northwestern state of Gujarat. But India, like Canada, is a democracy, and it won't stop people from leaving to look for opportunities elsewhere—something my grandfathers did as young men during the Great Depression, when they left Colonial India for what was then British East Africa and the original Eden. One settled at the shores of Lake Victoria—the source of the Nile—and the other on the Rift Valley, the very cradle of human civilization. The trail between them surely the original one that ultimately saw our ancestors make their way out of Africa and into the wide world.
 
 Looking at the current extractive orientation of our political economy, then, and the nature of its avarice—encompassing both human and natural resources—change is due. We must husband all our resources with a global and internationalist lens and with a long-term, sustainable vision of the future wherever we live—one which creates new markets everywhere instead of extracting existing ones at the expense of someone somewhere else and far poorer than you or I.
