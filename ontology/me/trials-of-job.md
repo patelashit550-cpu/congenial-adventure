@@ -32,6 +32,7 @@ Project Management in the software development lifecycle has been my vocation fo
 > He is jealous of the man in the corner shop
 > He is sick of struggling so hard
 > Says it might be nice to own a factory
+> 
 > Go to church do the people from the area
 > All shapes and classes sit and pray together
 > For here they are all one
