@@ -26,18 +26,17 @@ lexica:
   - "[[governance]]"
   - "[[transaction]]"
 ---
-> Your shoes keep turning different shades of blue
-> The colors of the other fools before you
-> And skin keeps turning different shades of red
-> The colors of the other voice that's swimming in your head
->
-> Your hands keep turning lighter shades of white
-> The color of the temperature that's dropping every night
-> Your pair of shoes are turning back to black
-> The color of the inner voice that's slowly coming back
->
-> ~ Mattiel
-
+> Your shoes keep turning different shades of blue  
+> The colors of the other fools before you  
+> And skin keeps turning different shades of red  
+> The colors of the other voice that's swimming in your head  
+>   
+> Your hands keep turning lighter shades of white  
+> The color of the temperature that's dropping every night  
+> Your pair of shoes are turning back to black  
+> The color of the inner voice that's slowly coming back  
+>  
+> — Mattiel, *Count Your Blessings* (2017)
 
 ## Miller Time
 

@@ -6,18 +6,12 @@ slug: arete
 order: 1
 series: peridot
 image: /assets/virtue.jpg
-imageAlt: "Virtue — areté and the Dial Square"
+imageAlt: "Virtue — areté"
 imageRole: inset
 showInNav: true
 publishedAt: 2026-07-01
 theme: emerald
 jurisdiction: "Ashit Milne"
-lexica:
-  - "[[virtue]]"
-  - "[[governance]]"
-  - "[[anarchy]]"
-  - "[[ragnarok]]"
-  - "[[Dial Square]]"
 tags:
   - ethics
   - governance

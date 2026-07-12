@@ -7,8 +7,9 @@ label: Ronin
 type: essay
 theme: emerald
 size: md
-image: /visuals/ronin.webp
-imageAlt: Ronin essay lead image
+image: /visuals/ronin-kanji-parchment.png
+imageAlt: "浪人 — rōnin, in sumi ink on parchment"
+imageRole: inset
 showInNav: true
 publishedAt: 2025-12-18T00:00:00.000Z
 lexica:
@@ -30,6 +31,7 @@ tags:
   - political-economy
   - self-sovereignty
   - art
+series: The Times
 ---
 
 ![Ronin essay lead image](/visuals/ronin.webp)
