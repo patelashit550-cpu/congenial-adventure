@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-12T12:43:47.442Z",
+  "generated": "2026-07-12T12:48:18.136Z",
   "tier": "global",
-  "manifestDigest": "sha256:d43305227619258c06ebda2d025806388e1cd8eccdbad3b3e97d8d57217584c1",
+  "manifestDigest": "sha256:ec7986d4c885bf2a4d6c3139fddbdbc7d27eb9e8b7d0cff1af0d6dd11d7f2727",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -75,7 +75,7 @@
       "publishedAt": "2026-06-29T00:00:00.000Z",
       "slug": "trials-of-job",
       "series": null,
-      "sha256": "sha256:e1d595834e45af343cff62ab3514562328c8423f8eabc22b6e4a55961a75237b"
+      "sha256": "sha256:848754154378f836690609926b18584f63e8be9ebbb8f7022087bff2b107ea23"
     },
     {
       "path": "ontology/narrative/biography/ashit-milne.md",

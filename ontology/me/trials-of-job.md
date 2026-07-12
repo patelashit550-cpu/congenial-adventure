@@ -28,14 +28,14 @@ tags:
 
 Project Management in the software development lifecycle has been my vocation for over a quarter of a century. I won't provide a job description, which may instead be discovered in any number of places. Briefly, it is the process by which applications are created, bundled, tested, and released to the world. In theory, an application is a mechanism or utility—technology designed to grant an end-user some incremental ease, measured in that scarcest of currencies: time and effort saved. My own role has been to *govern* project teams and orchestrate their tasks as the work is performed to elaborate software applications and manifest an end state. All the while transparently reporting progress to various stakeholders—the sponsors or champions who own the product and fund the initiative.
 
-> Sells cigars to the boss from the factory  
-> He is jealous of the man in the corner shop  
-> He is sick of struggling so hard  
-> Says it might be nice to own a factory  
-> Go to church do the people from the area  
-> All shapes and classes sit and pray together  
-> For here they are all one  
-> For God created all men equal  
+> Sells cigars to the boss from the factory
+> He is jealous of the man in the corner shop
+> He is sick of struggling so hard
+> Says it might be nice to own a factory
+> Go to church do the people from the area
+> All shapes and classes sit and pray together
+> For here they are all one
+> For God created all men equal
 >
 > ~ The Jam (Man in the Corner Shop)
 
