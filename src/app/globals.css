@@ -2057,7 +2057,17 @@
   flex-grow: 0;
 }
 
+/* Desktop: equal pillars via grid stretch (works without waiting on equal-row JS). */
 @media (min-width: 768px) {
+  .bento-container--home {
+    align-items: stretch;
+  }
+
+  .bento-container--home .bento-home-card-frame {
+    height: 100%;
+    align-self: stretch;
+  }
+
   .bento-container--home-equal {
     align-items: stretch;
   }
