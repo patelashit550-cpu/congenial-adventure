@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-12T13:07:50.264Z",
+  "generated": "2026-07-13T08:10:20.893Z",
   "tier": "global",
-  "manifestDigest": "sha256:ddd804228123586cc6c1cde96c802144859581f039f911cd9ed2d519ec0c9b16",
+  "manifestDigest": "sha256:5d9139fe66840df24620c2de1b581bf52886178673c32d7267e814d9695d5990",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,8 +12,8 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 68,
-    "attestedFiles": 9,
+    "totalOntologyFiles": 69,
+    "attestedFiles": 10,
     "signedFiles": 0
   },
   "attested": [
@@ -26,6 +26,16 @@
       "slug": "arete",
       "series": "peridot",
       "sha256": "sha256:dc8d0aa1083c26febc4f0e83d7f5c959547561d50ba155a9c47b2f119bc8731a"
+    },
+    {
+      "path": "ontology/governance/illumination/peridot.md",
+      "stage": "published",
+      "title": "Peridot",
+      "author": null,
+      "publishedAt": "2026-06-01T00:00:00.000Z",
+      "slug": "peridot",
+      "series": "peridot",
+      "sha256": "sha256:70e4767887728482297ab27c7cf5a217e2009742e082c13844cfd3ce302efecc"
     },
     {
       "path": "ontology/me/connexion.md",
@@ -55,7 +65,7 @@
       "publishedAt": "2026-07-11T00:00:00.000Z",
       "slug": "praxis",
       "series": null,
-      "sha256": "sha256:8732dfcaa7506b4b473f99bdf697e8d198d6ec0478aeb8496d7610311799915a"
+      "sha256": "sha256:7d243df86523e03bf9103e49fa5ddd3006281a7b2b71cd14c270f659866b2aa3"
     },
     {
       "path": "ontology/me/trials-of-job.md",
