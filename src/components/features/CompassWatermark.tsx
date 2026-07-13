@@ -1,12 +1,20 @@
 "use client";
-import { useRef, useEffect } from "react";
 
-import { withBasePath } from "@/lib/base-path";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+
+import sundialUrl from "@/assets/sundial_letters_outer.svg";
 
 export function CompassWatermark() {
   const ref = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     const el = ref.current;
     if (!el) return;
 
@@ -15,16 +23,21 @@ export function CompassWatermark() {
       const cx = r.left + r.width / 2;
       const cy = r.top + r.height / 2;
       const dist = Math.hypot(e.clientX - cx, e.clientY - cy);
-      el!.classList.toggle("is-revealed", dist < r.width * 0.55);
+      el!.classList.toggle("is-revealed", dist < r.width * 0.75);
     }
 
     window.addEventListener("mousemove", onMove);
     return () => window.removeEventListener("mousemove", onMove);
-  }, []);
+  }, [mounted]);
 
-  return (
+  if (!mounted) return null;
+
+  const src = typeof sundialUrl === "string" ? sundialUrl : sundialUrl.src;
+
+  return createPortal(
     <div ref={ref} className="p3-compass-watermark" aria-hidden="true">
-      <img src={withBasePath("/visuals/sundial_letters_outer.svg")} alt="" />
-    </div>
+      <img src={src} alt="" />
+    </div>,
+    document.body,
   );
 }

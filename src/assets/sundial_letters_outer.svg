@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none" aria-hidden="true">
+  <!--
+    Planet III – Compass Watermark
+    Centre: 400,400  · Outer ring: r=340  · No background fill.
+    Petals: tip in +y (local) = points toward centre after rotate().
+    Outer ring r=340 (r×0.707=240): 8 intersections.
+    Inner ring r=242 (r×0.707=171): 8 intersections.
+  -->
+
+  <defs>
+    <!-- Larger petal for outer ring — tip at y=12, cap at y=-6 -->
+    <path id="pl"
+          d="M 0,-6 C 5,-6 5,3 0,12 C -5,3 -5,-6 0,-6 Z"
+          stroke="#10b981" stroke-width="0.9" fill="none"/>
+    <!-- Smaller petal for inner ring — tip at y=9, cap at y=-4.5 -->
+    <path id="ps"
+          d="M 0,-4.5 C 3.8,-4.5 3.8,2 0,9 C -3.8,2 -3.8,-4.5 0,-4.5 Z"
+          stroke="#10b981" stroke-width="0.8" fill="none"/>
+  </defs>
+
+  <!-- 4 radial spokes + corner triangles — same weight/colour/opacity -->
+  <g stroke="#10b981" stroke-width="0.5" opacity="0.6" fill="none">
+    <line x1="400" y1="0"   x2="400" y2="800"/>
+    <line x1="0"   y1="400" x2="800" y2="400"/>
+    <line x1="0"   y1="0"   x2="800" y2="800"/>
+    <line x1="800" y1="0"   x2="0"   y2="800"/>
+    <!-- Corner triangles: apex at corner (pointing out), base facing inward -->
+    <polygon points="0,0   180,0  0,180"/>   <!-- top-left  -->
+    <polygon points="800,0   620,0  800,180"/>  <!-- top-right -->
+    <polygon points="800,800 620,800 800,620"/> <!-- bot-right -->
+    <polygon points="0,800   180,800 0,620"/>   <!-- bot-left  -->
+  </g>
+
+  <!-- Outer double ring -->
+  <circle cx="400" cy="400" r="340" stroke="#10b981" stroke-width="1.8"  fill="none"/>
+  <circle cx="400" cy="400" r="334" stroke="#10b981" stroke-width="0.5"  fill="none" opacity="0.5"/>
+
+  <!-- Inner double ring -->
+  <circle cx="400" cy="400" r="242" stroke="#10b981" stroke-width="1.3"  fill="none"/>
+  <circle cx="400" cy="400" r="236" stroke="#10b981" stroke-width="0.45" fill="none" opacity="0.55"/>
+
+  <!-- Innermost ring -->
+  <circle cx="400" cy="400" r="134" stroke="#10b981" stroke-width="0.65" fill="none" opacity="0.4"/>
+
+  <!-- ── Petals on outer ring (r=340) ─────────────────────────────────────
+       Rotation = compass bearing of petal from centre, so tip always faces in.
+       N=0° NE=45° E=90° SE=135° S=180° SW=225° W=270° NW=315°            -->
+  <use href="#pl" transform="translate(400  60) rotate(  0)"/>  <!-- N   -->
+  <use href="#pl" transform="translate(640 160) rotate( 45)"/>  <!-- NE  -->
+  <use href="#pl" transform="translate(740 400) rotate( 90)"/>  <!-- E   -->
+  <use href="#pl" transform="translate(640 640) rotate(135)"/>  <!-- SE  -->
+  <use href="#pl" transform="translate(400 740) rotate(180)"/>  <!-- S   -->
+  <use href="#pl" transform="translate(160 640) rotate(225)"/>  <!-- SW  -->
+  <use href="#pl" transform="translate( 60 400) rotate(270)"/>  <!-- W   -->
+  <use href="#pl" transform="translate(160 160) rotate(315)"/>  <!-- NW  -->
+
+  <!-- ── Petals on inner ring (r=242) ────────────────────────────────────── -->
+  <use href="#ps" transform="translate(400 158) rotate(  0)"/>  <!-- N   -->
+  <use href="#ps" transform="translate(571 229) rotate( 45)"/>  <!-- NE  -->
+  <use href="#ps" transform="translate(642 400) rotate( 90)"/>  <!-- E   -->
+  <use href="#ps" transform="translate(571 571) rotate(135)"/>  <!-- SE  -->
+  <use href="#ps" transform="translate(400 642) rotate(180)"/>  <!-- S   -->
+  <use href="#ps" transform="translate(229 571) rotate(225)"/>  <!-- SW  -->
+  <use href="#ps" transform="translate(158 400) rotate(270)"/>  <!-- W   -->
+  <use href="#ps" transform="translate(229 229) rotate(315)"/>  <!-- NW  -->
+
+
+</svg>

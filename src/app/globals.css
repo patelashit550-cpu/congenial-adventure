@@ -2057,15 +2057,29 @@
   flex-grow: 0;
 }
 
-/* Desktop: equal pillars via grid stretch (works without waiting on equal-row JS). */
+/* Desktop: equal pillar borders without waiting on equal-row JS. */
 @media (min-width: 768px) {
   .bento-container--home {
     align-items: stretch;
   }
 
   .bento-container--home .bento-home-card-frame {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
     align-self: stretch;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .bento-container--home .jurisdiction-card,
+  .bento-container--home .bento-card-surface {
+    flex: 1 1 auto;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .bento-container--home .jurisdiction-card .card-content {
+    height: 100%;
   }
 
   .bento-container--home-equal {
@@ -2483,26 +2497,35 @@
 /* ── Compass watermark ─────────────────────────────────────────────────────── */
 .p3-compass-watermark {
   position: fixed;
-  width: 650px;
-  height: 650px;
-  top: 50%;
-  right: 5%;
-  transform: translateY(-50%);
-  z-index: 0;
-  opacity: 0.07;
-  filter: blur(3px);
+  /* Sit in the right half, fully in-viewport (not hanging off the edge). */
+  top: 48%;
+  left: 62%;
+  width: min(560px, 48vw);
+  height: min(560px, 48vw);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  /* Must read at rest — prior 0.07 looked like the wheel was absent. */
+  opacity: 0.38;
+  filter: blur(1.5px);
   transition: opacity 0.8s ease, filter 0.8s ease;
   pointer-events: none;
   cursor: default;
 }
 
 .p3-compass-watermark.is-revealed {
-  opacity: 0.85;
+  opacity: 0.9;
   filter:
-    blur(0px)
+    blur(0.01px)
     drop-shadow(0 0 6px  rgba(52, 211, 153, 0.72))
     drop-shadow(0 0 18px rgba(16, 185, 129, 0.42))
     drop-shadow(0 0 48px rgba(52, 211, 153, 0.28));
+}
+
+/* Keep chrome above the watermark so links stay clickable. */
+.p3-landing-hero,
+.p3-bento-shell {
+  position: relative;
+  z-index: 2;
 }
 
 .p3-compass-watermark img {
