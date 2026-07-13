@@ -2497,35 +2497,28 @@
 /* ── Compass watermark ─────────────────────────────────────────────────────── */
 .p3-compass-watermark {
   position: fixed;
-  /* Sit in the right half, fully in-viewport (not hanging off the edge). */
-  top: 48%;
-  left: 62%;
-  width: min(560px, 48vw);
-  height: min(560px, 48vw);
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  /* Must read at rest — prior 0.07 looked like the wheel was absent. */
-  opacity: 0.38;
-  filter: blur(1.5px);
+  top: 50%;
+  /* Anchor past the content band into the right gutter — not under the cards. */
+  right: -6vw;
+  left: auto;
+  width: min(720px, 58vw);
+  height: min(720px, 58vw);
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0.5;
+  filter: blur(1px);
   transition: opacity 0.8s ease, filter 0.8s ease;
   pointer-events: none;
   cursor: default;
 }
 
 .p3-compass-watermark.is-revealed {
-  opacity: 0.9;
+  opacity: 0.92;
   filter:
     blur(0.01px)
     drop-shadow(0 0 6px  rgba(52, 211, 153, 0.72))
     drop-shadow(0 0 18px rgba(16, 185, 129, 0.42))
     drop-shadow(0 0 48px rgba(52, 211, 153, 0.28));
-}
-
-/* Keep chrome above the watermark so links stay clickable. */
-.p3-landing-hero,
-.p3-bento-shell {
-  position: relative;
-  z-index: 2;
 }
 
 .p3-compass-watermark img {
