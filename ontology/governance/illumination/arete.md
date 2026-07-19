@@ -1,5 +1,6 @@
 ---
 title: "Areté"
+label: "Virtue"
 stage: published
 type: essay
 slug: arete
@@ -42,6 +43,8 @@ Utility at scale is always crudely utilitarian—cold and institutional—where 
 God in mythology is felt as reverence towards that one unfathomable thing of unquestioned eminence—creation. It is felt as the natural order created as life itself. In Christian tradition that eminence is the holy spirit expressed as soft-power (virtue or areté). In the Hindu tradition these are truth (satyam) constantly transmuted through some thing with utility (shivam) into beauty (sundaram). Humanity's relative maturity in creation demands that it assume the responsibility of being its custodian and guardian.
 
 In modern software engineering we use A/B testing to objectively prove a hypothesized innovation as we continue our journey towards Omega—wholesome internalized integrative functionality. In our contemporary culture the relationship between Odin's sons Thor and Loki is the dance between orthodoxy (might makes right) and praxis (playful exploration) respectively. Fluidity makes praxis operative at a level that is almost inadvertently creative. Praxis is a deliberate acknowledgement of the power fluidity lends to an otherwise rigid orthodoxy. It requires that one deliberately chooses to register reality as just data and through the experience of a sometimes turbulent flow develop virtue or areté. This is the quality that enables contentment because it derives comfort from discomfort. A process we know as hormesis.
+
+![The S-Curve of Areté: from Alpha (orthodoxy) through Praxis (innovation) toward Omega — praxis as the increment that turns Alpha into Beta](/assets/alpha-beta.jpg)
 
 I use the term areté because of its linguistic personality; an almost arbitrary proximity to the French word _arrêt_, which means to arrest oneself or stop. To desist is almost always every bit as important as commencing something when one endeavors to cultivate virtue.
 

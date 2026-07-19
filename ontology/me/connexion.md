@@ -1,5 +1,6 @@
 ---
 title: "Connexion"
+label: "Transparent Gateway"
 stage: published
 type: essay
 slug: connexion

@@ -27,7 +27,10 @@
     "deploy:sovereign:upload": "node scripts/deploy-sovereign.mjs --upload-only",
     "pinata:cleanup": "node scripts/pinata-cleanup-pins.mjs",
     "tags:auto": "node scripts/auto-tag-essays.mjs",
-    "tags:write": "node scripts/auto-tag-essays.mjs --write"
+    "tags:write": "node scripts/auto-tag-essays.mjs --write",
+    "lexica:graph": "node scripts/generate-lexica-graph.mjs",
+    "lexica:watch": "node --watch-path=ontology scripts/generate-lexica-graph.mjs",
+    "backup:nightly": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/nightly-backup.ps1"
   },
   "dependencies": {
     "audit": "^0.0.6",

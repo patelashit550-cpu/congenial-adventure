@@ -28,6 +28,10 @@ export type ContentHubConfig = {
   landerSlug: string;
   /** When true, left nav shows 01/02… prefixes (EPU, SI, SQN). */
   sequentialNav?: boolean;
+  /** When true, left nav shows a publication date stamp per essay. */
+  showNavDate?: boolean;
+  /** When true with {@link showNavDate}, sort nav oldest → newest. */
+  navChronological?: boolean;
 } & (FolderHubConfig | SeriesHubConfig);
 
 export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
@@ -46,6 +50,8 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     mode: "series",
     seriesName: "Polite Bureau",
     landerOntologyRel: "narrative/comment/polite-bureau",
+    showNavDate: true,
+    navChronological: true,
   },
   "governance/identity": {
     publicBase: ["governance", "identity"],

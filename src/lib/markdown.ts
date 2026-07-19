@@ -9,6 +9,7 @@ import {
   type ContentTier,
 } from "@/lib/content-tier";
 import { ONTOLOGY_ROOT } from "@/lib/content-paths";
+import { essayNavDate } from "@/lib/essay-date";
 
 const EXTS = [".mdx", ".md"] as const;
 
@@ -16,6 +17,12 @@ export interface EssayStub {
   slug: string;
   title: string;
   order: number;
+  /** Epoch ms from `publishedAt` or `date` — for chrono nav sort. */
+  dateMs?: number;
+  /** ISO `YYYY-MM-DD` for `<time datetime>`. */
+  dateIso?: string;
+  /** Display stamp in margin nav (e.g. `2026.07.06`). */
+  dateLabel?: string;
 }
 
 function publicationTimeMs(data: Record<string, unknown> | null | undefined): number | null {
@@ -54,7 +61,16 @@ function essayStubFromFilename(filename: string): EssayStub & { _filename: strin
   } catch {
     /* keep defaults */
   }
-  return { slug: essaySlugFromFile(filename, data), title, order, _filename: filename };
+  const navDate = essayNavDate(data);
+  return {
+    slug: essaySlugFromFile(filename, data),
+    title,
+    order,
+    ...(navDate
+      ? { dateMs: navDate.ms, dateIso: navDate.iso, dateLabel: navDate.label }
+      : {}),
+    _filename: filename,
+  };
 }
 
 function sortEssayStubs<T extends EssayStub & { _filename: string }>(stubs: T[]): T[] {

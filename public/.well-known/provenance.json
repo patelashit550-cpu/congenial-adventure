@@ -1,12 +1,12 @@
 {
   "version": "1",
-  "generated": "2026-07-13T08:10:21.350Z",
+  "generated": "2026-07-19T12:38:48.952Z",
   "canonical": "https://ashitmilne.xyz",
   "aliases": [
     {
       "type": "ipfs",
-      "cid": "bafybeib445bltpeni4dx5khfehefmg5szbl5htmfhp6kusyqxozgeebyb4",
-      "url": "https://gateway.pinata.cloud/ipfs/bafybeib445bltpeni4dx5khfehefmg5szbl5htmfhp6kusyqxozgeebyb4/"
+      "cid": "bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm",
+      "url": "https://amber-total-muskox-866.mypinata.cloud/ipfs/bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm/"
     },
     {
       "type": "sns",
@@ -22,9 +22,9 @@
     }
   ],
   "ipfs": {
-    "cid": "bafybeib445bltpeni4dx5khfehefmg5szbl5htmfhp6kusyqxozgeebyb4",
-    "gateway": "https://gateway.pinata.cloud",
-    "directory": "https://gateway.pinata.cloud/ipfs/bafybeib445bltpeni4dx5khfehefmg5szbl5htmfhp6kusyqxozgeebyb4/",
+    "cid": "bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm",
+    "gateway": "https://amber-total-muskox-866.mypinata.cloud",
+    "directory": "https://amber-total-muskox-866.mypinata.cloud/ipfs/bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm/",
     "ipns": null,
     "ipnsUrl": null
   },
@@ -45,9 +45,9 @@
     "description": "Published ontology corpus attestation for milling, noding, and transaction-pool agents.",
     "tier": "global",
     "manifest": "https://ashitmilne.xyz/attestation.json",
-    "manifestDigest": "sha256:5d9139fe66840df24620c2de1b581bf52886178673c32d7267e814d9695d5990",
+    "manifestDigest": "sha256:3507ecaddb6f322209929ac8b16fb043a6c7648d49557155832812f679516fac",
     "signature": null,
-    "entryCount": 10
+    "entryCount": 8
   },
   "solSite": {
     "domain": "https://transition-insight.sol.sites",

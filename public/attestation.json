@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-13T08:10:20.893Z",
+  "generated": "2026-07-19T12:38:48.783Z",
   "tier": "global",
-  "manifestDigest": "sha256:5d9139fe66840df24620c2de1b581bf52886178673c32d7267e814d9695d5990",
+  "manifestDigest": "sha256:3507ecaddb6f322209929ac8b16fb043a6c7648d49557155832812f679516fac",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,8 +12,8 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 69,
-    "attestedFiles": 10,
+    "totalOntologyFiles": 67,
+    "attestedFiles": 8,
     "signedFiles": 0
   },
   "attested": [
@@ -25,17 +25,7 @@
       "publishedAt": "2026-07-01T00:00:00.000Z",
       "slug": "arete",
       "series": "peridot",
-      "sha256": "sha256:dc8d0aa1083c26febc4f0e83d7f5c959547561d50ba155a9c47b2f119bc8731a"
-    },
-    {
-      "path": "ontology/governance/illumination/peridot.md",
-      "stage": "published",
-      "title": "Peridot",
-      "author": null,
-      "publishedAt": "2026-06-01T00:00:00.000Z",
-      "slug": "peridot",
-      "series": "peridot",
-      "sha256": "sha256:70e4767887728482297ab27c7cf5a217e2009742e082c13844cfd3ce302efecc"
+      "sha256": "sha256:e1db2955741a8aedc818804cc0e9e3a127551eb2c87415095fe8b6eeaba40c5d"
     },
     {
       "path": "ontology/me/connexion.md",
@@ -45,7 +35,7 @@
       "publishedAt": "2026-04-30T00:00:00.000Z",
       "slug": "connexion",
       "series": null,
-      "sha256": "sha256:3e1b1bd4d900204ccdb0ac75d734c02fcb046e2aca9ea43e7ee58538538ba46b"
+      "sha256": "sha256:7343a4ade06391b24c11883853565a133ea5f6a6c5b9490cbe6fb23178bd9146"
     },
     {
       "path": "ontology/me/origins.md",
@@ -65,7 +55,7 @@
       "publishedAt": "2026-07-11T00:00:00.000Z",
       "slug": "praxis",
       "series": null,
-      "sha256": "sha256:7d243df86523e03bf9103e49fa5ddd3006281a7b2b71cd14c270f659866b2aa3"
+      "sha256": "sha256:77ade6955ba9e4ad3c7ccbb1bb68102132b09a89a20b09cb856799ebbd245956"
     },
     {
       "path": "ontology/me/trials-of-job.md",
@@ -98,16 +88,6 @@
       "sha256": "sha256:6e424cd43a5c51698c16396e648d0cd5fe74919bbcb45974563d493245a5e7f6"
     },
     {
-      "path": "ontology/narrative/comment/polite-bureau.md",
-      "stage": "published",
-      "title": "Polite Bureau",
-      "author": null,
-      "publishedAt": "2026-07-06T00:00:00.000Z",
-      "slug": "polite-bureau",
-      "series": "Polite Bureau",
-      "sha256": "sha256:bb30bfe33a60b5f62ecfc71d70cdf2002c1b135ea7309fdf627b513095e8a799"
-    },
-    {
       "path": "ontology/narrative/comment/Tenable.md",
       "stage": "published",
       "title": "The Tenable",
@@ -115,7 +95,7 @@
       "publishedAt": "2026-07-06T00:00:00.000Z",
       "slug": "tenable",
       "series": "Polite Bureau",
-      "sha256": "sha256:6cfb5a449e34d915551ba67a3bbc6797eee9f35de614a3ec0d0c2960f41bcfa6"
+      "sha256": "sha256:eaa41ccbcd8aae043616569ac942cd5cbc9123e8da00a2a9597e4dff8bfe0afd"
     }
   ],
   "signature": null

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { isStageIncludedInBuild, normalizeStage } from "@/lib/content-tier";
+import { sortEssayStubsChronological } from "@/lib/essay-date";
 import {
   getProfileData,
   getEssayInTopic,
@@ -232,16 +233,20 @@ function EditorialPlateFigure({
   imageAlt,
   imagePosition,
   imageClip,
+  imagePlate,
 }: {
   image: string;
   imageAlt: string;
   imagePosition?: string;
   imageClip?: string;
+  imagePlate?: string;
 }) {
+  const isWidePlate = imagePlate?.trim().toLowerCase() === "wide";
   return (
     <figure
       className={[
         "p3-narrative-figure p3-narrative-figure--plate",
+        isWidePlate ? "p3-narrative-figure--plate-wide" : "",
         imageClip === "circle" ? "p3-narrative-figure--plate-circle" : "",
       ]
         .filter(Boolean)
@@ -295,6 +300,23 @@ function headingText(children: ReactNode): string {
   return "";
 }
 
+function headingAnchor(text: string): string {
+  return text
+    .normalize("NFKD")
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function glossaryTerms(content: string): { title: string; anchor: string }[] {
+  return [...content.matchAll(/^##\s+(.+?)\s*$/gm)]
+    .map((match) => match[1]?.trim())
+    .filter((title): title is string => Boolean(title))
+    .map((title) => ({ title, anchor: headingAnchor(title) }))
+    .sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }));
+}
+
 type ConnexionLinks = {
   voiceUrl?: string;
   messageUrl?: string;
@@ -313,6 +335,7 @@ function NarrativeEssayBody({
   imageRole = "figure",
   imagePosition,
   imageClip,
+  imagePlate,
   blockquoteFlow = false,
   content,
   components,
@@ -324,6 +347,7 @@ function NarrativeEssayBody({
   imageRole?: string;
   imagePosition?: string;
   imageClip?: string;
+  imagePlate?: string;
   blockquoteFlow?: boolean;
   content: string;
   components: Components;
@@ -343,6 +367,7 @@ function NarrativeEssayBody({
         imageAlt={imageAlt}
         imagePosition={imagePosition}
         imageClip={imageClip}
+        imagePlate={imagePlate}
       />
     ) : null;
 
@@ -470,11 +495,14 @@ export default async function OntologyArchive({ params }: PageProps) {
 }
 
 function listHubEssays(config: ContentHubConfig): EssayStub[] {
-  return config.mode === "folder"
-    ? listEssaysInTopicFolderForBuild([...config.ontologyTopicPath], {
-        series: config.seriesSlug,
-      })
-    : listEssaysBySeriesForBuild(config.seriesName);
+  const essays =
+    config.mode === "folder"
+      ? listEssaysInTopicFolderForBuild([...config.ontologyTopicPath], {
+          series: config.seriesSlug,
+        })
+      : listEssaysBySeriesForBuild(config.seriesName);
+
+  return config.navChronological ? sortEssayStubsChronological(essays) : essays;
 }
 
 function renderContentHub(route: ContentHubRoute) {
@@ -483,17 +511,27 @@ function renderContentHub(route: ContentHubRoute) {
 
   const essays = listHubEssays(config);
   const latestSlug = pickLatestEssaySlug(essays);
+  const topicPath = config.mode === "folder" ? [...config.ontologyTopicPath] : [];
+
+  const landerEssay =
+    config.mode === "folder" ? getEssayInTopic(topicPath, config.landerSlug) : null;
+  // Sequential hubs open on the first essay in order; otherwise prefer a lander, then latest.
+  const hubIndexSlug = landerEssay
+    ? config.landerSlug
+    : config.sequentialNav
+      ? essays[0]?.slug ?? null
+      : latestSlug;
 
   const essaySlug =
     routeEssaySlug === null || routeEssaySlug === config.landerSlug
-      ? latestSlug
+      ? hubIndexSlug
       : routeEssaySlug;
 
   if (!essaySlug) return notFound();
 
   let activeEssay: EssayData | null = null;
   if (config.mode === "folder") {
-    activeEssay = getEssayInTopic([...config.ontologyTopicPath], essaySlug);
+    activeEssay = getEssayInTopic(topicPath, essaySlug);
   }
   if (!activeEssay) {
     activeEssay = getProfileData([essaySlug]);
@@ -513,6 +551,7 @@ function renderContentHub(route: ContentHubRoute) {
       topicPath={publicTopicPath}
       navKicker={config.navKicker}
       showNavIndex={config.sequentialNav === true}
+      showNavDate={config.showNavDate === true}
       essays={essays}
       activeSlug={essaySlug}
       activeEssay={activeEssay}
@@ -530,6 +569,7 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
   const imagePosition =
     typeof frontmatter.imagePosition === "string" ? frontmatter.imagePosition : undefined;
   const imageClip = typeof frontmatter.imageClip === "string" ? frontmatter.imageClip : undefined;
+  const imagePlate = typeof frontmatter.imagePlate === "string" ? frontmatter.imagePlate : undefined;
   const visual = typeof frontmatter.visual === "string" ? frontmatter.visual : undefined;
 
   const connexionFit = visual === "connexion-contact";
@@ -562,6 +602,7 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
           imageRole={connexionFit ? undefined : imageRole}
           imagePosition={connexionFit ? undefined : imagePosition}
           imageClip={connexionFit ? undefined : imageClip}
+          imagePlate={connexionFit ? undefined : imagePlate}
           blockquoteFlow={blockquoteInsetFlows(frontmatter as Record<string, unknown>)}
           content={content}
           components={components}
@@ -577,6 +618,7 @@ function TopicLayout({
   topicPath,
   navKicker,
   showNavIndex = false,
+  showNavDate = false,
   essays,
   activeSlug,
   activeEssay,
@@ -584,6 +626,7 @@ function TopicLayout({
   topicPath: string[];
   navKicker?: string;
   showNavIndex?: boolean;
+  showNavDate?: boolean;
   essays: EssayStub[];
   activeSlug: string;
   activeEssay: EssayData;
@@ -610,40 +653,91 @@ function TopicLayout({
   const imagePosition =
     typeof frontmatter.imagePosition === "string" ? frontmatter.imagePosition : undefined;
   const imageClip = typeof frontmatter.imageClip === "string" ? frontmatter.imageClip : undefined;
+  const imagePlate = typeof frontmatter.imagePlate === "string" ? frontmatter.imagePlate : undefined;
   const visual = typeof frontmatter.visual === "string" ? frontmatter.visual : undefined;
 
   const leadFeatureClass = leadImageFeatureModifier((frontmatter as Record<string, unknown>).image_feature);
-  const components = buildConnexionComponents(visual, leadFeatureClass);
+  const isGlossary = activeSlug === "canon" && frontmatter.type === "reference";
+  const terms = isGlossary ? glossaryTerms(content) : [];
+  const baseComponents = buildConnexionComponents(visual, leadFeatureClass);
+  const components: Components = isGlossary
+    ? {
+        ...baseComponents,
+        h2: ({ children, ...props }) => (
+          <h2 {...props} id={headingAnchor(headingText(children))}>
+            {children}
+          </h2>
+        ),
+      }
+    : baseComponents;
 
-  const activeKickerLabel = navKicker ?? topicPath[topicPath.length - 1]?.toUpperCase() ?? "INDEX";
+  const activeKickerLabel = isGlossary
+    ? "GLOSSARY"
+    : navKicker ?? topicPath[topicPath.length - 1]?.toUpperCase() ?? "INDEX";
 
   return (
     <div className="p3-topic-canvas">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentJsonLd(frontmatter, did, canonicalUrl) }} />
-      <nav className="p3-topic-nav" aria-label="Essays in this topic">
+      <nav
+        className={`p3-topic-nav${showNavIndex ? " p3-topic-nav--sequential" : ""}${showNavDate ? " p3-topic-nav--temporal" : ""}${isGlossary ? " p3-topic-nav--glossary" : ""}`}
+        aria-label={isGlossary ? "Glossary terms" : "Essays in this topic"}
+      >
         <div className="p3-topic-nav__sticky">
           <p className="p3-topic-nav__kicker">{activeKickerLabel}</p>
+          {showNavIndex && (
+            <p className="p3-topic-nav__seq-note" aria-hidden="true">
+              Read in order
+            </p>
+          )}
+          {showNavDate && (
+            <p className="p3-topic-nav__temporal-note" aria-hidden="true">
+              Ça va ?
+            </p>
+          )}
           <ul className="p3-topic-nav__list">
-            {essays.map((e, index) => {
-              const isActive = e.slug === activeSlug;
-              const indexLabel = String(index + 1).padStart(2, "0");
-              return (
-                <li key={e.slug}>
-                  <Link
-                    href={`${basePath}/${e.slug}`}
-                    className={`p3-topic-nav__link${isActive ? " is-active" : ""}`}
-                    aria-current={isActive ? "page" : undefined}
-                  >
-                    {showNavIndex && (
-                      <span className="p3-topic-nav__index" aria-hidden="true">
-                        {indexLabel}
-                      </span>
-                    )}
-                    {e.title}
-                  </Link>
-                </li>
-              );
-            })}
+            {isGlossary
+              ? terms.map((term) => (
+                  <li key={term.anchor}>
+                    <a href={`#${term.anchor}`} className="p3-topic-nav__link">
+                      {term.title}
+                    </a>
+                  </li>
+                ))
+              : essays.map((e, index) => {
+                  const isActive = e.slug === activeSlug;
+                  const indexLabel = String(index);
+                  const dateLabel = showNavDate ? e.dateLabel : undefined;
+                  return (
+                    <li key={e.slug}>
+                      <Link
+                        href={`${basePath}/${e.slug}`}
+                        className={`p3-topic-nav__link${isActive ? " is-active" : ""}`}
+                        aria-current={isActive ? "page" : undefined}
+                        aria-label={
+                          showNavIndex
+                            ? `Part ${index}: ${e.title}`
+                            : dateLabel
+                              ? `${e.title}, ${dateLabel}`
+                              : e.title
+                        }
+                      >
+                        {showNavIndex && (
+                          <span className="p3-topic-nav__index" aria-hidden="true">
+                            {indexLabel}
+                          </span>
+                        )}
+                        <span className="p3-topic-nav__label">
+                          <span className="p3-topic-nav__title">{e.title}</span>
+                          {dateLabel && e.dateIso && (
+                            <time className="p3-topic-nav__date" dateTime={e.dateIso}>
+                              {dateLabel}
+                            </time>
+                          )}
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
           </ul>
         </div>
       </nav>
@@ -674,6 +768,7 @@ function TopicLayout({
           imageRole={bodyImageRole}
           imagePosition={imagePosition}
           imageClip={imageClip}
+          imagePlate={imagePlate}
           blockquoteFlow={blockquoteInsetFlows(frontmatter as Record<string, unknown>)}
           content={content}
           components={components}

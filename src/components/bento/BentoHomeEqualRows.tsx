@@ -10,16 +10,21 @@ import { cn } from "@/lib/utils";
 
 const MD_MIN = 768;
 const WIDE_MQ = `(min-width: ${MD_MIN}px)`;
-/** Matches `pb-8` on `.p3-landing-home`. */
-const LANDING_BOTTOM_PAD_PX = 32;
 const MIN_ROW_PX = 180;
+/** Read landing bottom pad from CSS so equal-row height leaves breathing room below cards. */
+function getLandingBottomPadPx(): number {
+  const home = document.querySelector(".p3-landing-home");
+  if (!home) return 48;
+  const pad = parseFloat(getComputedStyle(home).paddingBottom);
+  return Number.isFinite(pad) && pad > 0 ? pad : 48;
+}
 
 function getAvailableRowHeight(): number {
   if (typeof window === "undefined") return Number.POSITIVE_INFINITY;
   const header = document.querySelector(".p3-landing-hero");
   const viewportH = window.visualViewport?.height ?? window.innerHeight;
   const top = header?.getBoundingClientRect().bottom ?? 0;
-  return Math.max(0, Math.floor(viewportH - top - LANDING_BOTTOM_PAD_PX));
+  return Math.max(0, Math.floor(viewportH - top - getLandingBottomPadPx()));
 }
 
 function subscribeWideMq(onStoreChange: () => void): () => void {

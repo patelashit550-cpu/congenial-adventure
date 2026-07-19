@@ -24,7 +24,6 @@ tags:
   - economy
   - technology
 ---
-## Social It Be In The End
 
 Acts I and II were a retrospective of my life so far—detailing my beginnings and career while tracing the fundamental tensions we all face as we express ourselves within that singular constraint described by the social sciences: the tension between self-sovereignty and collectivism.
 
@@ -43,7 +42,7 @@ It is relatively easy to reach middle age with your idealism intact from within 
 
 I have generally been good at drawing boundaries around work. Mostly, this involved refusing promotions into the bureaucratic roles beyond engineering—which is exactly where all the real learning happened as software architecture rapidly evolved. The most pertinent shift was the transition from Waterfall to Agile and DevOps methods, driven by a marketplace demanding relentless application innovation. It became imperative that build decisions were grounded in objective metrics traceable to customer experience. In that milieu, you looked beyond your day job—into spaces like the emerging crypto world—for answers that contrasted with the arbitrary, often crudely political, split-the-difference decision-making required to defend corporate turf.
 
-I used the rest of my time to absorb ideas. Some might consider them obscurely intellectual or philosophical, alongside the physical and mental fitness protocols that hold traction in our high-performance kaizen ecology of self-improvement. These paths converge on the same essential discipline: praxis.
+I used the rest of my time to absorb ideas. Some might consider them obscurely intellectual or philosophical, alongside the physical and mental fitness protocols that hold traction in our high-performance kaizen ecology of self-improvement. Similarly I immersed myself in pursuits that forced a reckoning with risk in a variety of contexts; forcing intuition, impulse and instinct to steer: motorcycling, snowboarding, backcountry exploration, improvisation. These paths converged on the same essential discipline: praxis. Paths that orthodox behavior would have even foreclosed entirely.
 
 Praxis brings fluidity to practice. It requires a loose fit rather than formal legitimacy, offering the leeway needed to explore the terrain of the social network—where so much extractable value lies hidden in the edge cases. Exploring these edges ultimately yields good architecture (_firmitas_)—a visual and structural harmony aligned with the broadest consensus: nature. This discipline is critical today as our networks develop a form of consciousness that requires universal protocols to safely and autonomously govern our interactions without neglecting the marginalized—including our ecology. Praxis, then, is the mobility and suppleness that keep architecture resilient rather than rigid, preventing it from becoming brittle or fragile. Ultimately, it facilitates the evolution of a body by allowing 気 (_ki_, or the lifeforce) to flow freely to wherever it is required.
 

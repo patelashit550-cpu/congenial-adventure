@@ -40,10 +40,10 @@ These four pillars can map directly to system layers.
 
 Two intertwined data bodies:
 
-| Type                     | Description                                        | Example Inputs                                               | Use                                         |
-| ------------------------ | -------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| **Stone Rose (static)**  | Canonical profile: persistent truths               | genetic/medical records, educational history, verified ID, asset base | Baseline model of personhood — “what is”    |
-| **Redcurrant (dynamic)** | Real-time flow: behaviour, sentiment, transactions | spending, sleep, mobility, social activity, physiological data | Continuous state updates — “how it’s going” |
+| Type                     | Description                                                                             | Example Inputs                                                        | Use                                         |
+| ------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------- |
+| **Stone Rose (static)**  | Canonical profile: persistent truths defined as on-chain and immutable transaction data | genetic/medical records, educational history, verified ID, asset base | Baseline model of personhood — “what is”    |
+| **Redcurrant (dynamic)** | Real-time flow: behaviour, sentiment, transactions                                      | spending, sleep, mobility, social activity, physiological data        | Continuous state updates — “how it’s going” |
 
 The **“redcurrant quality metric”** could be a composite *State Quality Index* (SQI) built from:
 

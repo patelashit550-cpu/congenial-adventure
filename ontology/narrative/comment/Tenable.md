@@ -30,7 +30,9 @@ lexica:
 > The colors of the other fools before you  
 > And skin keeps turning different shades of red  
 > The colors of the other voice that's swimming in your head  
->   
+>
+> ---
+>
 > Your hands keep turning lighter shades of white  
 > The color of the temperature that's dropping every night  
 > Your pair of shoes are turning back to black  
@@ -56,7 +58,7 @@ Collectively we executed over the course of the last 2,000 years the most extrao
 
 Before Christ we measured time in epochs or eras as the dynasties of truly powerful and seemingly permanent authority. The potentates who commanded truly arbitrary power over ordinary people. I cannot *imagine* the suffering of the millions who were subject to the arbitrariness of authority delegated by such Kings.
 
-Those Pharaohs are long gone. Moses parted the seas so that we may cross. The wisdom and courage of Solomon and David were granted to us and then came the *Messiah* who preached all you need is love. Corporate and government Caesars today are such that we may brush past them and their outstretched hand on the street without fear of retribution.
+Those Pharaohs are long gone. Moses forged a way. The wisdom and courage of Solomon and David were granted to us, and then came the Messiah who preached love. The Caesars of today—cast as giants of corporate and government domain—are now reduced to such a state that we may simply brush past them and their outstretched hands on the street, entirely without fear of retribution. We may instead align *directly* with the ecology of creation without their hapless intermediation. Without their notifications and messages to instead walk with God.
 
 The vast majority of us are granted modern conveniences that the kings of old could only *imagine*. Not a single one if given the chance would turn away the opportunity of returning as an ordinary run of the mill person living in the comfort of modern suburbia. Such are the wonders of the ordinary world.
 

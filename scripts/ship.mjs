@@ -29,6 +29,10 @@ function run(label, command, cmdArgs = [], opts = {}) {
     encoding: "utf8",
   });
   if (result.status !== 0) {
+    if (opts.inherit === false) {
+      if (result.stdout?.trim()) console.error(result.stdout.trim());
+      if (result.stderr?.trim()) console.error(result.stderr.trim());
+    }
     console.error(`ship: failed at ${label}`);
     process.exit(result.status ?? 1);
   }
@@ -60,14 +64,14 @@ if (push) {
     "package-lock.json",
     "scripts/ship.mjs",
   ];
-  run("git add", "git", ["-A", "--", ...paths], { inherit: false });
-  const status = run("git status", "git", ["--porcelain"], { inherit: false });
+  run("git add", "git", ["add", "-A", "--", ...paths], { inherit: false });
+  const status = run("git status", "git", ["status", "--porcelain"], { inherit: false });
   if (!status.stdout?.trim()) {
     console.log("ship: nothing to commit");
     process.exit(0);
   }
-  run("git commit", "git", ["-m", message], { inherit: false });
-  run("git push", "git", ["origin", "main"]);
+  run("git commit", "git", ["commit", "-m", message], { inherit: false });
+  run("git push", "git", ["push", "origin", "main"]);
   console.log("ship: pushed — GitHub Pages deploy in ~2–3 min");
 } else {
   console.log("ship: build ok — commit and push when ready (npm run ship -- --push -m \"…\")");

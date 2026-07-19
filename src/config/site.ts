@@ -73,10 +73,10 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     titleVisualSrc: withBasePath("/visuals/bento-gem-emerald.png"),
     titleVisualAlt: "Gem — Utilitas",
     series: [
-      { name: "Carta", desc: "Canon", dataPoint: "0xBF5", href: "/governance/carta" },
-      { name: "Semper Idem", desc: "Identity", dataPoint: "0xBF1", href: "/governance/identity" },
+      { name: "Carta", desc: "Introduction", dataPoint: "0xBF5", href: "/governance/carta" },
+      { name: "Semper Idem", desc: "Intelligence", dataPoint: "0xBF1", href: "/governance/intelligence" },
       { name: "E Pluribus Unum", desc: "Capital", dataPoint: "0xBF3", href: "/governance/capital" },
-      { name: "Sine Qua Non", desc: "Intelligence", dataPoint: "0xBF2", href: "/governance/intelligence" },
+      { name: "Sine Qua Non", desc: "Identity", dataPoint: "0xBF2", href: "/governance/identity" },
       { name: "Peridot", desc: "Terms & Conditions", dataPoint: "0xBF4", href: "/governance/peridot" },
     ],
   },

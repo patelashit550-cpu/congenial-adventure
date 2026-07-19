@@ -12,7 +12,6 @@ date: 2025-12-29T00:00:00.000Z
 tags:
   - practice
   - action
-  - cause and affect
   - domestic
   - local
   - pragmatism
