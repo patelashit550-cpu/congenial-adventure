@@ -1870,14 +1870,14 @@
 .p3-bento-shell .bento-card-nav {
   gap: calc(0.68rem * var(--p3-bento-list-s));
   margin-top: 0.08rem;
-  padding-top: 0.14rem;
+  padding-top: 0.85rem;
 }
 
 @media (min-width: 640px) {
   .p3-bento-shell .bento-card-nav {
     gap: calc(0.8rem * var(--p3-bento-list-s));
     margin-top: 0.1rem;
-    padding-top: 0.16rem;
+    padding-top: 1rem;
   }
 }
 
