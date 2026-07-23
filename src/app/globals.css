@@ -1741,9 +1741,12 @@
 }
 
 .bento-box-kicker {
-  font-size: 9px;
+  font-size: 18px;
   font-weight: 700;
   color: #52525b;
+  transition:
+    color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    text-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .bento-box-kicker__script {
@@ -1756,9 +1759,17 @@
   text-transform: none;
 }
 
+.jurisdiction-card:hover .bento-box-kicker,
+.jurisdiction-card:focus-within .bento-box-kicker {
+  color: #a1a1aa;
+  text-shadow:
+    0 0 3px rgba(255, 255, 255, 0.22),
+    0 0 8px rgba(255, 255, 255, 0.1);
+}
+
 .bento-box-subtitle {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: none;
   color: #71717a;
@@ -1792,12 +1803,12 @@
 }
 
 .p3-bento-shell .bento-title-accent-line {
-  margin-top: 0.65rem;
+  margin-top: 0.28rem;
 }
 
 @media (min-width: 640px) {
   .p3-bento-shell .bento-title-accent-line {
-    margin-top: 0.85rem;
+    margin-top: 0.35rem;
   }
 }
 
@@ -1840,15 +1851,15 @@
 
 .p3-bento-shell .bento-card-nav {
   gap: calc(0.68rem * var(--p3-bento-list-s));
-  margin-top: 0.45rem;
-  padding-top: 0.5rem;
+  margin-top: 0.18rem;
+  padding-top: 0.28rem;
 }
 
 @media (min-width: 640px) {
   .p3-bento-shell .bento-card-nav {
     gap: calc(0.8rem * var(--p3-bento-list-s));
-    margin-top: 0.5rem;
-    padding-top: 0.55rem;
+    margin-top: 0.2rem;
+    padding-top: 0.32rem;
   }
 }
 
@@ -1961,6 +1972,46 @@
   }
 }
 
+.p3-bento-shell .bento-card-surface {
+  padding-bottom: 0.85rem;
+}
+
+@media (min-width: 1024px) {
+  .p3-bento-shell .jurisdiction-card.bento-card-surface {
+    padding-bottom: 0.85rem;
+  }
+}
+
+.bento-box-colophon {
+  margin: auto 0 0;
+  padding-top: 0.7rem;
+  align-self: flex-end;
+  text-align: right;
+  font-size: 0.735rem;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  color: #34d399;
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .bento-box-colophon {
+    font-size: 0.78rem;
+  }
+}
+
+.p3-bento-shell .bento-box-colophon {
+  font-size: 0.735rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 640px) {
+  .p3-bento-shell .bento-box-colophon {
+    font-size: 0.78rem;
+  }
+}
+
 .p3-bento-shell .jurisdiction-card .bento-box-title {
   font-size: 1.25rem;
   line-height: 1.15;
@@ -1973,7 +2024,7 @@
 }
 
 .p3-bento-shell .bento-box-subtitle {
-  font-size: 14px;
+  font-size: 21px;
   line-height: 1.25;
 }
 
@@ -2468,7 +2519,7 @@
   border-radius: 2px;
 }
 
-/* Canon glossary — compact alphabetical anchor index */
+/* Canonical glossary — compact alphabetical anchor index */
 .p3-topic-nav--glossary .p3-topic-nav__list {
   gap: 0.35rem;
 }

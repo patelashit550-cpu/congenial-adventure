@@ -7,14 +7,19 @@
  *   npm run ship -- --push -m "Publish Praxis."
  *   npm run ship -- --ipfs          (Pinata upload after build; needs PINATA_JWT in .env.local)
  *   npm run ship -- --push --ipfs
+ *   npm run ship -- --skip-canon    (bypass Canonical freshness gate)
  *
  * GitHub Actions on push to main builds and deploys Pages → ashitmilne.xyz.
+ *
+ * Before build: canon:check — fails if published essays changed since last
+ * `npm run canon:generate` (so you don't ship without refreshing Canonical).
  */
 import { spawnSync } from "node:child_process";
 
 const args = process.argv.slice(2);
 const push = args.includes("--push");
 const ipfs = args.includes("--ipfs");
+const skipCanon = args.includes("--skip-canon");
 const messageIdx = args.indexOf("-m");
 const message =
   messageIdx >= 0 && args[messageIdx + 1]
@@ -22,9 +27,14 @@ const message =
     : `ship ${new Date().toISOString().slice(0, 10)}`;
 
 function run(label, command, cmdArgs = [], opts = {}) {
-  const result = spawnSync(command, cmdArgs, {
+  const useShell = process.platform === "win32";
+  // Windows shell mode strips arg quoting; re-quote args with spaces so e.g. -m "a b" survives.
+  const safeArgs = useShell
+    ? cmdArgs.map((a) => (/\s/.test(a) ? `"${a.replace(/"/g, '\\"')}"` : a))
+    : cmdArgs;
+  const result = spawnSync(command, safeArgs, {
     stdio: opts.inherit === false ? "pipe" : "inherit",
-    shell: process.platform === "win32",
+    shell: useShell,
     cwd: process.cwd(),
     encoding: "utf8",
   });
@@ -37,6 +47,12 @@ function run(label, command, cmdArgs = [], opts = {}) {
     process.exit(result.status ?? 1);
   }
   return result;
+}
+
+if (!skipCanon) {
+  run("canon:check", "npm", ["run", "canon:check"]);
+} else {
+  console.warn("ship: skipping canon:check (--skip-canon)");
 }
 
 run("content:attest", "npm", ["run", "content:attest"]);
@@ -63,6 +79,10 @@ if (push) {
     "package.json",
     "package-lock.json",
     "scripts/ship.mjs",
+    "scripts/generate-corpus-graph.mjs",
+    "scripts/generate-canon.mjs",
+    "scripts/check-canon-stale.mjs",
+    "scripts/data/canon-generated.json",
   ];
   run("git add", "git", ["add", "-A", "--", ...paths], { inherit: false });
   const status = run("git status", "git", ["status", "--porcelain"], { inherit: false });

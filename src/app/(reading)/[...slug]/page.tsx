@@ -657,7 +657,9 @@ function TopicLayout({
   const visual = typeof frontmatter.visual === "string" ? frontmatter.visual : undefined;
 
   const leadFeatureClass = leadImageFeatureModifier((frontmatter as Record<string, unknown>).image_feature);
-  const isGlossary = activeSlug === "canon" && frontmatter.type === "reference";
+  const isGlossary =
+    (activeSlug === "canonical" || activeSlug === "canon") &&
+    frontmatter.type === "reference";
   const terms = isGlossary ? glossaryTerms(content) : [];
   const baseComponents = buildConnexionComponents(visual, leadFeatureClass);
   const components: Components = isGlossary

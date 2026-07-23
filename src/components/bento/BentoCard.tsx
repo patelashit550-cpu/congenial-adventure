@@ -26,6 +26,8 @@ interface BentoProps {
   children?: React.ReactNode
   /** Parent frame has a fixed row height; we set a pixel `max-height` on the list so it can scroll. */
   equalRow?: boolean
+  /** Bottom-left colophon (Ab MCMLXIX) — Identity / B1 only. */
+  showColophon?: boolean
 }
 
 function assignRef<T>(r: ForwardedRef<T> | null, el: T | null) {
@@ -44,6 +46,7 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
   items,
   children,
   equalRow = false,
+  showColophon = false,
   },
   ref
 ) {
@@ -220,6 +223,12 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
             </>
           )}
         </nav>
+
+        {showColophon && (
+          <p className="bento-box-colophon" lang="la">
+            Ab MCMLXIX
+          </p>
+        )}
       </div>
     </div>
   );

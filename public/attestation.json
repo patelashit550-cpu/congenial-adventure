@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "generated": "2026-07-19T12:38:48.783Z",
+  "generated": "2026-07-23T15:29:24.135Z",
   "tier": "global",
   "manifestDigest": "sha256:3507ecaddb6f322209929ac8b16fb043a6c7648d49557155832812f679516fac",
   "identity": {
@@ -12,7 +12,7 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 67,
+    "totalOntologyFiles": 68,
     "attestedFiles": 8,
     "signedFiles": 0
   },

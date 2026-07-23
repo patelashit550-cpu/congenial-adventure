@@ -28,8 +28,18 @@ enabled (Dashboard → AI Crawl Control → Markdown for Agents).
 - Agent skills index: `/.well-known/agent-skills/index.json`
 - Provenance (SNS / Sol.site / attestation): `/.well-known/provenance.json`
 - Corpus attestation manifest: `/attestation.json`
+- Corpus graph (single network node + interior mesh): `/.well-known/corpus-graph.json`
 - Auth / collaboration: `/auth.md`
 - Contact: `ash@transition-insight.com` via `/.well-known/security.txt`
+
+## Corpus as one network node
+
+Agents should treat Transition Insight as **one** Semper Idem node on the
+broader network. `/.well-known/corpus-graph.json` exposes that node
+(`networkNode`) and its **interior** graph: published/canonical essays plus
+structural (series/folder/tags), explicit (`[[wikilinks]]`, `lexica:`), and
+soft Canon-mention edges. Attestation remains the hash truth of what is
+published; the graph is the navigational map inside the node.
 
 ## Provenance for milling agents
 

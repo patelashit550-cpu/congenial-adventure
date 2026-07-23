@@ -188,6 +188,7 @@ export function BentoHomeEqualRows({ visible }: Props) {
               titleVisualSrc={section.titleVisualSrc}
               titleVisualAlt={section.titleVisualAlt}
               items={items}
+              showColophon={key === "B1"}
             />
           </div>
         );
