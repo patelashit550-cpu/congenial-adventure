@@ -185,9 +185,10 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
         )}
       </div>
 
-      <p className="bento-box-subtitle">{subtitle}</p>
-
-      <div className="bento-title-accent-line" aria-hidden />
+      <div className="bento-header-category">
+        <p className="bento-box-subtitle">{subtitle}</p>
+        <div className="bento-title-accent-line" aria-hidden />
+      </div>
     </>
   );
 
