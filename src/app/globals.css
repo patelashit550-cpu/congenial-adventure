@@ -1900,7 +1900,7 @@
 .bento-category-title {
   margin: 0;
   padding: 0;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.12;
   letter-spacing: 0.02em;
@@ -1911,7 +1911,7 @@
 
 @media (min-width: 640px) {
   .bento-category-title {
-    font-size: 1rem;
+    font-size: 0.925rem;
   }
 }
 
@@ -1934,12 +1934,12 @@
 
 .p3-bento-shell .bento-category-title {
   line-height: 1.1;
-  font-size: 0.98rem;
+  font-size: 0.9rem;
 }
 
 @media (min-width: 640px) {
   .p3-bento-shell .bento-category-title {
-    font-size: 1.04rem;
+    font-size: 0.96rem;
   }
 }
 
