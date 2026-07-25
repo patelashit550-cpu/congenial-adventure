@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-23T17:33:08.131Z",
+  "generated": "2026-07-25T21:29:47.115Z",
   "tier": "global",
-  "manifestDigest": "sha256:3507ecaddb6f322209929ac8b16fb043a6c7648d49557155832812f679516fac",
+  "manifestDigest": "sha256:df474ae2d23648e655b87a6372c360f587d157ad047c0aa3a331115c92513917",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -13,7 +13,7 @@
   },
   "summary": {
     "totalOntologyFiles": 68,
-    "attestedFiles": 8,
+    "attestedFiles": 9,
     "signedFiles": 0
   },
   "attested": [
@@ -26,6 +26,16 @@
       "slug": "arete",
       "series": "peridot",
       "sha256": "sha256:e1db2955741a8aedc818804cc0e9e3a127551eb2c87415095fe8b6eeaba40c5d"
+    },
+    {
+      "path": "ontology/governance/illumination/social-network.md",
+      "stage": "published",
+      "title": "The Social Network",
+      "author": null,
+      "publishedAt": "2026-07-25T00:00:00.000Z",
+      "slug": "social-network",
+      "series": "peridot",
+      "sha256": "sha256:61dbf7fd1814e834181f762063c5786023451a566dd45294adbe873908a0f56d"
     },
     {
       "path": "ontology/me/connexion.md",

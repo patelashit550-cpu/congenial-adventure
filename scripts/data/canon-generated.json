@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-07-22T15:07:05.847Z",
-  "essayCount": 8,
+  "generatedAt": "2026-07-25T21:28:01.832Z",
+  "essayCount": 9,
   "essays": [
     "governance/illumination/arete.md",
+    "governance/illumination/social-network.md",
     "me/connexion.md",
     "me/origins.md",
     "me/praxis.md",
@@ -18,11 +19,11 @@
     {
       "term": "Alignment",
       "method": "extractive-synthesis",
-      "score": 8,
+      "score": 9,
       "sources": [
-        "governance/illumination/arete.md"
+        "governance/illumination/social-network.md"
       ],
-      "snippetCount": 3
+      "snippetCount": 4
     },
     {
       "term": "Alpha",
@@ -48,8 +49,9 @@
     {
       "term": "Anima",
       "method": "extractive",
-      "score": 15,
+      "score": 19,
       "sources": [
+        "governance/illumination/social-network.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md"
@@ -59,9 +61,10 @@
     {
       "term": "Animus",
       "method": "extractive-synthesis",
-      "score": 16,
+      "score": 20,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md"
       ],
@@ -108,9 +111,10 @@
     {
       "term": "Autonomy",
       "method": "extractive",
-      "score": 13,
+      "score": 18,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/praxis.md"
       ],
       "snippetCount": 4
@@ -127,11 +131,22 @@
       "snippetCount": 4
     },
     {
+      "term": "Calling",
+      "method": "extractive-synthesis",
+      "score": 9,
+      "sources": [
+        "governance/illumination/social-network.md",
+        "narrative/biography/ashit-milne.md"
+      ],
+      "snippetCount": 3
+    },
+    {
       "term": "Capital",
       "method": "extractive",
-      "score": 35,
+      "score": 43,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/origins.md",
         "me/praxis.md",
         "me/trials-of-job.md",
@@ -143,9 +158,10 @@
     {
       "term": "Commons",
       "method": "extractive-synthesis",
-      "score": 21,
+      "score": 26,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md"
@@ -167,10 +183,11 @@
     },
     {
       "term": "Flow",
-      "method": "extractive-synthesis",
-      "score": 30,
+      "method": "extractive",
+      "score": 38,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/origins.md",
         "me/praxis.md",
         "me/trials-of-job.md",
@@ -182,9 +199,10 @@
     {
       "term": "Giants",
       "method": "extractive",
-      "score": 16,
+      "score": 22,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "narrative/biography/ashit-milne.md",
         "narrative/comment/Tenable.md"
       ],
@@ -193,9 +211,10 @@
     {
       "term": "Governance",
       "method": "extractive",
-      "score": 74,
+      "score": 79,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/origins.md",
         "me/praxis.md",
         "me/trials-of-job.md",
@@ -208,9 +227,10 @@
     {
       "term": "Identity",
       "method": "extractive",
-      "score": 47,
+      "score": 55,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/origins.md",
         "me/praxis.md",
         "me/trials-of-job.md",
@@ -261,6 +281,15 @@
       "snippetCount": 1
     },
     {
+      "term": "Matthew Effect",
+      "method": "extractive-synthesis",
+      "score": 8,
+      "sources": [
+        "governance/illumination/social-network.md"
+      ],
+      "snippetCount": 4
+    },
+    {
       "term": "Moral Injury",
       "method": "extractive-synthesis",
       "score": 12,
@@ -282,9 +311,10 @@
     {
       "term": "Perimeter",
       "method": "extractive-synthesis",
-      "score": 21,
+      "score": 26,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/origins.md",
         "me/praxis.md",
         "narrative/biography/ashit-milne.md",
@@ -295,8 +325,9 @@
     {
       "term": "Political Economy",
       "method": "extractive-synthesis",
-      "score": 47,
+      "score": 51,
       "sources": [
+        "governance/illumination/social-network.md",
         "me/origins.md",
         "me/praxis.md",
         "me/trials-of-job.md",
@@ -318,8 +349,9 @@
     {
       "term": "Product",
       "method": "extractive-synthesis",
-      "score": 12,
+      "score": 16,
       "sources": [
+        "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md"
       ],
@@ -328,9 +360,10 @@
     {
       "term": "Project",
       "method": "extractive-synthesis",
-      "score": 25,
+      "score": 29,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-patel.md",
@@ -341,9 +374,10 @@
     {
       "term": "Protocol",
       "method": "extractive",
-      "score": 19,
+      "score": 25,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-patel.md"
@@ -353,13 +387,14 @@
     {
       "term": "Self-sovereign",
       "method": "extractive-synthesis",
-      "score": 12,
+      "score": 18,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md"
       ],
-      "snippetCount": 3
+      "snippetCount": 4
     },
     {
       "term": "Self-sovereignty",
@@ -373,13 +408,14 @@
     {
       "term": "Semantic Perimeter",
       "method": "extractive-synthesis",
-      "score": 20,
+      "score": 25,
       "sources": [
+        "governance/illumination/social-network.md",
         "me/praxis.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md"
       ],
-      "snippetCount": 3
+      "snippetCount": 4
     },
     {
       "term": "semantic perimeters of identity",
@@ -393,13 +429,14 @@
     {
       "term": "Semper Idem",
       "method": "extractive",
-      "score": 12,
+      "score": 16,
       "sources": [
+        "governance/illumination/social-network.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md"
       ],
-      "snippetCount": 3
+      "snippetCount": 4
     },
     {
       "term": "Social Credit",
@@ -412,10 +449,11 @@
     },
     {
       "term": "Social Network",
-      "method": "extractive-synthesis",
-      "score": 17,
+      "method": "extractive",
+      "score": 25,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md"
       ],
@@ -424,9 +462,10 @@
     {
       "term": "Sovereign",
       "method": "extractive-synthesis",
-      "score": 20,
+      "score": 27,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md"
@@ -463,24 +502,6 @@
       "snippetCount": 1
     },
     {
-      "term": "their architecture monolithic",
-      "method": "stub",
-      "score": 7,
-      "sources": [
-        "me/praxis.md"
-      ],
-      "snippetCount": 0
-    },
-    {
-      "term": "these risks and issues",
-      "method": "extractive-synthesis",
-      "score": 7,
-      "sources": [
-        "me/praxis.md"
-      ],
-      "snippetCount": 1
-    },
-    {
       "term": "transaction",
       "method": "extractive-synthesis",
       "score": 8,
@@ -505,9 +526,10 @@
     {
       "term": "Utility",
       "method": "extractive-synthesis",
-      "score": 32,
+      "score": 37,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
@@ -528,13 +550,14 @@
       "snippetCount": 4
     },
     {
-      "term": "Yoga Element",
+      "term": "Yield",
       "method": "extractive-synthesis",
-      "score": 7,
+      "score": 21,
       "sources": [
-        "narrative/biography/ashit-milne.md"
+        "governance/illumination/arete.md",
+        "governance/illumination/social-network.md"
       ],
-      "snippetCount": 3
+      "snippetCount": 4
     }
   ]
 }

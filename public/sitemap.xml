@@ -56,6 +56,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ashitmilne.xyz/governance/peridot/social-network/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ashitmilne.xyz/me/connexion/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

@@ -132,6 +132,17 @@
         }
       }
     },
+    "/governance/peridot/social-network": {
+      "get": {
+        "operationId": "get_governance_peridot_social_network",
+        "summary": "Read public page at /governance/peridot/social-network",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/me/connexion": {
       "get": {
         "operationId": "get_me_connexion",

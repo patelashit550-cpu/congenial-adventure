@@ -25,6 +25,7 @@
   --p3-essay-figure-block-gap: clamp(1.75rem, 3vw, 2.25rem);
   --p3-essay-subtitle-gap-below: 1.35rem;
   --p3-essay-plate-max: 800px;
+  --p3-essay-plate-wide-max: 56rem; /* reading-column width — wider than default plate, not full-bleed */
   --p3-essay-plate-gap: 2.5rem;
   --p3-essay-plate-radius: 4px;
   /* Narrative/header strip hovers — emerald-400 (same family as bento + accent line). */
@@ -1066,24 +1067,14 @@
   object-fit: cover;
 }
 
-/* Wide editorial plate — broader column + full bleed within article */
-@media (min-width: 1024px) {
-  .p3-narrative-article:has(.p3-narrative-figure--plate-wide),
-  .p3-topic-article:has(.p3-narrative-figure--plate-wide) {
-    max-width: 72rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .p3-narrative-article:has(.p3-narrative-figure--plate-wide),
-  .p3-topic-article:has(.p3-narrative-figure--plate-wide) {
-    max-width: 80rem;
-  }
-}
-
-.p3-narrative-figure--plate-wide,
-.p3-narrative-figure--plate-wide .p3-narrative-figure__img--plate {
-  max-width: 100%;
+/* Wide editorial plate — a step up from the default 800px cap, still within the reading column */
+.p3-narrative-figure.p3-narrative-figure--plate.p3-narrative-figure--plate-wide,
+.p3-narrative-figure.p3-narrative-figure--plate.p3-narrative-figure--plate-wide
+  .p3-narrative-figure__img--plate,
+.p3-narrative-figure.p3-narrative-figure--plate.p3-narrative-figure--plate-wide
+  .p3-narrative-figure__img {
+  width: 100%;
+  max-width: min(100%, var(--p3-essay-plate-wide-max, 42rem));
 }
 
 .p3-narrative-body--with-plate:has(.p3-narrative-figure--plate-wide) img.p3-inline-image--feature {
@@ -1741,7 +1732,7 @@
 }
 
 .bento-box-kicker {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   color: #52525b;
   transition:

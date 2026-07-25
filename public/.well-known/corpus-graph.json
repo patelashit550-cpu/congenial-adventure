@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T17:33:07.893Z",
+  "generatedAt": "2026-07-25T21:29:46.851Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,21 +14,21 @@
   },
   "interior": {
     "summary": {
-      "essays": 8,
-      "nodes": 87,
-      "edges": 164,
+      "essays": 9,
+      "nodes": 92,
+      "edges": 186,
       "byKind": {
-        "member-of-series": 4,
-        "member-of-folder": 8,
-        "tagged": 40,
+        "member-of-series": 5,
+        "member-of-folder": 9,
+        "tagged": 46,
         "lexica": 19,
-        "mention": 93
+        "mention": 107
       },
       "orphanEssays": 1,
       "series": 3,
       "folders": 4,
-      "tags": 18,
-      "terms": 54
+      "tags": 21,
+      "terms": 55
     },
     "nodes": [
       {
@@ -48,6 +48,25 @@
           "money",
           "capital",
           "theology"
+        ]
+      },
+      {
+        "id": "essay:governance/illumination/social-network.md",
+        "type": "essay",
+        "label": "The Social Network",
+        "stage": "published",
+        "slug": "social-network",
+        "series": "peridot",
+        "folder": "governance/illumination",
+        "ontologyPath": "governance/illumination/social-network.md",
+        "vaultPath": "ontology/governance/illumination/social-network",
+        "tags": [
+          "governance",
+          "identity",
+          "networks",
+          "capital",
+          "ecology",
+          "anarchism"
         ]
       },
       {
@@ -238,6 +257,21 @@
         "id": "tag:theology",
         "type": "tag",
         "label": "theology"
+      },
+      {
+        "id": "tag:networks",
+        "type": "tag",
+        "label": "networks"
+      },
+      {
+        "id": "tag:ecology",
+        "type": "tag",
+        "label": "ecology"
+      },
+      {
+        "id": "tag:anarchism",
+        "type": "tag",
+        "label": "anarchism"
       },
       {
         "id": "tag:political-economy",
@@ -486,15 +520,15 @@
         "defined": true
       },
       {
-        "id": "term:machina animus",
+        "id": "term:animus machinae",
         "type": "term",
-        "label": "Machina Animus",
+        "label": "Animus Machinae",
         "defined": true
       },
       {
-        "id": "term:maya",
+        "id": "term:maya - here!!!!",
         "type": "term",
-        "label": "Maya",
+        "label": "Maya - HERE!!!!",
         "defined": true
       },
       {
@@ -579,6 +613,12 @@
         "id": "term:soft power",
         "type": "term",
         "label": "Soft Power",
+        "defined": true
+      },
+      {
+        "id": "term:stephen / steven",
+        "type": "term",
+        "label": "Stephen / Steven",
         "defined": true
       },
       {
@@ -678,6 +718,62 @@
         "id": "edge:essay-governance-illumination-arete-md-tag-theology-tagged",
         "from": "essay:governance/illumination/arete.md",
         "to": "tag:theology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-series-peridot-member-of-series",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "series:peridot",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-folder-governance-illumination-member-of-folder",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "folder:governance-illumination",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-governance-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-identity-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-networks-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:networks",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-capital-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:capital",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-ecology-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:ecology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-anarchism-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:anarchism",
         "kind": "tagged",
         "weight": 1
       },
@@ -1163,6 +1259,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-illumination-social-network-md-term-anima-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:anima",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-anima-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:anima",
@@ -1189,6 +1293,14 @@
       {
         "id": "edge:essay-governance-illumination-arete-md-term-animus-mention",
         "from": "essay:governance/illumination/arete.md",
+        "to": "term:animus",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-animus-mention",
+        "from": "essay:governance/illumination/social-network.md",
         "to": "term:animus",
         "kind": "mention",
         "weight": 1,
@@ -1227,6 +1339,14 @@
         "count": 10
       },
       {
+        "id": "edge:essay-governance-illumination-social-network-md-term-autonomy-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:autonomy",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-me-praxis-md-term-autonomy-mention",
         "from": "essay:me/praxis.md",
         "to": "term:autonomy",
@@ -1238,6 +1358,14 @@
         "id": "edge:essay-me-trials-of-job-md-term-call-to-adventure-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:call to adventure",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-calling-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:calling",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -1257,6 +1385,14 @@
         "kind": "mention",
         "weight": 5,
         "count": 5
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-capital-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 5,
+        "count": 12
       },
       {
         "id": "edge:essay-me-origins-md-term-capital-mention",
@@ -1305,6 +1441,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-commons-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:commons",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-me-praxis-md-term-commons-mention",
@@ -1403,6 +1547,14 @@
         "count": 10
       },
       {
+        "id": "edge:essay-governance-illumination-social-network-md-term-giants-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:giants",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-giants-mention",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:giants",
@@ -1425,6 +1577,14 @@
         "kind": "mention",
         "weight": 4,
         "count": 4
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-governance-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-governance-mention",
@@ -1457,6 +1617,14 @@
         "kind": "mention",
         "weight": 4,
         "count": 4
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-identity-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 5,
+        "count": 8
       },
       {
         "id": "edge:essay-me-praxis-md-term-identity-mention",
@@ -1547,22 +1715,6 @@
         "count": 1
       },
       {
-        "id": "edge:essay-governance-illumination-arete-md-term-machina-animus-mention",
-        "from": "essay:governance/illumination/arete.md",
-        "to": "term:machina animus",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
-        "id": "edge:essay-governance-illumination-arete-md-term-maya-mention",
-        "from": "essay:governance/illumination/arete.md",
-        "to": "term:maya",
-        "kind": "mention",
-        "weight": 2,
-        "count": 2
-      },
-      {
         "id": "edge:essay-governance-illumination-arete-md-term-namaste-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:namaste",
@@ -1619,6 +1771,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-illumination-social-network-md-term-perimeter-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-me-origins-md-term-perimeter-mention",
         "from": "essay:me/origins.md",
         "to": "term:perimeter",
@@ -1649,6 +1809,14 @@
         "kind": "mention",
         "weight": 2,
         "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-political-economy-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-me-trials-of-job-md-term-political-economy-mention",
@@ -1699,6 +1867,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-illumination-social-network-md-term-self-sovereign-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:self-sovereign",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-self-sovereign-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:self-sovereign",
@@ -1710,6 +1886,14 @@
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-self-sovereign-mention",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:self-sovereign",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-semantic-perimeter-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:semantic perimeter",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -1734,6 +1918,14 @@
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-semantic-perimeter-mention",
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:semantic perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-semper-idem-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:semper idem",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -1777,6 +1969,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-social-network-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 5,
+        "count": 9
       },
       {
         "id": "edge:essay-me-praxis-md-term-social-network-mention",
@@ -1853,6 +2053,14 @@
       {
         "id": "edge:essay-governance-illumination-arete-md-term-yield-mention",
         "from": "essay:governance/illumination/arete.md",
+        "to": "term:yield",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-yield-mention",
+        "from": "essay:governance/illumination/social-network.md",
         "to": "term:yield",
         "kind": "mention",
         "weight": 3,
