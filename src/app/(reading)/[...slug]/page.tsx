@@ -515,12 +515,15 @@ function renderContentHub(route: ContentHubRoute) {
 
   const landerEssay =
     config.mode === "folder" ? getEssayInTopic(topicPath, config.landerSlug) : null;
-  // Sequential hubs open on the first essay in order; otherwise prefer a lander, then latest.
-  const hubIndexSlug = landerEssay
-    ? config.landerSlug
-    : config.sequentialNav
-      ? essays[0]?.slug ?? null
-      : latestSlug;
+  // Prefer latest when opted in; else lander overview; else sequential first; else latest.
+  const hubIndexSlug =
+    config.hubLanding === "latest"
+      ? latestSlug
+      : config.hubLanding === "first" || config.sequentialNav
+        ? essays[0]?.slug ?? null
+        : landerEssay
+          ? config.landerSlug
+          : latestSlug;
 
   const essaySlug =
     routeEssaySlug === null || routeEssaySlug === config.landerSlug

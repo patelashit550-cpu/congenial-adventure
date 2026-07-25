@@ -84,6 +84,15 @@ function sortEssayStubs<T extends EssayStub & { _filename: string }>(stubs: T[])
 export function pickLatestEssaySlug(essays: EssayStub[]): string | null {
   if (essays.length === 0) return null;
 
+  const withPub = essays.filter((e) => typeof e.dateMs === "number");
+  if (withPub.length > 0) {
+    const ranked = [...withPub].sort(
+      (a, b) => b.dateMs! - a.dateMs! || a.slug.localeCompare(b.slug)
+    );
+    return ranked[0]!.slug;
+  }
+
+  // Fallback when stubs lack dates: re-read frontmatter by slug.
   type Ranked = EssayStub & { pub: number | null };
   const ranked: Ranked[] = essays.map((essay) => {
     const file = listFlatOntologyFilenames().find((f) => {
@@ -94,10 +103,10 @@ export function pickLatestEssaySlug(essays: EssayStub[]): string | null {
     return { ...essay, pub };
   });
 
-  const withPub = ranked.filter((e) => e.pub != null);
-  if (withPub.length > 0) {
-    withPub.sort((a, b) => b.pub! - a.pub! || a.slug.localeCompare(b.slug));
-    return withPub[0]!.slug;
+  const withResolved = ranked.filter((e) => e.pub != null);
+  if (withResolved.length > 0) {
+    withResolved.sort((a, b) => b.pub! - a.pub! || a.slug.localeCompare(b.slug));
+    return withResolved[0]!.slug;
   }
 
   const byOrder = [...ranked].sort((a, b) => {

@@ -56,9 +56,9 @@ In ordinary and vocational speech: a strong inner summons to a kind of work or l
 
 In economics: assets that produce further value — physical, financial, human, social. Not only cash. The ability and wherewithal to care for and sustain things through generative action (Utility) —  the *Janus* custody, husbandry and stewardship that make yield possible without hollowing the commons.
 
-## Commons
+## Commons, Treasury of the
 
-Shared resources not owned as private inventory — from pastures and fisheries to knowledge, climate, and public trust (Ostrom and after). Here: the planetary and institutional inheritance whose custodianship is the ethical floor of governance.
+Shared resources not owned as private inventory — from pastures and fisheries to knowledge, climate, and public trust (Elinor Ostrom and after). 
 
 ## Creation
 
@@ -66,19 +66,19 @@ In theology and ordinary speech: the brought-into-being of the world, or the nat
 
 ## D.E.C.A.Y
 
-Corpus coinage: Dutifully Executing Conventional Activities Yieldlessly — the modern forfeiture of autonomy and Areté when people settle for a place in the pyramid instead of living as agents.
+Corpus coinage: Dutifully Executing Conventional Activities Yieldlessly — the modern forfeiture of autonomy and Areté when people settle for a place in the pyramid for the cosplay of performative and symbolic position; ones from which they no longer derive value. This happens when we stop asking: Why am I doing this?
 
 ## Dial Square
 
-Corpus model: four living pillars of a self-sovereign character — Intelligence (Truth), Capital (Utility), the Yoga Element (Alignment), and Connectedness (Beauty) — whose convergence is Governance, regulated by cyclicality ($\pi$).
+The quadrature and the living pillars of a self-sovereign character in the tradition of Jung and Campbell as Ash has interpreted them through the use of metaphor — Identity (Stone Rose), Capital (Redcurrant), Alignment (Yoga Element) — whose convergence is Governance, regulated by the *consistency* of cyclicality ($\pi$). This creates an integral strength which is a *deeper* ripeness or *pukka* form of beauty.
 
 ## Firmitas
 
-From Vitruvius: firmness — structural soundness, one of architecture's three virtues beside *utilitas* and *venustas*. Here: resilient form aligned with nature; what Praxis yields when edge exploration strengthens rather than brittle-izes the main branch (Alpha).
+Firmness — structural soundness. Form aligned with nature; what Praxis and beta yields at the branch where edge exploration strengthens rather than makes fragile through neglect and a lack of courage which over time generates animus at the trunk (Alpha).
 
 ## Giants
 
-In myth and modern idiom: oversized powers that dominate the landscape. Here: celebrity and institutional personalities who rule the social network through capital and narrative — hard power paid for by money to generate money; care grows impersonal at their scale.
+In myth and modern idiom: oversized power that dominates the landscape. Scale when capital is losing or has lost marginal utility. Celebrity and institutional personalities who dominate the social network through capital and narrative — hard power paid for by money to generate money; care grows impersonal at scale. 
 
 ## Governance
 

@@ -26,6 +26,8 @@ export type ContentHubConfig = {
   publicBase: readonly string[];
   navKicker: string;
   landerSlug: string;
+  /** When true, hub index (`/…/peridot/`) opens the latest essay by `publishedAt`. */
+  hubLanding?: "latest" | "lander" | "first";
   /** When true, left nav shows 01/02… prefixes (EPU, SI, SQN). */
   sequentialNav?: boolean;
   /** When true, left nav shows a publication date stamp per essay. */
@@ -81,6 +83,7 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     publicBase: ["governance", "peridot"],
     navKicker: "ILLUMINATION",
     landerSlug: "peridot",
+    hubLanding: "latest",
     mode: "folder",
     ontologyTopicPath: ["governance", "illumination"],
     seriesSlug: "peridot",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T21:29:46.851Z",
+  "generatedAt": "2026-07-25T23:14:28.401Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -16,13 +16,13 @@
     "summary": {
       "essays": 9,
       "nodes": 92,
-      "edges": 186,
+      "edges": 181,
       "byKind": {
         "member-of-series": 5,
         "member-of-folder": 9,
         "tagged": 46,
         "lexica": 19,
-        "mention": 107
+        "mention": 102
       },
       "orphanEssays": 1,
       "series": 3,
@@ -466,9 +466,9 @@
         "defined": true
       },
       {
-        "id": "term:commons",
+        "id": "term:commons, treasury of the",
         "type": "term",
-        "label": "Commons",
+        "label": "Commons, Treasury of the",
         "defined": true
       },
       {
@@ -1430,46 +1430,6 @@
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-capital-mention",
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:capital",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
-        "id": "edge:essay-governance-illumination-arete-md-term-commons-mention",
-        "from": "essay:governance/illumination/arete.md",
-        "to": "term:commons",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
-        "id": "edge:essay-governance-illumination-social-network-md-term-commons-mention",
-        "from": "essay:governance/illumination/social-network.md",
-        "to": "term:commons",
-        "kind": "mention",
-        "weight": 2,
-        "count": 2
-      },
-      {
-        "id": "edge:essay-me-praxis-md-term-commons-mention",
-        "from": "essay:me/praxis.md",
-        "to": "term:commons",
-        "kind": "mention",
-        "weight": 3,
-        "count": 3
-      },
-      {
-        "id": "edge:essay-me-trials-of-job-md-term-commons-mention",
-        "from": "essay:me/trials-of-job.md",
-        "to": "term:commons",
-        "kind": "mention",
-        "weight": 4,
-        "count": 4
-      },
-      {
-        "id": "edge:essay-narrative-biography-ashit-milne-md-term-commons-mention",
-        "from": "essay:narrative/biography/ashit-milne.md",
-        "to": "term:commons",
         "kind": "mention",
         "weight": 1,
         "count": 1
