@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-26T01:29:34.132Z",
+  "generated": "2026-07-26T11:13:44.992Z",
   "tier": "global",
-  "manifestDigest": "sha256:77a2886c639112fb7f86b4e6a6cf22a7bfb6ef307167a85d40a7c056e114d535",
+  "manifestDigest": "sha256:245f0d4babc82f737363b44e4a82741e2ec73d44d5d60c2f95d40322407d9a1d",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -25,7 +25,7 @@
       "publishedAt": "2026-07-25T00:00:00.000Z",
       "slug": "canonical",
       "series": "Regnum Dei",
-      "sha256": "sha256:2856ca6b66b2c43f2f78fc0d517b3c5809cbc9e01fd9820907acaa52b630bb14"
+      "sha256": "sha256:32ec45d9da029458ce008190d85dcf5f398cb6ade434f8a3058f1a9eb44e96a8"
     },
     {
       "path": "ontology/governance/illumination/arete.md",

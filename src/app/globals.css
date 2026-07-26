@@ -2328,7 +2328,7 @@
 .p3-topic-canvas {
   display: grid;
   grid-template-columns: 240px 1px minmax(0, 1fr);
-  gap: 2.5rem;
+  gap: 0;
   box-sizing: border-box;
   width: 100%;
   min-height: calc(100vh - 6.5rem);
@@ -2347,7 +2347,6 @@
 @media (min-width: 1280px) {
   .p3-topic-canvas {
     grid-template-columns: 280px 1px minmax(0, 1fr);
-    gap: 3.5rem;
     padding-bottom: 8rem;
   }
 }
@@ -2362,6 +2361,17 @@
   }
   .p3-topic-separator {
     display: none;
+  }
+
+  /* Banner-style chrome strip above the article on small screens */
+  .p3-topic-nav {
+    margin: -1rem -1rem 0;
+    padding: 1rem 1rem 0.85rem;
+    border-bottom: 1px solid rgba(52, 211, 153, 0.5);
+  }
+
+  .p3-topic-article {
+    padding-left: 0;
   }
 
   /* Compact horizontal essay nav — article body starts higher on phone */
@@ -2452,6 +2462,24 @@
 .p3-topic-nav {
   align-self: stretch;
   font-family: var(--p3-shell-nav-font);
+  /* Same chrome plane as the narrative banner */
+  background: #000;
+  margin: -3rem 0 -6rem -1.5rem;
+  padding: 3rem 1.25rem 6rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .p3-topic-nav {
+    margin: -4rem 0 -6rem -2rem;
+    padding: 4rem 1.5rem 6rem 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .p3-topic-nav {
+    margin-bottom: -8rem;
+    padding-bottom: 8rem;
+  }
 }
 
 .p3-topic-nav__sticky {
@@ -2727,19 +2755,39 @@
   width: 1px;
   align-self: stretch;
   min-height: 60vh;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(255, 255, 255, 0.08) 10%,
-    rgba(255, 255, 255, 0.08) 90%,
-    transparent 100%
-  );
+  /* Same emerald rule as banner → main */
+  background: rgba(52, 211, 153, 0.5);
+  margin-block: -3rem -6rem;
+}
+
+@media (min-width: 768px) {
+  .p3-topic-separator {
+    margin-block: -4rem -6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .p3-topic-separator {
+    margin-bottom: -8rem;
+  }
 }
 
 .p3-topic-article {
   min-width: 0;
   width: 100%;
   max-width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .p3-topic-article {
+    padding-left: 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .p3-topic-article {
+    padding-left: 2.25rem;
+  }
 }
 
 @media (min-width: 768px) {
