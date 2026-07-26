@@ -1,6 +1,6 @@
 ---
 title: Canonical
-label: Glossary
+label: A Glossary
 stage: published
 type: reference
 series: Regnum Dei
@@ -24,6 +24,13 @@ generation: consensus-v1
 ## Alpha
 
 In ordinary use: the first, dominant, or established form — the baseline against which alternatives are judged. In this corpus: the orthodoxy that builds utility by harvesting the commons through inherited competence; the starting plateau on the S-curve of Areté. From a firmly grounded Alpha, Praxis (Beta) extends us toward Omega (wholeness) through the discovery of a broadly defined efficiency — a competence in living itself.
+
+## Beta
+A deliberate branching from the orthodox main trunk to test a hypothesis developed with data from reality (production) that additional yield may be generated. Ecology does this this through genetic variety, variance and evolution.
+
+
+## Ab
+Latin for 'since'. It appears to encompass learned orthodoxy Alpha with the Beta (bravo) of expedition and exploration rather than expediency. The word appears to encompass the whole of Greco/Roman classical epistemology dovetailing ethical traditions (stoicism) to ecology and evolution in as compact a formulation as imaginable.
 
 ## Anarchism
 
@@ -188,7 +195,7 @@ Attraction and persuasion rather than coercion or payment. Virtue as influence �
 
 ## Stephen / Steven
 
-Derived from the ancient Greek name *Stephanos* (Στέφανος), stemming from the verb *stepho* ("to encircle" or "to crown"). Popularized by Saint Stephen, the first Christian martyr (*protomartyr*), whose death symbolized receiving the "crown of martyrdom." The Feast of Stephen on 27 December (in the Anglican calendar) bridges the joyous celebration of Christ's birth with the sobering reality of the cost of discipleship — the *imitatio Christi*.
+Derived from the ancient Greek name *Stephanos* (Στέφανος), stemming from the verb *stepho* ("to encircle" or "to crown"). Popularized by Saint Stephen, the first Christian martyr (*protomartyr*), whose death symbolized receiving the "crown of martyrdom." The Feast of Stephen on 27 December (in the Anglican calendar) bridges the joyous celebration of Christ's birth with the sobering reality of the cost of discipleship — the *imitatio Christi*. This is relevant because in defining a perimeter and setting boundaries one reserves for oneself the right to fully define identity.
 
 
 ## Tel
