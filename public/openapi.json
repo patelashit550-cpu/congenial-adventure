@@ -77,6 +77,17 @@
         }
       }
     },
+    "/governance/canonical": {
+      "get": {
+        "operationId": "get_governance_canonical",
+        "summary": "Read public page at /governance/canonical",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/governance/capital": {
       "get": {
         "operationId": "get_governance_capital",

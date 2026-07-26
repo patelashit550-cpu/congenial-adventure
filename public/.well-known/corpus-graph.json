@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T23:14:28.401Z",
+  "generatedAt": "2026-07-26T01:29:33.864Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -15,20 +15,20 @@
   "interior": {
     "summary": {
       "essays": 9,
-      "nodes": 92,
-      "edges": 181,
+      "nodes": 87,
+      "edges": 176,
       "byKind": {
         "member-of-series": 5,
         "member-of-folder": 9,
         "tagged": 46,
         "lexica": 19,
-        "mention": 102
+        "mention": 97
       },
       "orphanEssays": 1,
       "series": 3,
       "folders": 4,
       "tags": 21,
-      "terms": 55
+      "terms": 50
     },
     "nodes": [
       {
@@ -436,6 +436,12 @@
         "defined": true
       },
       {
+        "id": "term:animus machinae",
+        "type": "term",
+        "label": "Animus Machinae",
+        "defined": true
+      },
+      {
         "id": "term:areté",
         "type": "term",
         "label": "Areté",
@@ -478,12 +484,6 @@
         "defined": true
       },
       {
-        "id": "term:d.e.c.a.y",
-        "type": "term",
-        "label": "D.E.C.A.Y",
-        "defined": true
-      },
-      {
         "id": "term:dial square",
         "type": "term",
         "label": "Dial Square",
@@ -514,21 +514,21 @@
         "defined": true
       },
       {
+        "id": "term:janus",
+        "type": "term",
+        "label": "Janus",
+        "defined": true
+      },
+      {
         "id": "term:ledger",
         "type": "term",
         "label": "Ledger",
         "defined": true
       },
       {
-        "id": "term:animus machinae",
+        "id": "term:maya",
         "type": "term",
-        "label": "Animus Machinae",
-        "defined": true
-      },
-      {
-        "id": "term:maya - here!!!!",
-        "type": "term",
-        "label": "Maya - HERE!!!!",
+        "label": "Maya",
         "defined": true
       },
       {
@@ -622,45 +622,15 @@
         "defined": true
       },
       {
-        "id": "term:stone rose",
-        "type": "term",
-        "label": "Stone Rose",
-        "defined": true
-      },
-      {
         "id": "term:tenable",
         "type": "term",
         "label": "Tenable",
         "defined": true
       },
       {
-        "id": "term:the young idea",
-        "type": "term",
-        "label": "The Young Idea",
-        "defined": true
-      },
-      {
-        "id": "term:transition insight",
-        "type": "term",
-        "label": "Transition Insight",
-        "defined": true
-      },
-      {
-        "id": "term:truth, utility, beauty",
-        "type": "term",
-        "label": "Truth, Utility, Beauty",
-        "defined": true
-      },
-      {
         "id": "term:yield",
         "type": "term",
         "label": "Yield",
-        "defined": true
-      },
-      {
-        "id": "term:yoga element",
-        "type": "term",
-        "label": "Yoga Element",
         "defined": true
       }
     ],
@@ -1475,14 +1445,6 @@
         "count": 1
       },
       {
-        "id": "edge:essay-governance-illumination-arete-md-term-d-e-c-a-y-mention",
-        "from": "essay:governance/illumination/arete.md",
-        "to": "term:d.e.c.a.y",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
         "id": "edge:essay-governance-illumination-arete-md-term-dial-square-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:dial square",
@@ -1673,6 +1635,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-maya-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:maya",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-namaste-mention",
@@ -1963,14 +1933,6 @@
         "count": 1
       },
       {
-        "id": "edge:essay-governance-illumination-arete-md-term-stone-rose-mention",
-        "from": "essay:governance/illumination/arete.md",
-        "to": "term:stone rose",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
         "id": "edge:essay-me-praxis-md-term-tenable-mention",
         "from": "essay:me/praxis.md",
         "to": "term:tenable",
@@ -1987,30 +1949,6 @@
         "count": 3
       },
       {
-        "id": "edge:essay-me-origins-md-term-the-young-idea-mention",
-        "from": "essay:me/origins.md",
-        "to": "term:the young idea",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
-        "id": "edge:essay-narrative-biography-ashit-patel-md-term-the-young-idea-mention",
-        "from": "essay:narrative/biography/ashit-patel.md",
-        "to": "term:the young idea",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
-        "id": "edge:essay-narrative-biography-ashit-milne-md-term-transition-insight-mention",
-        "from": "essay:narrative/biography/ashit-milne.md",
-        "to": "term:transition insight",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
         "id": "edge:essay-governance-illumination-arete-md-term-yield-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:yield",
@@ -2025,14 +1963,6 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
-      },
-      {
-        "id": "edge:essay-narrative-biography-ashit-milne-md-term-yoga-element-mention",
-        "from": "essay:narrative/biography/ashit-milne.md",
-        "to": "term:yoga element",
-        "kind": "mention",
-        "weight": 4,
-        "count": 4
       }
     ]
   }

@@ -23,6 +23,7 @@ export const ONTOLOGY_TOPIC_KEYS: Record<string, readonly string[]> = {
  */
 export const BENTO_ROUTE_ONTOLOGY: Record<string, string> = {
   "governance/carta": "carta",
+  "governance/canonical": "governance/Canonical",
   "governance/identity": "governance/identity/identity",
   "governance/capital": "governance/capital/capital",
   "governance/intelligence": "governance/intelligence/intelligence",

@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-25T23:14:28.695Z",
+  "generated": "2026-07-26T01:29:34.132Z",
   "tier": "global",
-  "manifestDigest": "sha256:df474ae2d23648e655b87a6372c360f587d157ad047c0aa3a331115c92513917",
+  "manifestDigest": "sha256:77a2886c639112fb7f86b4e6a6cf22a7bfb6ef307167a85d40a7c056e114d535",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -13,10 +13,20 @@
   },
   "summary": {
     "totalOntologyFiles": 68,
-    "attestedFiles": 9,
+    "attestedFiles": 10,
     "signedFiles": 0
   },
   "attested": [
+    {
+      "path": "ontology/governance/Canonical.md",
+      "stage": "published",
+      "title": "Canonical",
+      "author": null,
+      "publishedAt": "2026-07-25T00:00:00.000Z",
+      "slug": "canonical",
+      "series": "Regnum Dei",
+      "sha256": "sha256:2856ca6b66b2c43f2f78fc0d517b3c5809cbc9e01fd9820907acaa52b630bb14"
+    },
     {
       "path": "ontology/governance/illumination/arete.md",
       "stage": "published",
