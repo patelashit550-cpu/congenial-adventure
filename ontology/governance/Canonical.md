@@ -30,7 +30,7 @@ A deliberate branching from the orthodox main trunk to test a hypothesis develop
 
 
 ## Ab
-Latin for 'since'. It appears to encompass learned orthodoxy Alpha with the Beta (bravo) of expedition and exploration rather than expediency. The word appears to encompass the whole of Greco/Roman classical epistemology dovetailing ethical traditions (stoicism) to ecology and evolution in as compact a formulation as imaginable.
+Latin for 'since' encompasses learned orthodoxy Alpha with the Beta (bravo) of expedition and exploration rather than expediency. The word appears to encompass the whole of Greco/Roman classical epistemology dovetailing ethical traditions (stoicism) to ecology and evolution in as compact a formulation as imaginable.
 
 ## Anarchism
 
