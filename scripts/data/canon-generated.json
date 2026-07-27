@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-25T21:28:01.832Z",
-  "essayCount": 9,
+  "generatedAt": "2026-07-27T17:41:14.325Z",
+  "essayCount": 10,
   "essays": [
     "governance/illumination/arete.md",
     "governance/illumination/social-network.md",
@@ -10,7 +10,8 @@
     "me/trials-of-job.md",
     "narrative/biography/ashit-milne.md",
     "narrative/biography/ashit-patel.md",
-    "narrative/comment/Tenable.md"
+    "narrative/comment/Tenable.md",
+    "narrative/comment/Transition.md"
   ],
   "termCount": 48,
   "ollama": null,
@@ -133,17 +134,18 @@
     {
       "term": "Calling",
       "method": "extractive-synthesis",
-      "score": 9,
+      "score": 13,
       "sources": [
         "governance/illumination/social-network.md",
-        "narrative/biography/ashit-milne.md"
+        "narrative/biography/ashit-milne.md",
+        "narrative/comment/Transition.md"
       ],
-      "snippetCount": 3
+      "snippetCount": 4
     },
     {
       "term": "Capital",
       "method": "extractive",
-      "score": 43,
+      "score": 48,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
@@ -151,40 +153,70 @@
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Commons",
       "method": "extractive-synthesis",
-      "score": 26,
+      "score": 30,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md",
-        "narrative/biography/ashit-milne.md"
+        "narrative/biography/ashit-milne.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Creation",
       "method": "extractive",
-      "score": 22,
+      "score": 26,
       "sources": [
         "governance/illumination/arete.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
-        "narrative/comment/Tenable.md"
+        "narrative/comment/Tenable.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
     {
+      "term": "dharana",
+      "method": "extractive-synthesis",
+      "score": 8,
+      "sources": [
+        "narrative/comment/Transition.md"
+      ],
+      "snippetCount": 2
+    },
+    {
+      "term": "dhyana",
+      "method": "extractive-synthesis",
+      "score": 8,
+      "sources": [
+        "narrative/comment/Transition.md"
+      ],
+      "snippetCount": 1
+    },
+    {
+      "term": "Dollar Regime",
+      "method": "extractive",
+      "score": 8,
+      "sources": [
+        "narrative/comment/Transition.md"
+      ],
+      "snippetCount": 3
+    },
+    {
       "term": "Flow",
       "method": "extractive",
-      "score": 38,
+      "score": 44,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
@@ -192,7 +224,8 @@
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
@@ -211,7 +244,7 @@
     {
       "term": "Governance",
       "method": "extractive",
-      "score": 79,
+      "score": 92,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
@@ -220,14 +253,15 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
-        "narrative/comment/Tenable.md"
+        "narrative/comment/Tenable.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Identity",
       "method": "extractive",
-      "score": 55,
+      "score": 68,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
@@ -235,7 +269,8 @@
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
@@ -272,15 +307,6 @@
       "snippetCount": 4
     },
     {
-      "term": "Macauley's Children or Macaulayputra",
-      "method": "extractive-synthesis",
-      "score": 7,
-      "sources": [
-        "narrative/biography/ashit-patel.md"
-      ],
-      "snippetCount": 1
-    },
-    {
       "term": "Matthew Effect",
       "method": "extractive-synthesis",
       "score": 8,
@@ -311,28 +337,30 @@
     {
       "term": "Perimeter",
       "method": "extractive-synthesis",
-      "score": 26,
+      "score": 31,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/origins.md",
         "me/praxis.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Political Economy",
       "method": "extractive-synthesis",
-      "score": 51,
+      "score": 55,
       "sources": [
         "governance/illumination/social-network.md",
         "me/origins.md",
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
@@ -349,11 +377,12 @@
     {
       "term": "Product",
       "method": "extractive-synthesis",
-      "score": 16,
+      "score": 20,
       "sources": [
         "governance/illumination/social-network.md",
         "me/praxis.md",
-        "me/trials-of-job.md"
+        "me/trials-of-job.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
@@ -374,13 +403,14 @@
     {
       "term": "Protocol",
       "method": "extractive",
-      "score": 25,
+      "score": 37,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
@@ -408,23 +438,15 @@
     {
       "term": "Semantic Perimeter",
       "method": "extractive-synthesis",
-      "score": 25,
+      "score": 30,
       "sources": [
         "governance/illumination/social-network.md",
         "me/praxis.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
-    },
-    {
-      "term": "semantic perimeters of identity",
-      "method": "extractive",
-      "score": 7,
-      "sources": [
-        "me/trials-of-job.md"
-      ],
-      "snippetCount": 1
     },
     {
       "term": "Semper Idem",
@@ -450,90 +472,77 @@
     {
       "term": "Social Network",
       "method": "extractive",
-      "score": 25,
+      "score": 30,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
-        "me/trials-of-job.md"
+        "me/trials-of-job.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Sovereign",
       "method": "extractive-synthesis",
-      "score": 27,
+      "score": 33,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md",
-        "narrative/biography/ashit-milne.md"
-      ],
-      "snippetCount": 4
-    },
-    {
-      "term": "Tel",
-      "method": "extractive-synthesis",
-      "score": 8,
-      "sources": [
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-milne.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Tenable",
       "method": "extractive-synthesis",
-      "score": 10,
+      "score": 18,
       "sources": [
         "me/praxis.md",
-        "narrative/comment/Tenable.md"
+        "narrative/comment/Tenable.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 3
     },
     {
-      "term": "The Young Idea",
-      "method": "extractive-synthesis",
-      "score": 8,
-      "sources": [
-        "me/origins.md",
-        "narrative/biography/ashit-patel.md"
-      ],
-      "snippetCount": 1
-    },
-    {
       "term": "transaction",
       "method": "extractive-synthesis",
-      "score": 8,
+      "score": 16,
       "sources": [
-        "narrative/comment/Tenable.md"
+        "narrative/comment/Tenable.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 2
     },
     {
       "term": "Truth",
       "method": "extractive-synthesis",
-      "score": 29,
+      "score": 33,
       "sources": [
         "governance/illumination/arete.md",
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Utility",
       "method": "extractive-synthesis",
-      "score": 37,
+      "score": 41,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
@@ -551,13 +560,24 @@
     },
     {
       "term": "Yield",
-      "method": "extractive-synthesis",
-      "score": 21,
+      "method": "extractive",
+      "score": 36,
       "sources": [
         "governance/illumination/arete.md",
-        "governance/illumination/social-network.md"
+        "governance/illumination/social-network.md",
+        "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
+    },
+    {
+      "term": "Yoga Element",
+      "method": "extractive-synthesis",
+      "score": 19,
+      "sources": [
+        "narrative/biography/ashit-milne.md",
+        "narrative/comment/Transition.md"
+      ],
+      "snippetCount": 3
     }
   ]
 }
