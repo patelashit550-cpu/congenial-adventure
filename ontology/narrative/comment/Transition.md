@@ -52,7 +52,7 @@ lexica:
 > ~ RHCP (Give It Away Now)
 
 
-## Yoga Element
+## Evolution Theology
 
 Those of us who do creative work owe an extravagant debt to the people who came before us and paid an unbearable price. All we can do is make a good account of ourselves as we pay this inheritance forward—assuming custody of the things they fought for; making them secure utilities that balance our obligations to each other. We must stop making war with someone else's reality—because it's ours, too.
 
@@ -74,7 +74,7 @@ After _dharana_ comes _dhyana_ (meditation), then _samadhi_ (absorption). Absorp
 
 ## Off The Mat
 
-Coming back to the film, a company must find and bring a soldier home. The last of four brothers—the other three, like our friend on the beach, have passed. In this quest, six of eight die. In purely utilitarian terms, it's a loss, but there is something more to life than numbers. Nothing says more about optimism than parenthood and the surrender of children by their family into the world of the sovereign. Ryan is the keeper of the flame—the one who carries the ember safely through wind and rain so that it may light another fire on a cold night.
+Coming back to the film, a company must find and bring a soldier home. The last of four brothers—the other three, like our friend on the beach, have passed. In this quest, six of eight die. In purely utilitarian terms, it's a loss, but there is something more to life than numbers. Nothing says more about optimism than parenthood and the surrender of children by their family into the world of the sovereign. Ryan is the keeper of the flame—the one who carries the ember safely through wind and rain so that it may light another fire on a cold night. That's the beautiful narrative but this is essentially the story of how authority executes the trolley problem to kill nine and save the one in order to preserve the mythology or reputation of state. That was then but what now?
 
 Morale matters, and so too does loyalty. But if our institutions and their office-holders are to earn it, they must be transparent with their intentions. They must frame in the plainest terms that our problems stem from our collective inability to stem the debasement of capital—and that they stand ready to embrace the architecture required for a resilient transition. Humanity's survival depends upon it.
 
