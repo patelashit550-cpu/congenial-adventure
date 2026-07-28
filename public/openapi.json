@@ -77,6 +77,17 @@
         }
       }
     },
+    "/chronicle/polite_bureau/transition": {
+      "get": {
+        "operationId": "get_chronicle_polite_bureau_transition",
+        "summary": "Read public page at /chronicle/polite_bureau/transition",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/governance/canonical": {
       "get": {
         "operationId": "get_governance_canonical",

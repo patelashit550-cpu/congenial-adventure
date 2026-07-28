@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-26T11:13:44.992Z",
+  "generated": "2026-07-28T11:08:32.029Z",
   "tier": "global",
-  "manifestDigest": "sha256:245f0d4babc82f737363b44e4a82741e2ec73d44d5d60c2f95d40322407d9a1d",
+  "manifestDigest": "sha256:9d2eef50216b6406516788c5967fef3714ff9a487643b14efe3e6f5d0eb8a9bf",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,8 +12,8 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 68,
-    "attestedFiles": 10,
+    "totalOntologyFiles": 69,
+    "attestedFiles": 11,
     "signedFiles": 0
   },
   "attested": [
@@ -25,7 +25,7 @@
       "publishedAt": "2026-07-25T00:00:00.000Z",
       "slug": "canonical",
       "series": "Regnum Dei",
-      "sha256": "sha256:32ec45d9da029458ce008190d85dcf5f398cb6ade434f8a3058f1a9eb44e96a8"
+      "sha256": "sha256:00b7ae68fad5c6e06dc1bbdaf98b56f9c7076c654427af481b2140c89a9e193d"
     },
     {
       "path": "ontology/governance/illumination/arete.md",
@@ -116,6 +116,16 @@
       "slug": "tenable",
       "series": "Polite Bureau",
       "sha256": "sha256:eaa41ccbcd8aae043616569ac942cd5cbc9123e8da00a2a9597e4dff8bfe0afd"
+    },
+    {
+      "path": "ontology/narrative/comment/Transition.md",
+      "stage": "published",
+      "title": "The Transition",
+      "author": null,
+      "publishedAt": "2026-07-27T00:00:00.000Z",
+      "slug": "transition",
+      "series": "Polite Bureau",
+      "sha256": "sha256:6a81afa3daa6d6f3128b01f9905420feacaa7ead440c50c3292cf8d9dd81f198"
     }
   ],
   "signature": null

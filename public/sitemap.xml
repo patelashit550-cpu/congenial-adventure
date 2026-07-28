@@ -31,6 +31,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ashitmilne.xyz/chronicle/polite_bureau/transition/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ashitmilne.xyz/governance/canonical/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
