@@ -64,7 +64,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     ],
   },
   B2: {
-    title: "Regnum Dei",
+    title: "Philosophy",
     label: "Utilitas",
     nodeKicker: "शिवम",
     subtitle: "Anarchy As Governance",
@@ -82,7 +82,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     ],
   },
   B3: {
-    title: "Telamon",
+    title: "Lens",
     label: "Firmitas",
     nodeKicker: "सुन्दरम",
     subtitle: "Jackanory: The Tangent",

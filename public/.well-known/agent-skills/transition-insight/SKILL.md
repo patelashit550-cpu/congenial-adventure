@@ -15,7 +15,7 @@ enabled (Dashboard → AI Crawl Control → Markdown for Agents).
 
 ## Entry points
 
-- `/` — Bento home (Ashit Milne / Regnum Dei / Telamon nodes)
+- `/` — Bento home (Ashit Milne / Philosophy / Lens nodes)
 - `/chronicle/jack-london/` — Jack London biography hub (The Times series)
 - `/governance/` — Governance topic hubs (identity, capital, intelligence, peridot)
 - `/me/` — Personal identity essays (Origins, Trials of Job, etc.)

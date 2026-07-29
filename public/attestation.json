@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-28T11:10:02.392Z",
+  "generated": "2026-07-29T22:33:54.309Z",
   "tier": "global",
-  "manifestDigest": "sha256:9d2eef50216b6406516788c5967fef3714ff9a487643b14efe3e6f5d0eb8a9bf",
+  "manifestDigest": "sha256:ed9e1539b18710d161167c08547eb5187e1ffb114fdd89bb9fa5e94e2b242f2d",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -25,7 +25,7 @@
       "publishedAt": "2026-07-25T00:00:00.000Z",
       "slug": "canonical",
       "series": "Regnum Dei",
-      "sha256": "sha256:00b7ae68fad5c6e06dc1bbdaf98b56f9c7076c654427af481b2140c89a9e193d"
+      "sha256": "sha256:067efeb78880135b014582dde2da630c6f9c460928355780d114a6a2021d9b4a"
     },
     {
       "path": "ontology/governance/illumination/arete.md",
@@ -75,7 +75,7 @@
       "publishedAt": "2026-07-11T00:00:00.000Z",
       "slug": "praxis",
       "series": null,
-      "sha256": "sha256:77ade6955ba9e4ad3c7ccbb1bb68102132b09a89a20b09cb856799ebbd245956"
+      "sha256": "sha256:6edd31d3b123dbd8a3e527c5d8654e204fed68fe2a3ee24ac7b3ea416157a415"
     },
     {
       "path": "ontology/me/trials-of-job.md",
@@ -85,7 +85,7 @@
       "publishedAt": "2026-06-29T00:00:00.000Z",
       "slug": "trials-of-job",
       "series": null,
-      "sha256": "sha256:3fe2b5cfd4a47133a2bfa2e7aa24579da4d67f120994a793592b24725edc6d81"
+      "sha256": "sha256:1182509134e0667b8625d2bf7deb4899a9f38243ded387ad5d0bb9bc945cf203"
     },
     {
       "path": "ontology/narrative/biography/ashit-milne.md",
@@ -125,7 +125,7 @@
       "publishedAt": "2026-07-27T00:00:00.000Z",
       "slug": "transition",
       "series": "Polite Bureau",
-      "sha256": "sha256:6a81afa3daa6d6f3128b01f9905420feacaa7ead440c50c3292cf8d9dd81f198"
+      "sha256": "sha256:e05222a54cd3376d551c136896e08e8b6bb09be34c9de0d00c2e58cffd7fc08c"
     }
   ],
   "signature": null
