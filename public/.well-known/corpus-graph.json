@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T02:32:21.564Z",
+  "generatedAt": "2026-07-30T02:44:35.968Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,23 +14,40 @@
   },
   "interior": {
     "summary": {
-      "essays": 10,
-      "nodes": 102,
-      "edges": 221,
+      "essays": 11,
+      "nodes": 105,
+      "edges": 232,
       "byKind": {
+        "member-of-folder": 11,
+        "tagged": 55,
         "member-of-series": 6,
-        "member-of-folder": 10,
-        "tagged": 51,
         "lexica": 33,
-        "mention": 121
+        "mention": 127
       },
       "orphanEssays": 1,
       "series": 3,
-      "folders": 4,
-      "tags": 21,
+      "folders": 5,
+      "tags": 22,
       "terms": 64
     },
     "nodes": [
+      {
+        "id": "essay:governance/identity/semanticperimeter.md",
+        "type": "essay",
+        "label": "Semper Idem",
+        "stage": "published",
+        "slug": "semantic-perimeter",
+        "series": null,
+        "folder": "governance/identity",
+        "ontologyPath": "governance/identity/SemanticPerimeter.md",
+        "vaultPath": "ontology/governance/identity/SemanticPerimeter",
+        "tags": [
+          "governance",
+          "identity",
+          "sovereignty",
+          "commons"
+        ]
+      },
       {
         "id": "essay:governance/illumination/arete.md",
         "type": "essay",
@@ -227,6 +244,11 @@
         "label": "Polite Bureau"
       },
       {
+        "id": "folder:governance-identity",
+        "type": "folder",
+        "label": "governance/identity"
+      },
+      {
         "id": "folder:governance-illumination",
         "type": "folder",
         "label": "governance/illumination"
@@ -247,11 +269,6 @@
         "label": "narrative/comment"
       },
       {
-        "id": "tag:ethics",
-        "type": "tag",
-        "label": "ethics"
-      },
-      {
         "id": "tag:governance",
         "type": "tag",
         "label": "governance"
@@ -260,6 +277,21 @@
         "id": "tag:identity",
         "type": "tag",
         "label": "identity"
+      },
+      {
+        "id": "tag:sovereignty",
+        "type": "tag",
+        "label": "sovereignty"
+      },
+      {
+        "id": "tag:commons",
+        "type": "tag",
+        "label": "commons"
+      },
+      {
+        "id": "tag:ethics",
+        "type": "tag",
+        "label": "ethics"
       },
       {
         "id": "tag:money",
@@ -305,11 +337,6 @@
         "id": "tag:technology",
         "type": "tag",
         "label": "technology"
-      },
-      {
-        "id": "tag:commons",
-        "type": "tag",
-        "label": "commons"
       },
       {
         "id": "tag:community",
@@ -737,6 +764,41 @@
       }
     ],
     "edges": [
+      {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-folder-governance-identity-member-of-folder",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "folder:governance-identity",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-tag-governance-tagged",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-tag-identity-tagged",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-tag-sovereignty-tagged",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "tag:sovereignty",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-tag-commons-tagged",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "tag:commons",
+        "kind": "tagged",
+        "weight": 1
+      },
       {
         "id": "edge:essay-governance-illumination-arete-md-series-peridot-member-of-series",
         "from": "essay:governance/illumination/arete.md",
@@ -1622,6 +1684,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-term-capital-mention",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-capital-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:capital",
@@ -1729,6 +1799,14 @@
         "id": "edge:essay-narrative-comment-transition-md-term-creation-mention",
         "from": "essay:narrative/comment/transition.md",
         "to": "term:creation",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-term-dial-square-mention",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "term:dial square",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -1846,6 +1924,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-term-identity-mention",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-identity-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:identity",
@@ -1892,6 +1978,14 @@
         "kind": "mention",
         "weight": 4,
         "count": 4
+      },
+      {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-term-intelligence-mention",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-intelligence-mention",
@@ -2025,6 +2119,14 @@
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-peridot-mention",
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:peridot",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-term-perimeter-mention",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "term:perimeter",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -2249,6 +2351,14 @@
         "id": "edge:essay-narrative-comment-transition-md-term-semantic-perimeter-mention",
         "from": "essay:narrative/comment/transition.md",
         "to": "term:semantic perimeter",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-governance-identity-semanticperimeter-md-term-semper-idem-mention",
+        "from": "essay:governance/identity/semanticperimeter.md",
+        "to": "term:semper idem",
         "kind": "mention",
         "weight": 2,
         "count": 2

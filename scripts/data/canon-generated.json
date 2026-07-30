@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-07-27T17:41:14.325Z",
-  "essayCount": 10,
+  "generatedAt": "2026-07-30T02:43:53.571Z",
+  "essayCount": 11,
   "essays": [
+    "governance/identity/SemanticPerimeter.md",
     "governance/illumination/arete.md",
     "governance/illumination/social-network.md",
     "me/connexion.md",
@@ -17,15 +18,6 @@
   "ollama": null,
   "wroteCanonicalDoc": false,
   "entries": [
-    {
-      "term": "Alignment",
-      "method": "extractive-synthesis",
-      "score": 9,
-      "sources": [
-        "governance/illumination/social-network.md"
-      ],
-      "snippetCount": 4
-    },
     {
       "term": "Alpha",
       "method": "extractive-synthesis",
@@ -132,6 +124,16 @@
       "snippetCount": 4
     },
     {
+      "term": "Body Politic",
+      "method": "extractive-synthesis",
+      "score": 9,
+      "sources": [
+        "governance/identity/SemanticPerimeter.md",
+        "governance/illumination/social-network.md"
+      ],
+      "snippetCount": 3
+    },
+    {
       "term": "Calling",
       "method": "extractive-synthesis",
       "score": 13,
@@ -145,8 +147,9 @@
     {
       "term": "Capital",
       "method": "extractive",
-      "score": 48,
+      "score": 52,
       "sources": [
+        "governance/identity/SemanticPerimeter.md",
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/origins.md",
@@ -205,6 +208,16 @@
       "snippetCount": 1
     },
     {
+      "term": "Dial Square",
+      "method": "extractive",
+      "score": 8,
+      "sources": [
+        "governance/identity/SemanticPerimeter.md",
+        "governance/illumination/arete.md"
+      ],
+      "snippetCount": 2
+    },
+    {
       "term": "Dollar Regime",
       "method": "extractive",
       "score": 8,
@@ -244,7 +257,7 @@
     {
       "term": "Governance",
       "method": "extractive",
-      "score": 92,
+      "score": 83,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
@@ -261,8 +274,9 @@
     {
       "term": "Identity",
       "method": "extractive",
-      "score": 68,
+      "score": 72,
       "sources": [
+        "governance/identity/SemanticPerimeter.md",
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/origins.md",
@@ -277,8 +291,9 @@
     {
       "term": "Intelligence",
       "method": "extractive",
-      "score": 18,
+      "score": 22,
       "sources": [
+        "governance/identity/SemanticPerimeter.md",
         "governance/illumination/arete.md",
         "me/praxis.md",
         "narrative/biography/ashit-milne.md",
@@ -325,6 +340,15 @@
       "snippetCount": 1
     },
     {
+      "term": "mudra",
+      "method": "extractive-synthesis",
+      "score": 8,
+      "sources": [
+        "narrative/comment/Transition.md"
+      ],
+      "snippetCount": 3
+    },
+    {
       "term": "Omega",
       "method": "extractive-synthesis",
       "score": 9,
@@ -337,8 +361,9 @@
     {
       "term": "Perimeter",
       "method": "extractive-synthesis",
-      "score": 31,
+      "score": 35,
       "sources": [
+        "governance/identity/SemanticPerimeter.md",
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/origins.md",
@@ -352,7 +377,7 @@
     {
       "term": "Political Economy",
       "method": "extractive-synthesis",
-      "score": 55,
+      "score": 46,
       "sources": [
         "governance/illumination/social-network.md",
         "me/origins.md",
@@ -367,7 +392,7 @@
     {
       "term": "Praxis",
       "method": "extractive",
-      "score": 33,
+      "score": 24,
       "sources": [
         "governance/illumination/arete.md",
         "me/praxis.md"
@@ -427,18 +452,9 @@
       "snippetCount": 4
     },
     {
-      "term": "Self-sovereignty",
-      "method": "extractive-synthesis",
-      "score": 16,
-      "sources": [
-        "me/praxis.md"
-      ],
-      "snippetCount": 4
-    },
-    {
       "term": "Semantic Perimeter",
       "method": "extractive-synthesis",
-      "score": 30,
+      "score": 21,
       "sources": [
         "governance/illumination/social-network.md",
         "me/praxis.md",
@@ -451,23 +467,15 @@
     {
       "term": "Semper Idem",
       "method": "extractive",
-      "score": 16,
+      "score": 21,
       "sources": [
+        "governance/identity/SemanticPerimeter.md",
         "governance/illumination/social-network.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md"
       ],
       "snippetCount": 4
-    },
-    {
-      "term": "Social Credit",
-      "method": "extractive-synthesis",
-      "score": 10,
-      "sources": [
-        "me/praxis.md"
-      ],
-      "snippetCount": 1
     },
     {
       "term": "Social Network",
@@ -561,7 +569,7 @@
     {
       "term": "Yield",
       "method": "extractive",
-      "score": 36,
+      "score": 27,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
@@ -572,7 +580,7 @@
     {
       "term": "Yoga Element",
       "method": "extractive-synthesis",
-      "score": 19,
+      "score": 15,
       "sources": [
         "narrative/biography/ashit-milne.md",
         "narrative/comment/Transition.md"

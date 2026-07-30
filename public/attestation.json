@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-07-30T02:32:22.107Z",
+  "generated": "2026-07-30T02:44:36.304Z",
   "tier": "global",
-  "manifestDigest": "sha256:df40a2e88d049453230016a392f17b8899376a9ef578853f93dd2493a89b1c4b",
+  "manifestDigest": "sha256:ac99df48af04dfaee707c4cf78b0b66afbf37a8a6fa7b41052bc15bec942b17b",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -13,7 +13,7 @@
   },
   "summary": {
     "totalOntologyFiles": 70,
-    "attestedFiles": 11,
+    "attestedFiles": 12,
     "signedFiles": 0
   },
   "attested": [
@@ -26,6 +26,16 @@
       "slug": "canonical",
       "series": "Regnum Dei",
       "sha256": "sha256:067efeb78880135b014582dde2da630c6f9c460928355780d114a6a2021d9b4a"
+    },
+    {
+      "path": "ontology/governance/identity/SemanticPerimeter.md",
+      "stage": "published",
+      "title": "Semper Idem",
+      "author": null,
+      "publishedAt": null,
+      "slug": "semantic-perimeter",
+      "series": null,
+      "sha256": "sha256:b3aaf1d7438601dc7d7ddcf302e3e46215a4c6075634efd9db41b84b0696c165"
     },
     {
       "path": "ontology/governance/illumination/arete.md",

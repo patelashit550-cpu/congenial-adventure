@@ -71,9 +71,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     series: [
       { name: "Carta", desc: "Introduction", dataPoint: "0xBF5", href: "/governance/carta" },
       { name: "Canonical", desc: "Glossary", dataPoint: "0xBF0", href: "/governance/canonical" },
-      { name: "Semper Idem", desc: "Identity", dataPoint: "0xBF2", href: "/governance/identity" },
-      { name: "E Pluribus Unum", desc: "Capital", dataPoint: "0xBF3", href: "/governance/capital" },
-      { name: "Sine Qua Non", desc: "Intelligence", dataPoint: "0xBF1", href: "/governance/intelligence" },
+      { name: "Regnum Dei", desc: "Restful State", dataPoint: "0xBF1", href: "/governance/dial-square" },
       { name: "Peridot", desc: "Terms & Conditions", dataPoint: "0xBF4", href: "/governance/peridot" },
     ],
   },

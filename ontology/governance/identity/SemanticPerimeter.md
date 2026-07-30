@@ -1,5 +1,5 @@
 ---
-stage: draft
+stage: published
 node_id: 2960
 jurisdiction: Ashit Milne
 title: Semper Idem
