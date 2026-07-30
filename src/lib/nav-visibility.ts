@@ -117,6 +117,18 @@ function isHrefNew(href: string, relFromOntology: string): boolean {
         ? listEssaysInTopicFolder([...config.ontologyTopicPath], { series: config.seriesSlug })
         : listEssaysBySeries(config.seriesName);
 
+    const pillarHits =
+      config.navPillars?.some((pillar) =>
+        listEssaysInTopicFolder([...pillar.ontologyTopicPath], { series: pillar.seriesSlug }).some(
+          (stub) => {
+            const fm = frontmatterForEssaySlug(stub.slug, pillar.ontologyTopicPath);
+            return isWithinNewHighlightWindow(fm, NEW_HIGHLIGHT_DAYS);
+          }
+        )
+      ) ?? false;
+
+    if (pillarHits) return true;
+
     return stubs.some((stub) => {
       const topicPath = config.mode === "folder" ? config.ontologyTopicPath : undefined;
       const fm = frontmatterForEssaySlug(stub.slug, topicPath);

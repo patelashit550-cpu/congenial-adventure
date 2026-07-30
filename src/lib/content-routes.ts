@@ -5,9 +5,21 @@ export type ContentHubKey =
   | "chronicle/jack-london"
   | "chronicle/polite_bureau"
   | "governance/capital"
+  | "governance/dial-square"
   | "governance/identity"
   | "governance/intelligence"
   | "governance/peridot";
+
+/** Pillar group on a composite hub (Semper Idem) — essays nest under the hub URL. */
+export type ContentHubPillar = {
+  /** Series title shown in the left nav (e.g. Sine Qua Non). */
+  kicker: string;
+  /** Pillar role under the series title (e.g. Intelligence). */
+  subtitle?: string;
+  publicBase: readonly string[];
+  ontologyTopicPath: readonly string[];
+  seriesSlug?: string;
+};
 
 type FolderHubConfig = {
   mode: "folder";
@@ -25,6 +37,8 @@ type SeriesHubConfig = {
 export type ContentHubConfig = {
   publicBase: readonly string[];
   navKicker: string;
+  /** Optional line under the series kicker (e.g. Regnum Dei → The Restful State). */
+  navKickerSubtitle?: string;
   landerSlug: string;
   /** When true, hub index (`/…/peridot/`) opens the latest essay by `publishedAt`. */
   hubLanding?: "latest" | "lander" | "first";
@@ -34,6 +48,11 @@ export type ContentHubConfig = {
   showNavDate?: boolean;
   /** When true with {@link showNavDate}, sort nav oldest → newest. */
   navChronological?: boolean;
+  /**
+   * Dial Square–style map: left nav groups linking out to pillar hubs.
+   * Hub itself only hosts the lander (and any folder essays under publicBase).
+   */
+  navPillars?: readonly ContentHubPillar[];
 } & (FolderHubConfig | SeriesHubConfig);
 
 export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
@@ -55,12 +74,44 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     showNavDate: true,
     navChronological: true,
   },
+  "governance/dial-square": {
+    publicBase: ["governance", "dial-square"],
+    navKicker: "REGNUM DEI",
+    navKickerSubtitle: "Restful State",
+    landerSlug: "semantic-perimeter",
+    hubLanding: "lander",
+    mode: "folder",
+    ontologyTopicPath: ["governance", "identity"],
+    seriesSlug: "dial square",
+    navPillars: [
+      {
+        kicker: "Sine Qua Non",
+        subtitle: "Intelligence",
+        publicBase: ["governance", "intelligence"],
+        ontologyTopicPath: ["governance", "intelligence"],
+      },
+      {
+        kicker: "Dial Square",
+        subtitle: "Identity",
+        publicBase: ["governance", "identity"],
+        ontologyTopicPath: ["governance", "identity"],
+        seriesSlug: "dial square",
+      },
+      {
+        kicker: "E Pluribus Unum",
+        subtitle: "Capital",
+        publicBase: ["governance", "capital"],
+        ontologyTopicPath: ["governance", "capital"],
+      },
+    ],
+  },
   "governance/identity": {
     publicBase: ["governance", "identity"],
     navKicker: "IDENTITY",
-    landerSlug: "identity",
+    landerSlug: "dial-square",
     mode: "folder",
     ontologyTopicPath: ["governance", "identity"],
+    seriesSlug: "dial square",
     sequentialNav: true,
   },
   "governance/capital": {
@@ -145,13 +196,30 @@ export function listContentHubStaticParams(
     const base = [...config.publicBase];
     out.push({ slug: base });
 
+    const seen = new Set<string>();
+    const addEssay = (essaySlug: string) => {
+      if (seen.has(essaySlug)) return;
+      seen.add(essaySlug);
+      out.push({ slug: [...base, essaySlug] });
+    };
+
+    if (config.landerSlug) addEssay(config.landerSlug);
+
     const essays =
       config.mode === "folder"
         ? listFolderEssays([...config.ontologyTopicPath], config.seriesSlug)
         : listSeriesEssays(config.seriesName);
 
     for (const essay of essays) {
-      out.push({ slug: [...base, essay.slug] });
+      addEssay(essay.slug);
+    }
+
+    if (config.navPillars) {
+      for (const pillar of config.navPillars) {
+        for (const essay of listFolderEssays([...pillar.ontologyTopicPath], pillar.seriesSlug)) {
+          addEssay(essay.slug);
+        }
+      }
     }
   }
 

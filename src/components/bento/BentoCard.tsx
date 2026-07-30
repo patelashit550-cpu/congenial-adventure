@@ -168,7 +168,7 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
       </p>
 
       <div className="bento-header-title-row">
-        <h2 className="bento-box-title text-2xl font-bold tracking-tight sm:text-3xl">
+        <h2 className="bento-box-title text-xl tracking-normal sm:text-2xl">
           {title.toUpperCase()}
         </h2>
         {titleVisualSrc && (
