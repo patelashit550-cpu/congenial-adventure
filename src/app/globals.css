@@ -1231,6 +1231,12 @@
   margin-top: 0.85rem;
 }
 
+.p3-narrative-body blockquote br {
+  display: block;
+  content: "";
+  margin-top: 0;
+}
+
 .p3-narrative-body blockquote hr {
   margin: 0.9rem auto;
   border: 0;
