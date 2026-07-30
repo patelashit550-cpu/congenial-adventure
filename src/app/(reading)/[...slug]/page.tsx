@@ -505,64 +505,6 @@ function listHubEssays(config: ContentHubConfig): EssayStub[] {
   return config.navChronological ? sortEssayStubsChronological(essays) : essays;
 }
 
-type TopicNavGroup = {
-  kicker: string;
-  subtitle?: string;
-  items: Array<{ href: string; title: string; slug: string }>;
-};
-
-function listPillarNavGroups(
-  config: ContentHubConfig,
-  options?: { omitSlug?: string }
-): TopicNavGroup[] | undefined {
-  if (!config.navPillars?.length) return undefined;
-
-  /** Keep the Semper Idem chrome: essays nest under this hub’s public base. */
-  const nestBase = `/${config.publicBase.join("/")}`;
-
-  return config.navPillars.map((pillar) => {
-    const stubs = listEssaysInTopicFolderForBuild([...pillar.ontologyTopicPath], {
-      series: pillar.seriesSlug,
-    }).filter((e) => e.slug !== options?.omitSlug);
-    return {
-      kicker: pillar.kicker,
-      subtitle: pillar.subtitle,
-      items: stubs.map((e) => ({
-        href: `${nestBase}/${e.slug}`,
-        title: e.title,
-        slug: e.slug,
-      })),
-    };
-  });
-}
-
-function resolveHubEssay(
-  config: ContentHubConfig,
-  essaySlug: string,
-  topicPath: string[]
-): EssayData | null {
-  if (config.mode === "folder") {
-    const inFolder = getEssayInTopic(topicPath, essaySlug);
-    if (inFolder) return inFolder;
-  }
-  for (const pillar of config.navPillars ?? []) {
-    const inPillar = getEssayInTopic([...pillar.ontologyTopicPath], essaySlug);
-    if (inPillar) return inPillar;
-  }
-  return getProfileData([essaySlug]);
-}
-
-function hubAllowsEssaySlug(config: ContentHubConfig, essaySlug: string, essays: EssayStub[]): boolean {
-  if (essaySlug === config.landerSlug) return true;
-  if (essays.some((e) => e.slug === essaySlug)) return true;
-  if (!config.navPillars?.length) return false;
-  return config.navPillars.some((pillar) =>
-    listEssaysInTopicFolderForBuild([...pillar.ontologyTopicPath], {
-      series: pillar.seriesSlug,
-    }).some((e) => e.slug === essaySlug)
-  );
-}
-
 function renderContentHub(route: ContentHubRoute) {
   const { config, essaySlug: routeEssaySlug } = route;
   const publicTopicPath = [...config.publicBase];
@@ -570,9 +512,6 @@ function renderContentHub(route: ContentHubRoute) {
   const essays = listHubEssays(config);
   const latestSlug = pickLatestEssaySlug(essays);
   const topicPath = config.mode === "folder" ? [...config.ontologyTopicPath] : [];
-  const navGroups = listPillarNavGroups(config, {
-    omitSlug: config.navPillars ? config.landerSlug : undefined,
-  });
 
   const landerEssay =
     config.mode === "folder" ? getEssayInTopic(topicPath, config.landerSlug) : null;
@@ -580,15 +519,11 @@ function renderContentHub(route: ContentHubRoute) {
   const hubIndexSlug =
     config.hubLanding === "latest"
       ? latestSlug
-      : config.hubLanding === "lander"
-        ? landerEssay
+      : config.hubLanding === "first" || config.sequentialNav
+        ? essays[0]?.slug ?? null
+        : landerEssay
           ? config.landerSlug
-          : latestSlug
-        : config.hubLanding === "first" || config.sequentialNav
-          ? essays[0]?.slug ?? null
-          : landerEssay
-            ? config.landerSlug
-            : latestSlug;
+          : latestSlug;
 
   const essaySlug =
     routeEssaySlug === null || routeEssaySlug === config.landerSlug
@@ -597,33 +532,30 @@ function renderContentHub(route: ContentHubRoute) {
 
   if (!essaySlug) return notFound();
 
-  if (routeEssaySlug && !hubAllowsEssaySlug(config, routeEssaySlug, essays)) {
-    return notFound();
+  let activeEssay: EssayData | null = null;
+  if (config.mode === "folder") {
+    activeEssay = getEssayInTopic(topicPath, essaySlug);
+  }
+  if (!activeEssay) {
+    activeEssay = getProfileData([essaySlug]);
   }
 
-  const activeEssay = resolveHubEssay(config, essaySlug, topicPath);
   if (!activeEssay) return notFound();
 
   const st = normalizeStage((activeEssay.frontmatter as Record<string, unknown>).stage);
   if (!isStageIncludedInBuild(st)) return notFound();
 
-  const landerTitle =
-    (typeof landerEssay?.frontmatter.title === "string" && landerEssay.frontmatter.title) ||
-    essays.find((e) => e.slug === config.landerSlug)?.title ||
-    "Overview";
+  if (routeEssaySlug && essays.length > 0 && !essays.some((e) => e.slug === routeEssaySlug)) {
+    if (routeEssaySlug !== config.landerSlug) return notFound();
+  }
 
   return (
     <TopicLayout
       topicPath={publicTopicPath}
       navKicker={config.navKicker}
-      navKickerSubtitle={config.navKickerSubtitle}
-      showNavIndex={config.sequentialNav === true && !navGroups}
+      showNavIndex={config.sequentialNav === true}
       showNavDate={config.showNavDate === true}
       essays={essays}
-      navGroups={navGroups}
-      overviewHref={navGroups ? `/${publicTopicPath.join("/")}` : undefined}
-      overviewTitle={navGroups ? landerTitle : undefined}
-      overviewSlug={navGroups ? config.landerSlug : undefined}
       activeSlug={essaySlug}
       activeEssay={activeEssay}
     />
@@ -688,27 +620,17 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
 function TopicLayout({
   topicPath,
   navKicker,
-  navKickerSubtitle,
   showNavIndex = false,
   showNavDate = false,
   essays,
-  navGroups,
-  overviewHref,
-  overviewTitle,
-  overviewSlug,
   activeSlug,
   activeEssay,
 }: {
   topicPath: string[];
   navKicker?: string;
-  navKickerSubtitle?: string;
   showNavIndex?: boolean;
   showNavDate?: boolean;
   essays: EssayStub[];
-  navGroups?: TopicNavGroup[];
-  overviewHref?: string;
-  overviewTitle?: string;
-  overviewSlug?: string;
   activeSlug: string;
   activeEssay: EssayData;
 }) {
@@ -757,23 +679,16 @@ function TopicLayout({
   const activeKickerLabel = isGlossary
     ? "GLOSSARY"
     : navKicker ?? topicPath[topicPath.length - 1]?.toUpperCase() ?? "INDEX";
-  const hasPillarNav = Boolean(navGroups?.length);
-  const overviewActive = Boolean(overviewSlug && activeSlug === overviewSlug);
 
   return (
     <div className="p3-topic-canvas">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentJsonLd(frontmatter, did, canonicalUrl) }} />
       <nav
-        className={`p3-topic-nav${showNavIndex ? " p3-topic-nav--sequential" : ""}${showNavDate ? " p3-topic-nav--temporal" : ""}${isGlossary ? " p3-topic-nav--glossary" : ""}${hasPillarNav ? " p3-topic-nav--pillars" : ""}`}
+        className={`p3-topic-nav${showNavIndex ? " p3-topic-nav--sequential" : ""}${showNavDate ? " p3-topic-nav--temporal" : ""}${isGlossary ? " p3-topic-nav--glossary" : ""}`}
         aria-label={isGlossary ? "Glossary terms" : "Essays in this topic"}
       >
         <div className="p3-topic-nav__sticky">
-          <div className="p3-topic-nav__head">
-            <p className="p3-topic-nav__kicker">{activeKickerLabel}</p>
-            {navKickerSubtitle && (
-              <p className="p3-topic-nav__kicker-sub">{navKickerSubtitle}</p>
-            )}
-          </div>
+          <p className="p3-topic-nav__kicker">{activeKickerLabel}</p>
           {showNavIndex && (
             <p className="p3-topic-nav__seq-note" aria-hidden="true">
               Read in order
@@ -784,112 +699,51 @@ function TopicLayout({
               Ça va ?
             </p>
           )}
-          {isGlossary ? (
-            <ul className="p3-topic-nav__list">
-              {terms.map((term) => (
-                <li key={term.anchor}>
-                  <a href={`#${term.anchor}`} className="p3-topic-nav__link">
-                    {term.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          ) : hasPillarNav && navGroups ? (
-            <>
-              {overviewHref && overviewTitle && (
-                <ul className="p3-topic-nav__list p3-topic-nav__list--overview">
-                  <li>
-                    <Link
-                      href={overviewHref}
-                      className={`p3-topic-nav__link${overviewActive ? " is-active" : ""}`}
-                      aria-current={overviewActive ? "page" : undefined}
-                    >
-                      <span className="p3-topic-nav__label">
-                        <span className="p3-topic-nav__title">{overviewTitle}</span>
-                      </span>
-                    </Link>
+          <ul className="p3-topic-nav__list">
+            {isGlossary
+              ? terms.map((term) => (
+                  <li key={term.anchor}>
+                    <a href={`#${term.anchor}`} className="p3-topic-nav__link">
+                      {term.title}
+                    </a>
                   </li>
-                </ul>
-              )}
-              <div className="p3-topic-nav__pillars">
-                {navGroups.map((group) => {
-                  if (group.items.length === 0) return null;
+                ))
+              : essays.map((e, index) => {
+                  const isActive = e.slug === activeSlug;
+                  const indexLabel = String(index);
+                  const dateLabel = showNavDate ? e.dateLabel : undefined;
                   return (
-                    <details
-                      key={group.kicker}
-                      className="p3-topic-nav__group"
-                      open
-                    >
-                      <summary className="p3-topic-nav__group-kicker">
-                        <span className="p3-topic-nav__group-label">
-                          <span className="p3-topic-nav__group-title">{group.kicker}</span>
-                          {group.subtitle && (
-                            <span className="p3-topic-nav__group-sub">{group.subtitle}</span>
+                    <li key={e.slug}>
+                      <Link
+                        href={`${basePath}/${e.slug}`}
+                        className={`p3-topic-nav__link${isActive ? " is-active" : ""}`}
+                        aria-current={isActive ? "page" : undefined}
+                        aria-label={
+                          showNavIndex
+                            ? `Part ${index}: ${e.title}`
+                            : dateLabel
+                              ? `${e.title}, ${dateLabel}`
+                              : e.title
+                        }
+                      >
+                        {showNavIndex && (
+                          <span className="p3-topic-nav__index" aria-hidden="true">
+                            {indexLabel}
+                          </span>
+                        )}
+                        <span className="p3-topic-nav__label">
+                          <span className="p3-topic-nav__title">{e.title}</span>
+                          {dateLabel && e.dateIso && (
+                            <time className="p3-topic-nav__date" dateTime={e.dateIso}>
+                              {dateLabel}
+                            </time>
                           )}
                         </span>
-                      </summary>
-                      <ul className="p3-topic-nav__list">
-                        {group.items.map((item) => {
-                          const isActive = item.slug === activeSlug;
-                          return (
-                            <li key={`${group.kicker}-${item.slug}`}>
-                              <Link
-                                href={item.href}
-                                className={`p3-topic-nav__link${isActive ? " is-active" : ""}`}
-                                aria-current={isActive ? "page" : undefined}
-                              >
-                                <span className="p3-topic-nav__label">
-                                  <span className="p3-topic-nav__title">{item.title}</span>
-                                </span>
-                              </Link>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </details>
+                      </Link>
+                    </li>
                   );
                 })}
-              </div>
-            </>
-          ) : (
-            <ul className="p3-topic-nav__list">
-              {essays.map((e, index) => {
-                const isActive = e.slug === activeSlug;
-                const indexLabel = String(index);
-                const dateLabel = showNavDate ? e.dateLabel : undefined;
-                return (
-                  <li key={e.slug}>
-                    <Link
-                      href={`${basePath}/${e.slug}`}
-                      className={`p3-topic-nav__link${isActive ? " is-active" : ""}`}
-                      aria-current={isActive ? "page" : undefined}
-                      aria-label={
-                        showNavIndex
-                          ? `Part ${index}: ${e.title}`
-                          : dateLabel
-                            ? `${e.title}, ${dateLabel}`
-                            : e.title
-                      }
-                    >
-                      {showNavIndex && (
-                        <span className="p3-topic-nav__index" aria-hidden="true">
-                          {indexLabel}
-                        </span>
-                      )}
-                      <span className="p3-topic-nav__label">
-                        <span className="p3-topic-nav__title">{e.title}</span>
-                        {dateLabel && e.dateIso && (
-                          <time className="p3-topic-nav__date" dateTime={e.dateIso}>
-                            {dateLabel}
-                          </time>
-                        )}
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
+          </ul>
         </div>
       </nav>
 

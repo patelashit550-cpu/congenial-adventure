@@ -2,9 +2,8 @@
 stage: draft
 node_id: 2947
 jurisdiction: Ashit Milne
-title: Dial Square
-label: Dial Square
-slug: dial-square
+title: DialSquare
+label: DialSquare
 type: essay
 theme: emerald
 size: md
@@ -28,10 +27,6 @@ Gloria, in te domine Gloria, exultate Oh Lord, if I had anything Anything at all
 ~ U2 ([Gloria](https://www.youtube.com/watch?v=vBODktZLQuI))
 
 **To Each His Own...**
-
-
-Theories must have real world utility and they must be based on truth - even if that truth is from a specific lens. The more lenses or perspective of truth there are the more holistic our collective model. It provides a different answer based on its location. Even 20 to 25 kilometres introduces a variance and that data itself rather than nullifying the utility provide a valuable signal to those who use it. It's not just telling you the time. It's giving you the equivalent of a GPS coordinate (with the Sun as the satellite - the one stationary thing in our lives providing a stable data point. This amounts to the first ever factor recognition of identity. From this we begin to piece together  
-
 
 The image above is *The Dial Square.* It encompasses the elements required for the expression of virtue through the application of conscientious effort - which has merit (virtue) and productive outcome. It is reflective of the contemplative as he is to it and so it improves over time until the contemplative's time on the Earth has ended. The Dial Square will maintain fidelity eternally as long as creation and its elements allow: It is an *idealized sundial* as seen from above and it provides to the seer (perceiver) the time in space for all that he needs and could ever want.
 
