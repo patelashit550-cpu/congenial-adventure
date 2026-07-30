@@ -2481,7 +2481,8 @@
 }
 
 .p3-topic-nav {
-  align-self: start;
+  /* Stretch with the article column so black chrome stays full-height while sticky nav sticks */
+  align-self: stretch;
   font-family: var(--p3-shell-nav-font);
   /* Same chrome plane as the narrative banner */
   background: #000;
@@ -2512,6 +2513,8 @@
   overscroll-behavior: contain;
   padding-bottom: 2.5rem;
   scrollbar-width: none;
+  /* Opaque fill on the stuck layer — parent bg alone scrolls away under position:sticky */
+  background: #000;
 }
 
 @media (min-width: 1280px) {

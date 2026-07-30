@@ -55,32 +55,10 @@
         }
       }
     },
-    "/chronicle/jack-london/jack-london": {
-      "get": {
-        "operationId": "get_chronicle_jack_london_jack_london",
-        "summary": "Read public page at /chronicle/jack-london/jack-london",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
     "/chronicle/polite_bureau": {
       "get": {
         "operationId": "get_chronicle_polite_bureau",
         "summary": "Read public page at /chronicle/polite_bureau",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/chronicle/polite_bureau/polite-bureau": {
-      "get": {
-        "operationId": "get_chronicle_polite_bureau_polite_bureau",
-        "summary": "Read public page at /chronicle/polite_bureau/polite-bureau",
         "responses": {
           "200": {
             "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
@@ -132,39 +110,6 @@
         }
       }
     },
-    "/governance/capital/capital": {
-      "get": {
-        "operationId": "get_governance_capital_capital",
-        "summary": "Read public page at /governance/capital/capital",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/governance/dial-square": {
-      "get": {
-        "operationId": "get_governance_dial_square",
-        "summary": "Read public page at /governance/dial-square",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/governance/dial-square/semantic-perimeter": {
-      "get": {
-        "operationId": "get_governance_dial_square_semantic_perimeter",
-        "summary": "Read public page at /governance/dial-square/semantic-perimeter",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
     "/governance/identity": {
       "get": {
         "operationId": "get_governance_identity",
@@ -176,10 +121,10 @@
         }
       }
     },
-    "/governance/identity/dial-square": {
+    "/governance/identity/semantic-perimeter": {
       "get": {
-        "operationId": "get_governance_identity_dial_square",
-        "summary": "Read public page at /governance/identity/dial-square",
+        "operationId": "get_governance_identity_semantic_perimeter",
+        "summary": "Read public page at /governance/identity/semantic-perimeter",
         "responses": {
           "200": {
             "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
@@ -191,17 +136,6 @@
       "get": {
         "operationId": "get_governance_intelligence",
         "summary": "Read public page at /governance/intelligence",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/governance/intelligence/intelligence": {
-      "get": {
-        "operationId": "get_governance_intelligence_intelligence",
-        "summary": "Read public page at /governance/intelligence/intelligence",
         "responses": {
           "200": {
             "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
@@ -224,17 +158,6 @@
       "get": {
         "operationId": "get_governance_peridot_arete",
         "summary": "Read public page at /governance/peridot/arete",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/governance/peridot/peridot": {
-      "get": {
-        "operationId": "get_governance_peridot_peridot",
-        "summary": "Read public page at /governance/peridot/peridot",
         "responses": {
           "200": {
             "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"

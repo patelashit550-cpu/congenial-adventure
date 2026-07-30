@@ -21,17 +21,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ashitmilne.xyz/chronicle/jack-london/jack-london/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://ashitmilne.xyz/chronicle/polite_bureau/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ashitmilne.xyz/chronicle/polite_bureau/polite-bureau/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -56,37 +46,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ashitmilne.xyz/governance/capital/capital/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ashitmilne.xyz/governance/dial-square/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ashitmilne.xyz/governance/dial-square/semantic-perimeter/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://ashitmilne.xyz/governance/identity/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ashitmilne.xyz/governance/identity/dial-square/</loc>
+    <loc>https://ashitmilne.xyz/governance/identity/semantic-perimeter/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ashitmilne.xyz/governance/intelligence/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ashitmilne.xyz/governance/intelligence/intelligence/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -97,11 +67,6 @@
   </url>
   <url>
     <loc>https://ashitmilne.xyz/governance/peridot/arete/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ashitmilne.xyz/governance/peridot/peridot/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -42,16 +42,7 @@ function isSiblingNavActive(
 ): boolean {
   const p = (pathname ?? "/").replace(/\/+$/, "") || "/";
   const h = href.replace(/\/+$/, "") || "/";
-  if (p === h || p.startsWith(`${h}/`)) return true;
-  // Dial Square home nests the three pillar hubs under one Philosophy sibling.
-  if (h === "/governance/dial-square") {
-    return (
-      p.startsWith("/governance/intelligence") ||
-      p.startsWith("/governance/capital") ||
-      p.startsWith("/governance/identity")
-    );
-  }
-  return false;
+  return p === h || p.startsWith(`${h}/`);
 }
 
 /*
