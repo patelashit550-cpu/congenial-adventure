@@ -60,11 +60,6 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
-function resolveTopicMapping(rawPath: string[]): { path: string[]; active: string } {
-  const target = rawPath[rawPath.length - 1];
-  return { path: rawPath.slice(0, rawPath.length - 1), active: target };
-}
-
 const AUTHOR_NAME_DEFAULT = "Ashit Milne";
 
 /** Frontmatter `tags` normalized to a trimmed string[] (SEO keywords). */
@@ -132,6 +127,49 @@ function essayDescription(fm: Record<string, unknown>, content: string): string 
   return plainExcerpt(content) ?? SiteIdentity.description;
 }
 
+/**
+ * Resolve the essay that the public URL actually renders. Must stay aligned with
+ * {@link OntologyArchive} / {@link renderContentHub} so metadata cannot pick a
+ * different file than the page body when slugs collide across the ontology.
+ */
+function resolveEssayForPublicSlug(slug: string[]): EssayData | null {
+  const route = resolveContentRoute(slug);
+  if (!route) return null;
+
+  if (route.kind === "content-hub") {
+    const { config, essaySlug: routeEssaySlug } = route;
+    const essays = listHubEssays(config);
+    const latestSlug = pickLatestEssaySlug(essays);
+    const topicPath = config.mode === "folder" ? [...config.ontologyTopicPath] : [];
+    const landerEssay =
+      config.mode === "folder" ? getEssayInTopic(topicPath, config.landerSlug) : null;
+    const hubIndexSlug =
+      config.hubLanding === "latest"
+        ? latestSlug
+        : config.hubLanding === "first" || config.sequentialNav
+          ? essays[0]?.slug ?? null
+          : landerEssay
+            ? config.landerSlug
+            : latestSlug;
+    const essaySlug =
+      routeEssaySlug === null || routeEssaySlug === config.landerSlug
+        ? hubIndexSlug
+        : routeEssaySlug;
+    if (!essaySlug) return null;
+
+    let activeEssay: EssayData | null = null;
+    if (config.mode === "folder") {
+      activeEssay = getEssayInTopic(topicPath, essaySlug);
+    }
+    if (!activeEssay) {
+      activeEssay = getProfileData([essaySlug]);
+    }
+    return activeEssay;
+  }
+
+  return getProfileData([route.activeSlug]);
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug: rawSlug } = await params;
   if (!rawSlug) return {};
@@ -139,10 +177,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const slug = rawSlug.filter(Boolean);
   if (slug.length < 2) return {};
 
-  const { active: targetSlug } = resolveTopicMapping(slug);
-  const essay = getProfileData([targetSlug]);
-
+  const essay = resolveEssayForPublicSlug(slug);
   if (!essay) return {};
+
+  const st = normalizeStage((essay.frontmatter as Record<string, unknown>).stage);
+  if (!isStageIncludedInBuild(st)) return {};
 
   const { frontmatter, content } = essay;
   const { did } = getSovereignIdentity();
