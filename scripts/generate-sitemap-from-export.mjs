@@ -140,11 +140,57 @@ function buildOpenApi(paths) {
   };
 }
 
+/**
+ * ontology-manifest.json historically listed draft hubs with paths/titles.
+ * That is a recon map. For the export, keep only tier-eligible artifacts;
+ * redact the rest to stage+name without ontology paths.
+ */
+function hardenOntologyManifest(tier = process.env.NEXT_PUBLIC_CONTENT_TIER || "global") {
+  const src = path.join(PUBLIC, "ontology-manifest.json");
+  if (!fs.existsSync(src)) return null;
+  const manifest = JSON.parse(fs.readFileSync(src, "utf8"));
+  const included = new Set(
+    tier === "preprod"
+      ? ["review", "published", "canonical"]
+      : tier === "local"
+        ? null
+        : ["published", "canonical"],
+  );
+
+  const artifacts = (manifest.artifacts ?? []).map((artifact) => {
+    const stage = String(artifact.stage ?? "draft").trim().toLowerCase() || "draft";
+    if (included == null || included.has(stage)) return artifact;
+    return {
+      dataPoint: artifact.dataPoint ?? null,
+      bento: artifact.bento ?? null,
+      layer: artifact.layer ?? null,
+      name: artifact.name ?? null,
+      stage,
+      transit: { globalExport: false, humanAudit: false },
+      redacted: true,
+    };
+  });
+
+  return {
+    ...manifest,
+    generatedAt: new Date().toISOString(),
+    contentTier: tier,
+    hardenedForRecon: true,
+    artifacts,
+  };
+}
+
 function writeDiscoveryArtifacts(paths, sitemapXml, robotsTxt) {
   const apiCatalog = buildApiCatalog();
   const openapi = buildOpenApi(paths);
   const apiCatalogJson = `${JSON.stringify(apiCatalog, null, 2)}\n`;
   const openapiJson = `${JSON.stringify(openapi, null, 2)}\n`;
+  const hardenedManifest = hardenOntologyManifest(
+    process.env.NEXT_PUBLIC_CONTENT_TIER?.trim() || "global",
+  );
+  const hardenedManifestJson = hardenedManifest
+    ? `${JSON.stringify(hardenedManifest, null, 2)}\n`
+    : null;
 
   for (const dir of [OUT, PUBLIC]) {
     fs.mkdirSync(dir, { recursive: true });
@@ -153,6 +199,10 @@ function writeDiscoveryArtifacts(paths, sitemapXml, robotsTxt) {
     fs.writeFileSync(path.join(dir, "openapi.json"), openapiJson, "utf8");
     fs.mkdirSync(path.join(dir, ".well-known"), { recursive: true });
     fs.writeFileSync(path.join(dir, ".well-known", "api-catalog"), apiCatalogJson, "utf8");
+    // Only rewrite the export copy — keep public/ source as the editorial registry.
+    if (hardenedManifestJson && dir === OUT) {
+      fs.writeFileSync(path.join(dir, "ontology-manifest.json"), hardenedManifestJson, "utf8");
+    }
   }
 
   const headersSrc = path.join(PUBLIC, "_headers");

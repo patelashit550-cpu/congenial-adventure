@@ -18,9 +18,11 @@ CI is `.github/workflows/deploy-pages.yml` (runs `npm ci` then `npm run build:gl
   `dev:preprod`, `dev:global`.
 - Production build (static export to `out/`): `npm run build:global` (this is what CI
   runs). Plain `npm run build` also works. The build chains several `scripts/*.mjs`
-  generators before/after `next build`.
+  generators before/after `next build`, ending with `stress-recon-defense.mjs` (bot/agent
+  recon stress test + learning memory in `scripts/data/recon-memory.json`).
 - Lint: `npm run lint` (`eslint .`). There is **no test suite** and no type-check script
   (types are checked as part of `next build`; run `npx tsc --noEmit` for a standalone check).
+  Standalone recon stress: `npm run stress:recon` (requires a fresh `out/`).
 
 ### Non-obvious gotchas
 
@@ -35,8 +37,10 @@ CI is `.github/workflows/deploy-pages.yml` (runs `npm ci` then `npm run build:gl
   only `published`/`canonical`. See `src/lib/content-tier.ts`.
 - **The build writes generated files into the working tree** — `next-env.d.ts`,
   `public/attestation.json`, `public/.well-known/*` (corpus-graph, provenance,
-  agent-skills), plus an untracked `semantic-graph/` dir. Do **not** commit these build
+  agent-skills), plus an untracked `semantic-graph/` dir. Do **not** commit those build
   outputs; revert them (`git checkout -- <file>`) / delete `semantic-graph/` before committing.
+  Exception: `scripts/data/recon-memory.json` is the recon-defense learning store — **do**
+  commit updates when the stress test records new lessons or surface deltas.
 - **Pre-existing lint errors** exist in `src/components/bento/BentoHomeEqualRows.tsx`
   (`react-hooks/set-state-in-effect`). They do not block deploy because CI runs only
   `build:global`, not `npm run lint`.
