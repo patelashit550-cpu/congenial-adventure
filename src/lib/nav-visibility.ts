@@ -13,7 +13,9 @@ import {
   getProfileData,
   listEssays,
   listEssaysBySeries,
+  listEssaysBySeriesForBuild,
   listEssaysInTopicFolder,
+  listEssaysInTopicFolderForBuild,
   resolveOntologyFilePath,
 } from "@/lib/markdown";
 import type { BentoKey, NavSiblingItem, NavVisibilityPayload } from "@/lib/nav-visibility-shared";
@@ -52,6 +54,9 @@ function tryReadFrontmatter(fp: string): Record<string, unknown> | null {
  * - Single-file essay: read that file.
  * - Topic folder: read the **first essay** after `listEssays` sort (order, then filename).
  *   To change which file gates a topic, set `order` in frontmatter so the intended essay sorts first.
+ *
+ * Content hubs ({@link CONTENT_HUBS}) use {@link readContentHubGateFrontmatter} instead —
+ * missing landers must not let a draft sibling hide a hub that has tier-eligible essays.
  */
 function readNavGateFrontmatter(relFromOntology: string): Record<string, unknown> | null {
   const single = resolveOntologyFilePath(relFromOntology);
@@ -69,6 +74,29 @@ function readNavGateFrontmatter(relFromOntology: string): Record<string, unknown
   }
 
   return null;
+}
+
+/**
+ * Gate a content hub from its tier-eligible essays (same set the hub route can render).
+ * Empty hubs → null → hidden. Avoids draft lander/sibling sort order suppressing published work.
+ */
+function readContentHubGateFrontmatter(
+  hubKey: ContentHubKey,
+  tier: ContentTier
+): Record<string, unknown> | null {
+  const config = CONTENT_HUBS[hubKey];
+  const stubs =
+    config.mode === "folder"
+      ? listEssaysInTopicFolderForBuild([...config.ontologyTopicPath], {
+          series: config.seriesSlug,
+          tier,
+        })
+      : listEssaysBySeriesForBuild(config.seriesName, tier);
+
+  if (stubs.length === 0) return null;
+
+  const topicPath = config.mode === "folder" ? config.ontologyTopicPath : undefined;
+  return frontmatterForEssaySlug(stubs[0]!.slug, topicPath);
 }
 
 /** Rolling window for `isNew` (gate `publishedAt` vs build/runtime `Date.now()`). */
@@ -141,7 +169,11 @@ function filterSeries(
   for (const item of section.series) {
     const href = item.href as string;
     const rel = hrefToRelOntology(href);
-    const data = readNavGateFrontmatter(rel);
+    const hubKey = href.replace(/^\//, "") as ContentHubKey;
+    const data =
+      hubKey in CONTENT_HUBS
+        ? readContentHubGateFrontmatter(hubKey, tier)
+        : readNavGateFrontmatter(rel);
     if (!isNavSeriesItemVisible(bentoKey, data, tier)) continue;
     out.push({
       name: item.name,
