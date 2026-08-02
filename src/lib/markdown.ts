@@ -215,19 +215,59 @@ function fileBelongsToTopic(filename: string, topicPath: string | string[]): boo
   return fileDir === cleanTarget || (cleanTarget === "me" && fileDir === "me");
 }
 
+type ProfileSlugMatch = {
+  filename: string;
+  basenameMatch: boolean;
+  includedInBuild: boolean;
+};
+
+/**
+ * Rank duplicate slug matches so draft/orphan frontmatter collisions cannot
+ * eclipse the essay that belongs in the current publishing tier (or the file
+ * whose basename is the slug).
+ */
+function rankProfileSlugMatches(a: ProfileSlugMatch, b: ProfileSlugMatch): number {
+  if (a.includedInBuild !== b.includedInBuild) {
+    return a.includedInBuild ? -1 : 1;
+  }
+  if (a.basenameMatch !== b.basenameMatch) {
+    return a.basenameMatch ? -1 : 1;
+  }
+  return a.filename.localeCompare(b.filename);
+}
+
 /**
  * Single-file essay lookup. Evaluates exact target files matching the leaf slug name
  * across the recursive folder index tree.
+ *
+ * When multiple files claim the same slug (basename or frontmatter), prefer the
+ * match included in the current build tier, then basename matches over
+ * frontmatter-only aliases. This prevents draft collisions from winning metadata
+ * and legacy route resolution for published URLs.
  */
 export function getProfileData(slugPath: string | string[]): EssayData | null {
   const targetSlug = Array.isArray(slugPath) ? slugPath[slugPath.length - 1] : slugPath;
   const cleanTarget = toSlug(targetSlug);
+  const tier = getPublishingContentTier();
 
-  const matchedFile = listFlatOntologyFilenames().find((filename) => {
-    if (toSlug(path.basename(filename)) === cleanTarget) return true;
+  const matches: ProfileSlugMatch[] = [];
+  for (const filename of listFlatOntologyFilenames()) {
+    const basenameMatch = toSlug(path.basename(filename)) === cleanTarget;
     const data = readFrontmatterForFilename(filename);
-    return typeof data.slug === "string" && toSlug(data.slug) === cleanTarget;
-  });
+    const frontmatterMatch =
+      typeof data.slug === "string" && toSlug(data.slug) === cleanTarget;
+    if (!basenameMatch && !frontmatterMatch) continue;
+
+    const full = path.join(ONTOLOGY_ROOT, filename);
+    matches.push({
+      filename,
+      basenameMatch,
+      includedInBuild: isStageIncludedInBuild(readStageFromFile(full), tier),
+    });
+  }
+
+  matches.sort(rankProfileSlugMatches);
+  const matchedFile = matches[0]?.filename;
 
   if (!matchedFile) {
     if (process.env.NODE_ENV === "development") {
