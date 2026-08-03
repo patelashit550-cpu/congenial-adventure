@@ -9,7 +9,9 @@ out/
 .env
 .env.local
 .env.*.local
+.env.orderbook
 *.key
+scripts/data/orderbook-processed.json
 
 # os / editor
 .DS_Store

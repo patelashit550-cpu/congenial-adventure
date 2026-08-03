@@ -43,3 +43,9 @@ CI is `.github/workflows/deploy-pages.yml` (runs `npm ci` then `npm run build:gl
 - Optional integrations are **not needed** for local dev/build: Pinata/IPFS
   (`.env.sovereign.example`), Ollama (`canon:generate:ollama`), and Python + Pillow
   (`process:bento-emblems`).
+- **Ethereum mainnet order book** (optional): `/orderbook/` + `src/lib/orderbook/*`.
+  MetaMask connects traders; custodial deposit addresses are HD-derived from
+  `ORDERBOOK_HD_MNEMONIC` via `npm run orderbook:derive` (writes public addresses
+  only to `src/data/orderbook-deposit-addresses.json`). Never commit the mnemonic
+  (use `.env.orderbook` / `.env.local`). Offline matcher: `npm run orderbook:process`.
+  Mainnet only — no L2 settlement in this module.
