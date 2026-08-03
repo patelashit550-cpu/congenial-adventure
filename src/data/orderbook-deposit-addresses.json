@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "chainId": 1,
+  "chainName": "Ethereum Mainnet",
+  "generatedAt": null,
+  "note": "Run npm run orderbook:derive with ORDERBOOK_HD_MNEMONIC set to populate public deposit addresses. Never commit the mnemonic. Do not use development/test mnemonics on mainnet.",
+  "addresses": []
+}
