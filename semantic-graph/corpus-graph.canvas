@@ -1,0 +1,1368 @@
+{
+  "nodes": [
+    {
+      "id": "c-essay-0",
+      "type": "file",
+      "file": "ontology/governance/identity/SemanticPerimeter.md",
+      "x": 0,
+      "y": 0,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-essay-1",
+      "type": "file",
+      "file": "ontology/governance/illumination/arete.md",
+      "x": 360,
+      "y": 0,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-essay-2",
+      "type": "file",
+      "file": "ontology/governance/illumination/social-network.md",
+      "x": 720,
+      "y": 0,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-essay-3",
+      "type": "file",
+      "file": "ontology/me/connexion.md",
+      "x": 1080,
+      "y": 0,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-essay-4",
+      "type": "file",
+      "file": "ontology/me/origins.md",
+      "x": 1440,
+      "y": 0,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-essay-5",
+      "type": "file",
+      "file": "ontology/me/praxis.md",
+      "x": 0,
+      "y": 110,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-essay-6",
+      "type": "file",
+      "file": "ontology/me/trials-of-job.md",
+      "x": 360,
+      "y": 110,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-essay-7",
+      "type": "file",
+      "file": "ontology/narrative/biography/ashit-milne.md",
+      "x": 720,
+      "y": 110,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-essay-8",
+      "type": "file",
+      "file": "ontology/narrative/biography/ashit-patel.md",
+      "x": 1080,
+      "y": 110,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-essay-9",
+      "type": "file",
+      "file": "ontology/narrative/comment/Tenable.md",
+      "x": 1440,
+      "y": 110,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-essay-10",
+      "type": "file",
+      "file": "ontology/narrative/comment/Transition.md",
+      "x": 0,
+      "y": 220,
+      "width": 300,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "c-other-0",
+      "type": "text",
+      "text": "series: peridot",
+      "x": 0,
+      "y": 490,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-1",
+      "type": "text",
+      "text": "series: The Times",
+      "x": 360,
+      "y": 490,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-2",
+      "type": "text",
+      "text": "series: Polite Bureau",
+      "x": 720,
+      "y": 490,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-3",
+      "type": "text",
+      "text": "folder: governance/identity",
+      "x": 1080,
+      "y": 490,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-4",
+      "type": "text",
+      "text": "folder: governance/illumination",
+      "x": 1440,
+      "y": 490,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-5",
+      "type": "text",
+      "text": "folder: me",
+      "x": 0,
+      "y": 580,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-6",
+      "type": "text",
+      "text": "folder: narrative/biography",
+      "x": 360,
+      "y": 580,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-7",
+      "type": "text",
+      "text": "folder: narrative/comment",
+      "x": 720,
+      "y": 580,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-8",
+      "type": "text",
+      "text": "tag: governance",
+      "x": 1080,
+      "y": 580,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-9",
+      "type": "text",
+      "text": "tag: identity",
+      "x": 1440,
+      "y": 580,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-10",
+      "type": "text",
+      "text": "tag: sovereignty",
+      "x": 0,
+      "y": 670,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-11",
+      "type": "text",
+      "text": "tag: commons",
+      "x": 360,
+      "y": 670,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-12",
+      "type": "text",
+      "text": "tag: ethics",
+      "x": 720,
+      "y": 670,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-13",
+      "type": "text",
+      "text": "tag: money",
+      "x": 1080,
+      "y": 670,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-14",
+      "type": "text",
+      "text": "tag: capital",
+      "x": 1440,
+      "y": 670,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-15",
+      "type": "text",
+      "text": "tag: theology",
+      "x": 0,
+      "y": 760,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-16",
+      "type": "text",
+      "text": "tag: networks",
+      "x": 360,
+      "y": 760,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-17",
+      "type": "text",
+      "text": "tag: ecology",
+      "x": 720,
+      "y": 760,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-18",
+      "type": "text",
+      "text": "tag: anarchism",
+      "x": 1080,
+      "y": 760,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-19",
+      "type": "text",
+      "text": "tag: political-economy",
+      "x": 1440,
+      "y": 760,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-20",
+      "type": "text",
+      "text": "tag: economy",
+      "x": 0,
+      "y": 850,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-21",
+      "type": "text",
+      "text": "tag: technology",
+      "x": 360,
+      "y": 850,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-22",
+      "type": "text",
+      "text": "tag: Community",
+      "x": 720,
+      "y": 850,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-23",
+      "type": "text",
+      "text": "tag: Spirituality",
+      "x": 1080,
+      "y": 850,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-24",
+      "type": "text",
+      "text": "tag: Personal-Growth",
+      "x": 1440,
+      "y": 850,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-25",
+      "type": "text",
+      "text": "tag: Toronto",
+      "x": 0,
+      "y": 940,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-26",
+      "type": "text",
+      "text": "tag: Meditation",
+      "x": 360,
+      "y": 940,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-27",
+      "type": "text",
+      "text": "tag: cultural-critique",
+      "x": 720,
+      "y": 940,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-28",
+      "type": "text",
+      "text": "tag: civilization",
+      "x": 1080,
+      "y": 940,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-29",
+      "type": "text",
+      "text": "tag: monetary-policy",
+      "x": 1440,
+      "y": 940,
+      "width": 280,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "c-other-30",
+      "type": "text",
+      "text": "term: migration",
+      "x": 0,
+      "y": 1030,
+      "width": 280,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "c-other-31",
+      "type": "text",
+      "text": "term: Identity",
+      "x": 360,
+      "y": 1030,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-32",
+      "type": "text",
+      "text": "term: Political Economy",
+      "x": 720,
+      "y": 1030,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-33",
+      "type": "text",
+      "text": "term: Governance",
+      "x": 1080,
+      "y": 1030,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-34",
+      "type": "text",
+      "text": "term: Keiretsu",
+      "x": 1440,
+      "y": 1030,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-35",
+      "type": "text",
+      "text": "term: ash patel",
+      "x": 0,
+      "y": 1120,
+      "width": 280,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "c-other-36",
+      "type": "text",
+      "text": "term: ashit patel",
+      "x": 360,
+      "y": 1120,
+      "width": 280,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "c-other-37",
+      "type": "text",
+      "text": "term: education",
+      "x": 720,
+      "y": 1120,
+      "width": 280,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "c-other-38",
+      "type": "text",
+      "text": "term: international",
+      "x": 1080,
+      "y": 1120,
+      "width": 280,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "c-other-39",
+      "type": "text",
+      "text": "term: Praxis",
+      "x": 1440,
+      "y": 1120,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-40",
+      "type": "text",
+      "text": "term: architecture",
+      "x": 0,
+      "y": 1210,
+      "width": 280,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "c-other-41",
+      "type": "text",
+      "text": "term: Moral Injury",
+      "x": 360,
+      "y": 1210,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-42",
+      "type": "text",
+      "text": "term: transaction",
+      "x": 720,
+      "y": 1210,
+      "width": 280,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "c-other-43",
+      "type": "text",
+      "text": "term: Yoga Element",
+      "x": 1080,
+      "y": 1210,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-44",
+      "type": "text",
+      "text": "term: Dharana",
+      "x": 1440,
+      "y": 1210,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-45",
+      "type": "text",
+      "text": "term: Dhyana",
+      "x": 0,
+      "y": 1300,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-46",
+      "type": "text",
+      "text": "term: Samadhi",
+      "x": 360,
+      "y": 1300,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-47",
+      "type": "text",
+      "text": "term: Mudra",
+      "x": 720,
+      "y": 1300,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-48",
+      "type": "text",
+      "text": "term: Omphalos",
+      "x": 1080,
+      "y": 1300,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-49",
+      "type": "text",
+      "text": "term: Dollar Regime",
+      "x": 1440,
+      "y": 1300,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-50",
+      "type": "text",
+      "text": "term: Treasury of the Commons",
+      "x": 0,
+      "y": 1390,
+      "width": 280,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "c-other-51",
+      "type": "text",
+      "text": "term: Protocol",
+      "x": 360,
+      "y": 1390,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-52",
+      "type": "text",
+      "text": "term: Yield",
+      "x": 720,
+      "y": 1390,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-53",
+      "type": "text",
+      "text": "term: Tenable",
+      "x": 1080,
+      "y": 1390,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-54",
+      "type": "text",
+      "text": "term: Alpha",
+      "x": 1440,
+      "y": 1390,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-55",
+      "type": "text",
+      "text": "term: Anarchism",
+      "x": 0,
+      "y": 1480,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-56",
+      "type": "text",
+      "text": "term: Anima",
+      "x": 360,
+      "y": 1480,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-57",
+      "type": "text",
+      "text": "term: Animus",
+      "x": 720,
+      "y": 1480,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-58",
+      "type": "text",
+      "text": "term: Animus Machinae",
+      "x": 1080,
+      "y": 1480,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-59",
+      "type": "text",
+      "text": "term: Areté",
+      "x": 1440,
+      "y": 1480,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-60",
+      "type": "text",
+      "text": "term: Autonomy",
+      "x": 0,
+      "y": 1570,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-61",
+      "type": "text",
+      "text": "term: Beta",
+      "x": 360,
+      "y": 1570,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-62",
+      "type": "text",
+      "text": "term: Breathwork",
+      "x": 720,
+      "y": 1570,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-63",
+      "type": "text",
+      "text": "term: Call to Adventure",
+      "x": 1080,
+      "y": 1570,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-64",
+      "type": "text",
+      "text": "term: Calling",
+      "x": 1440,
+      "y": 1570,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-65",
+      "type": "text",
+      "text": "term: Capital",
+      "x": 0,
+      "y": 1660,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-66",
+      "type": "text",
+      "text": "term: Commons, Treasury of the",
+      "x": 360,
+      "y": 1660,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-67",
+      "type": "text",
+      "text": "term: Creation",
+      "x": 720,
+      "y": 1660,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-68",
+      "type": "text",
+      "text": "term: Dial Square",
+      "x": 1080,
+      "y": 1660,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-69",
+      "type": "text",
+      "text": "term: Equivalence",
+      "x": 1440,
+      "y": 1660,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-70",
+      "type": "text",
+      "text": "term: Firmitas",
+      "x": 0,
+      "y": 1750,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-71",
+      "type": "text",
+      "text": "term: Giants",
+      "x": 360,
+      "y": 1750,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-72",
+      "type": "text",
+      "text": "term: Hormesis",
+      "x": 720,
+      "y": 1750,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-73",
+      "type": "text",
+      "text": "term: Intelligence",
+      "x": 1080,
+      "y": 1750,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-74",
+      "type": "text",
+      "text": "term: Janus",
+      "x": 1440,
+      "y": 1750,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-75",
+      "type": "text",
+      "text": "term: Ledger",
+      "x": 0,
+      "y": 1840,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-76",
+      "type": "text",
+      "text": "term: Lingam",
+      "x": 360,
+      "y": 1840,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-77",
+      "type": "text",
+      "text": "term: Maya",
+      "x": 720,
+      "y": 1840,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-78",
+      "type": "text",
+      "text": "term: Namaste",
+      "x": 1080,
+      "y": 1840,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-79",
+      "type": "text",
+      "text": "term: Noblesse Oblige",
+      "x": 1440,
+      "y": 1840,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-80",
+      "type": "text",
+      "text": "term: Omega",
+      "x": 0,
+      "y": 1930,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-81",
+      "type": "text",
+      "text": "term: Orthodoxy",
+      "x": 360,
+      "y": 1930,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-82",
+      "type": "text",
+      "text": "term: Peridot",
+      "x": 720,
+      "y": 1930,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-83",
+      "type": "text",
+      "text": "term: Perimeter",
+      "x": 1080,
+      "y": 1930,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-84",
+      "type": "text",
+      "text": "term: Project, Product, Protocol",
+      "x": 1440,
+      "y": 1930,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-85",
+      "type": "text",
+      "text": "term: Satyagraha",
+      "x": 0,
+      "y": 2020,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-86",
+      "type": "text",
+      "text": "term: Self-sovereign",
+      "x": 360,
+      "y": 2020,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-87",
+      "type": "text",
+      "text": "term: Semantic Perimeter",
+      "x": 720,
+      "y": 2020,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-88",
+      "type": "text",
+      "text": "term: Semper Idem",
+      "x": 1080,
+      "y": 2020,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-89",
+      "type": "text",
+      "text": "term: Social Credit",
+      "x": 1440,
+      "y": 2020,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-90",
+      "type": "text",
+      "text": "term: Social Network",
+      "x": 0,
+      "y": 2110,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-91",
+      "type": "text",
+      "text": "term: Soft Power",
+      "x": 360,
+      "y": 2110,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-92",
+      "type": "text",
+      "text": "term: Stephen / Steven",
+      "x": 720,
+      "y": 2110,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "c-other-93",
+      "type": "text",
+      "text": "term: Yogasana",
+      "x": 1080,
+      "y": 2110,
+      "width": 280,
+      "height": 60,
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "c-edge-0",
+      "fromNode": "c-essay-1",
+      "fromSide": "right",
+      "toNode": "c-other-0",
+      "toSide": "left",
+      "label": "member-of-series"
+    },
+    {
+      "id": "c-edge-1",
+      "fromNode": "c-essay-2",
+      "fromSide": "right",
+      "toNode": "c-other-0",
+      "toSide": "left",
+      "label": "member-of-series"
+    },
+    {
+      "id": "c-edge-2",
+      "fromNode": "c-essay-4",
+      "fromSide": "right",
+      "toNode": "c-other-30",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-3",
+      "fromNode": "c-essay-4",
+      "fromSide": "right",
+      "toNode": "c-other-31",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-4",
+      "fromNode": "c-essay-4",
+      "fromSide": "right",
+      "toNode": "c-other-32",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-5",
+      "fromNode": "c-essay-4",
+      "fromSide": "right",
+      "toNode": "c-other-33",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-6",
+      "fromNode": "c-essay-4",
+      "fromSide": "right",
+      "toNode": "c-other-34",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-7",
+      "fromNode": "c-essay-4",
+      "fromSide": "right",
+      "toNode": "c-other-35",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-8",
+      "fromNode": "c-essay-4",
+      "fromSide": "right",
+      "toNode": "c-other-36",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-9",
+      "fromNode": "c-essay-4",
+      "fromSide": "right",
+      "toNode": "c-other-37",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-10",
+      "fromNode": "c-essay-4",
+      "fromSide": "right",
+      "toNode": "c-other-38",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-11",
+      "fromNode": "c-essay-5",
+      "fromSide": "right",
+      "toNode": "c-other-39",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-12",
+      "fromNode": "c-essay-5",
+      "fromSide": "right",
+      "toNode": "c-other-40",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-13",
+      "fromNode": "c-essay-5",
+      "fromSide": "right",
+      "toNode": "c-other-33",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-14",
+      "fromNode": "c-essay-5",
+      "fromSide": "right",
+      "toNode": "c-other-32",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-15",
+      "fromNode": "c-essay-6",
+      "fromSide": "right",
+      "toNode": "c-other-41",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-16",
+      "fromNode": "c-essay-6",
+      "fromSide": "right",
+      "toNode": "c-other-33",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-17",
+      "fromNode": "c-essay-6",
+      "fromSide": "right",
+      "toNode": "c-other-36",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-18",
+      "fromNode": "c-essay-7",
+      "fromSide": "right",
+      "toNode": "c-other-1",
+      "toSide": "left",
+      "label": "member-of-series"
+    },
+    {
+      "id": "c-edge-19",
+      "fromNode": "c-essay-8",
+      "fromSide": "right",
+      "toNode": "c-other-1",
+      "toSide": "left",
+      "label": "member-of-series"
+    },
+    {
+      "id": "c-edge-20",
+      "fromNode": "c-essay-8",
+      "fromSide": "right",
+      "toNode": "c-other-35",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-21",
+      "fromNode": "c-essay-9",
+      "fromSide": "right",
+      "toNode": "c-other-2",
+      "toSide": "left",
+      "label": "member-of-series"
+    },
+    {
+      "id": "c-edge-22",
+      "fromNode": "c-essay-9",
+      "fromSide": "right",
+      "toNode": "c-other-33",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-23",
+      "fromNode": "c-essay-9",
+      "fromSide": "right",
+      "toNode": "c-other-42",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-24",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-2",
+      "toSide": "left",
+      "label": "member-of-series"
+    },
+    {
+      "id": "c-edge-25",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-43",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-26",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-44",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-27",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-45",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-28",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-46",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-29",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-47",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-30",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-48",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-31",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-49",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-32",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-50",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-33",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-51",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-34",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-31",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-35",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-52",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-36",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-53",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-37",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-33",
+      "toSide": "left",
+      "label": "lexica"
+    },
+    {
+      "id": "c-edge-38",
+      "fromNode": "c-essay-10",
+      "fromSide": "right",
+      "toNode": "c-other-42",
+      "toSide": "left",
+      "label": "lexica"
+    }
+  ]
+}
