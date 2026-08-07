@@ -69,10 +69,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </NavVisibilityProvider>
         <AdTrackingCleanup />
         <Script
-          defer
           src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token": "c4b3d006fe4b4c56bf2bbf3334b764ea"}'
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       </body>
     </html>
