@@ -143,13 +143,17 @@ export function listContentHubStaticParams(
 
   for (const config of Object.values(CONTENT_HUBS)) {
     const base = [...config.publicBase];
-    out.push({ slug: base });
 
     const essays =
       config.mode === "folder"
         ? listFolderEssays([...config.ontologyTopicPath], config.seriesSlug)
         : listSeriesEssays(config.seriesName);
 
+    // Empty hubs render `notFound()` — do not export index shells that become
+    // sitemap/openapi 404 URLs (e.g. capital/intelligence with only drafts).
+    if (essays.length === 0) continue;
+
+    out.push({ slug: base });
     for (const essay of essays) {
       out.push({ slug: [...base, essay.slug] });
     }
